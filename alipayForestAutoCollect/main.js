@@ -14,6 +14,7 @@ let utils = require('utils.js') || require('alipayForestAutoCollect/utils.js')
 /* 解锁设备 */
 utils.unlockDevice()
 
+/* 当前设备的一些信息 */
 let deviceWidth = device.width
 let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
@@ -78,6 +79,7 @@ app.startActivity({
 //   .parent()
 //   .click()
 
+/* 等待进入蚂蚁森林 */
 className('android.widget.Button')
   .depth(7)
   .text('背包')

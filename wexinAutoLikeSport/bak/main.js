@@ -8,6 +8,7 @@ if(!images.requestScreenCapture(false)){
   sleep(250)
 }
 
+/* 一些常用的当前设备信息 */
 let deviceWidth = device.width
 let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
