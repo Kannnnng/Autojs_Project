@@ -9,11 +9,12 @@ if(!images.requestScreenCapture(false)){
 }
 
 /* 引入工具箱 */
-let utils = require('utils.js')
+let utils = require('utils.js') || require('wexinAutoLikeSport/utils.js')
 
 /* 解锁设备 */
 utils.unlockDevice()
 
+/* 当前设备的一些信息 */
 let deviceWidth = device.width
 let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
@@ -33,27 +34,9 @@ depth(0)
   .packageName('com.tencent.mm')
   .waitFor()
 
-let meSelectedImage = images.read('./assets/me-selected.jpg') || images.read('wexinAutoLikeSport/assets//me-selected.jpg')
-let meUnselectedImage = images.read('./assets/me-unselected.jpg') || images.read('wexinAutoLikeSport/assets//me-unselected.jpg')
-
-/* 如果打开的微信不是主页面，则返回到主页面 */
-let isFoundHomePage = currentActivity() === 'com.tencent.mm.ui.LauncherUI'
-while (!isFoundHomePage) {
-  for (let i = 0; !isFoundHomePage && i < 2; i++) {
-    let temp_screenCapture = images.captureScreen()
-    if (
-      images.matchTemplate(temp_screenCapture, meSelectedImage).best() ||
-      images.matchTemplate(temp_screenCapture, meUnselectedImage).best()
-    ) {
-      isFoundHomePage = true
-    } else {
-      sleep(50)
-    }
-  }
-
-  if (!isFoundHomePage) back()
-}
-
+/* 如果当前打开的微信页面不是主页面，则返回到主页面 */
+while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
+  
 /* 确认选择到微信最近对话页面 */
 while (true) {
   try {
@@ -163,13 +146,10 @@ while (!isFoundEnd) {
   }
 }
 
-meSelectedImage.recycle()
-meUnselectedImage.recycle()
-
 /* 执行完毕退出程序返回到最开始的桌面 */
 for (let i = 0; i < 3; i++) {
   back()
-  sleep(500)
+  sleep(250)
 }
 
 /* 锁定设备 */

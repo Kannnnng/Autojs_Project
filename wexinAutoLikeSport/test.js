@@ -241,6 +241,9 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 
 // log(shell("am kill com.tencent.mm", true))
 
+depth(0)
+  .packageName('com.tencent.mm')
+  .findOne()
 toast('执行完毕')
 
 // importPackage(java.io)
