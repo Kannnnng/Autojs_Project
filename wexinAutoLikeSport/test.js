@@ -241,9 +241,17 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 
 // log(shell("am kill com.tencent.mm", true))
 
-depth(0)
-  .packageName('com.tencent.mm')
+// depth(0)
+//   .packageName('com.tencent.mm')
+//   .findOne()
+// swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 0, 250)
+className('android.widget.ListView')
+  .depth(2)
+  .drawingOrder(3)
   .findOne()
+  .scrollForward()
+
+
 toast('执行完毕')
 
 // importPackage(java.io)

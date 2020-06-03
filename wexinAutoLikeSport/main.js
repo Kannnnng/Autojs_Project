@@ -136,12 +136,18 @@ while (!isFoundEnd) {
         isFoundEnd = true
       } else {
         item.click()
-        sleep(100)
+        sleep(50)
       }
     })
 
   if (!isFoundEnd) {
-    swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 0, 250)
+    /* 模拟滑动会出现错误，且效率不如控件滑动好，因此将滑动的实现方式改为控件滑动 */
+    // swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 0, 250)
+    className('android.widget.ListView')
+      .depth(2)
+      .drawingOrder(3)
+      .findOne()
+      .scrollForward()
     sleep(250)
   }
 }
