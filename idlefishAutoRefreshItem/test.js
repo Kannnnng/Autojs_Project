@@ -12,8 +12,12 @@
 //   .parent()
 //   .click()
 // log(213)
-log(currentActivity())
-log(currentPackage())
+// log(currentActivity())
+// log(currentPackage())
 // log(Object.keys(runtime))
 // powerDialog()
 // quickSettings()
+
+engines.all().slice(0).forEach((script) => {
+  log(script.getSource().getName().includes(engines.myEngine().getSource().getName()))
+})
