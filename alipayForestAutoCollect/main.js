@@ -85,19 +85,19 @@ className('android.widget.Button')
   .text('背包')
   .waitFor()
 
-/* 通过识别能量球图像来点击相对应位置，但因为没有颜色匹配简单，故废弃 */
-// let energyIcon = images.read('assets/energy-icon.jpg') || images.read('alipayForestAutoCollect/assets/energy-icon.jpg')
-// images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-//   click(point.x + 60, point.y - 40)
-//   sleep(250)
-// })
-
-/* 找到能量球颜色位置，即找到能量球的位置 */
-let point
-while (point = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
-  click(point.x, point.y)
+/* 通过识别能量球图像来点击相对应位置 */
+let energyIcon = images.read('assets/energy-icon.jpg') || images.read('alipayForestAutoCollect/assets/energy-icon.jpg')
+images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+  click(point.x + 60, point.y - 50)
   sleep(250)
-}
+})
+
+/* 找到能量球颜色位置，即找到能量球的位置，相比于图像匹配，颜色匹配速度更快，但有些情况下会匹配到不属于能量球的错误位置，导致一直点击错误位置而不能继续执行，因此换用图像匹配方式 */
+// let point
+// while (point = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
+//   click(point.x, point.y)
+//   sleep(250)
+// }
 
 /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件 */
 // className('android.widget.Button')
@@ -167,11 +167,16 @@ while (!isFoundEnd) {
     sleep(100)
     
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
-    let energyPoint
-    while (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
-        click(energyPoint.x, energyPoint.y)
-        sleep(250)
-      }
+    // let energyPoint
+    // while (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
+    //   click(energyPoint.x, energyPoint.y)
+    //   sleep(250)
+    // }
+
+    images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+      click(point.x + 60, point.y - 50)
+      sleep(250)
+    })
       
     /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件，因此使用 untilFind 函数 */
     // className('android.widget.Button')
@@ -185,6 +190,7 @@ while (!isFoundEnd) {
     //   })
   
     back()
+
     className('android.view.View')
       .depth(8)
       .text('总排行榜')
@@ -208,6 +214,7 @@ while (!isFoundEnd) {
   }
 }
 
+energyIcon.recycle()
 pickableIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
