@@ -14,8 +14,9 @@ let utils = require('utils.js') || require('wexinAutoLikeSport/utils.js')
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
 
-/* 超时停止 */
-utils.stopWhenTimeout(1000 * 60 * 3)
+/* 超时停止检测线程 */
+let thread
+thread = utils.stopWhenTimeout(1000 * 60 * 2)
 
 /* 解锁设备 */
 utils.unlockDevice()
@@ -163,6 +164,9 @@ for (let i = 0; i < 3; i++) {
   back()
   sleep(250)
 }
+
+/* 停止检测程序运行时间超时的线程 */
+thread.interrupt()
 
 /* 锁定设备 */
 utils.lockDevice()

@@ -83,6 +83,8 @@ function stopWhenTimeout(timeout) {
   })
 
   thread.waitFor()
+
+  return thread
 }
 
 module.exports = {
