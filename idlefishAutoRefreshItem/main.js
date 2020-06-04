@@ -8,16 +8,14 @@ if(!images.requestScreenCapture(false)){
   sleep(500)
 }
 
-/* 防止多个相同的程序同时执行 */
-engines.all().slice(1).forEach((script) => {
-  if (script.getSource().getName().includes(engines.myEngine().getSource().getName())) {
-    script.forceStop()
-    sleep(250)
-  }
-})
-
 /* 引入工具箱 */
 let utils = require('utils.js')
+
+/* 防止当前代码被重复执行 */
+utils.stopRepeatExecution()
+
+/* 超时停止 */
+utils.stopWhenTimeout(1000 * 60 * 3)
 
 /* 解锁设备 */
 utils.unlockDevice()

@@ -9,12 +9,17 @@ setScreenMetrics(designedWidth, designedHeight)
 /* 解锁设备，适用于手机处于锁屏状态，且解锁方式为指定的手势解锁方案 */
 function unlockDevice() {
   /* 手机屏幕开着且不处于解锁页面，则手机没有锁屏，直接返回 */
-  if (device.isScreenOn() && currentPackage() !== 'com.android.systemui') {
-    if (confirm('设定的程序即将执行')) return
-    else exit()
-  } else {
-    device.wakeUpIfNeeded()
-    sleep(500)
+  while (true) {
+    if (device.isScreenOn() && currentPackage() !== 'com.android.systemui') {
+      if (confirm('设定的程序即将执行')) return
+      else exit()
+    } else {
+      device.wakeUpIfNeeded()
+      sleep(500)
+
+      /* 执行唤醒操作后查看是否真正唤醒了，如果没有则继续执行唤醒动作 */
+      if (device.isScreenOn()) break
+    }
   }
 
   /* 阻塞等待手机被唤醒 */
@@ -57,7 +62,32 @@ function lockDevice() {
     .click()
 }
 
+/* 防止相同代码重复执行，当同一程序被多次同时运行时，停掉除本程序之外的其他程序 */
+function stopRepeatExecution() {
+  engines.all().slice(1).forEach((script) => {
+    if (script.getSource().getName().includes(engines.myEngine().getSource().getName())) {
+      script.forceStop()
+      sleep(250)
+    }
+  })
+}
+
+/* 超时停止，超过设置的超时时间 timeout 自动停止当前程序，已毫秒为单位 */
+function stopWhenTimeout(timeout) {
+  if (!timeout) return
+  
+  threads.start(function() {
+    setTimeout(function() {
+      engines.myEngine.forceStop()
+    }, timeout)
+  })
+
+  threads.waitFor()
+}
+
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
+  stopRepeatExecution: stopRepeatExecution,
+  stopWhenTimeout: stopWhenTimeout,
 }

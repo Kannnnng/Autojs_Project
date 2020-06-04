@@ -8,16 +8,14 @@ if(!images.requestScreenCapture(false)){
   sleep(250)
 }
 
-/* 防止多个相同的程序同时执行 */
-engines.all().slice(1).forEach((script) => {
-  if (script.getSource().getName().includes(engines.myEngine().getSource().getName())) {
-    script.forceStop()
-    sleep(250)
-  }
-})
-
 /* 引入工具箱 */
 let utils = require('utils.js') || require('alipayForestAutoCollect/utils.js')
+
+/* 防止当前代码被重复执行 */
+utils.stopRepeatExecution()
+
+/* 超时停止 */
+utils.stopWhenTimeout(1000 * 60 * 3)
 
 /* 解锁设备 */
 utils.unlockDevice()
@@ -91,7 +89,6 @@ className('android.widget.Button')
   .waitFor()
 
 /* 通过识别能量球图像来点击相对应位置 */
-// let energyIcon = images.read('assets/energy-icon.jpg') || images.read('alipayForestAutoCollect/assets/energy-icon.jpg')
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   click(point.x + 40, point.y)
@@ -141,38 +138,13 @@ sleep(250)
 let pickableIcon = images.read('assets/pickable-icon.jpg') || images.read('alipayForestAutoCollect/assets/pickable-icon.jpg')
 let isFoundEnd = false
 while (!isFoundEnd) {
-  /* 颜色识别因为存在等待获取的能量球标识，所以不能正确识别 */
-  // let pickableUserPoint
-  // while (pickableUserPoint = images.findColor(images.captureScreen(), PICKABLE_IDENTIFY_COLOR, { region: [950, 0] })) {
-  //   click(pickableUserPoint.x, pickableUserPoint.y)
-
-  //   className('android.widget.TextView')
-  //     .depth(1)
-  //     .textContains('的蚂蚁森林')
-  //     .waitFor()
-  //   sleep(250)
-    
-  //   let point
-  //   while (point = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
-  //     click(point.x, point.y)
-  //     sleep(250)
-  //   }
-
-  //   back()
-  //   className('android.widget.TextView')
-  //     .depth(1)
-  //     .text('蚂蚁森林')
-  //     .waitFor()
-  //   sleep(250)
-  // }
-  
   images.matchTemplate(images.captureScreen(), pickableIcon, { region: [950, 0] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
     click(point.x - 100, point.y + 80) // 这里的偏移是手动测量后设置的
-  
+    
     className('android.widget.Button')
-      .depth(7)
-      .textContains('浇水')
-      .waitFor()
+    .depth(7)
+    .textContains('浇水')
+    .waitFor()
     
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
     // let energyPoint
@@ -180,7 +152,11 @@ while (!isFoundEnd) {
     //   click(energyPoint.x, energyPoint.y)
     //   sleep(250)
     // }
-
+      
+    /* 1.颜色识别因为存在等待获取的能量球标识，所以不能正确识别 */
+    /* 2.颜色识别存在识别错误的情况，比如检测到背景颜色与能量球颜色相同时， */
+    /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
+    /* 会卡在这里无法继续向下执行 */
     images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
       click(point.x + 40, point.y)
       sleep(250)
@@ -211,8 +187,7 @@ while (!isFoundEnd) {
     .findOne(100)) isFoundEnd = true
 
   if (!isFoundEnd) {
-    /* 向下滑动的实现方式由模拟滑动改为调用空间滑动方法实现 */
-    // swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 300, 250)
+    /* 向下滑动的实现方式由模拟滑动改为调用控件滑动方法实现 */
     className('android.webkit.WebView')
       .depth(3)
       .findOne()
@@ -221,7 +196,6 @@ while (!isFoundEnd) {
   }
 }
 
-// energyIcon.recycle()
 energyBallIcon.recycle()
 pickableIcon.recycle()
 

@@ -62,7 +62,32 @@ function lockDevice() {
     .click()
 }
 
+/* 防止相同代码重复执行，当同一程序被多次同时运行时，停掉除本程序之外的其他程序 */
+function stopRepeatExecution() {
+  engines.all().slice(1).forEach((script) => {
+    if (script.getSource().getName().includes(engines.myEngine().getSource().getName())) {
+      script.forceStop()
+      sleep(250)
+    }
+  })
+}
+
+/* 超时停止，超过设置的超时时间 timeout 自动停止当前程序，已毫秒为单位 */
+function stopWhenTimeout(timeout) {
+  if (!timeout) return
+  
+  threads.start(function() {
+    setTimeout(function() {
+      engines.myEngine.forceStop()
+    }, timeout)
+  })
+
+  threads.waitFor()
+}
+
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
+  stopRepeatExecution: stopRepeatExecution,
+  stopWhenTimeout: stopWhenTimeout,
 }
