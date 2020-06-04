@@ -76,13 +76,13 @@ function stopRepeatExecution() {
 function stopWhenTimeout(timeout) {
   if (!timeout) return
   
-  threads.start(function() {
+  let thread = threads.start(function() {
     setTimeout(function() {
       engines.myEngine.forceStop()
     }, timeout)
   })
 
-  threads.waitFor()
+  thread.waitFor()
 }
 
 module.exports = {
