@@ -95,7 +95,7 @@ className('android.widget.Button')
 
 /* 通过识别能量球图像来点击相对应位置 */
 let energyIcon = images.read('assets/energy-icon.jpg') || images.read('alipayForestAutoCollect/assets/energy-icon.jpg')
-images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630], threshold: 0.6 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   click(point.x + 60, point.y - 50)
   sleep(250)
 })
@@ -181,7 +181,7 @@ while (!isFoundEnd) {
     //   sleep(250)
     // }
 
-    images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+    images.matchTemplate(images.captureScreen(), energyIcon, { region: [0, 430, 1080, 630], threshold: 0.6 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
       click(point.x + 60, point.y - 50)
       sleep(250)
     })
