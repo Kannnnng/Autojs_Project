@@ -172,7 +172,6 @@ while (!isFoundEnd) {
       .depth(7)
       .text('浇水')
       .waitFor()
-    sleep(100)
     
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
     // let energyPoint
