@@ -9,7 +9,7 @@ if(!images.requestScreenCapture(false)){
 }
 
 /* 引入工具箱 */
-let utils = require('utils.js') || require('wexinAutoLikeSport/utils.js')
+let utils = require('utils/main.js')
 
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()

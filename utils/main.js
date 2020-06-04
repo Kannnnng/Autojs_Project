@@ -74,11 +74,12 @@ function stopRepeatExecution() {
 
 /* 超时停止，超过设置的超时时间 timeout 自动停止当前程序，已毫秒为单位 */
 function stopWhenTimeout(timeout) {
+  /* 超时时间无效时，不做任何操作 */
   if (!timeout) return
   
   let thread = threads.start(function() {
     setTimeout(function() {
-      engines.myEngine.forceStop()
+      engines.myEngine().forceStop()
     }, timeout)
   })
 

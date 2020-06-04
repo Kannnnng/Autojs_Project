@@ -95,5 +95,20 @@ if(!images.requestScreenCapture(false)){
 //   sleep(250)
 // })
 // energyIcon.recycle()
+engines.all().slice(1).forEach((script) => {
+  if (script.getSource().getName().includes(engines.myEngine().getSource().getName())) {
+    script.forceStop()
+    sleep(250)
+  }
+})
+let thread = threads.start(function() {
+  setTimeout(function() {
+    toast(123)
+    engines.myEngine().forceStop()
+  }, 30000)
+})
+
+thread.waitFor()
+toast(new Date())
 
 toast('执行完成')
