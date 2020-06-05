@@ -92,7 +92,7 @@ className('android.widget.Button')
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   click(point.x + 40, point.y)
-  sleep(250)
+  sleep(500)
 })
 
 /* 能量球识别颜色 */
@@ -159,7 +159,7 @@ while (!isFoundEnd) {
     /* 会卡在这里无法继续向下执行 */
     images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
       click(point.x + 40, point.y)
-      sleep(250)
+      sleep(500)
     })
       
     /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件，因此使用 untilFind 函数 */
