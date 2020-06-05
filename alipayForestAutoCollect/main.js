@@ -9,7 +9,12 @@ if(!images.requestScreenCapture(false)){
 }
 
 /* 引入工具箱 */
-let utils = require('utils/main.js')
+let utils
+try {
+  utils = require('utils/main.js')
+} catch (e) {
+  utils = require('../utils/main.js')
+}
 
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
@@ -41,6 +46,16 @@ app.startActivity({
   action: "VIEW",
   data: "alipayqr://platformapi/startapp?saId=60000002"
 })
+
+/* Autojs 打开支付宝提示窗，只检测 500 毫秒，如果没检测到就跳过 */
+try {
+  packageName('com.eg.android.AlipayGphone')
+    .className('android.widget.Button')
+    .depth(1)
+    .textContains('打开')
+    .findOne(500)
+    .click()
+} catch (e) {}
 
 /* 因为可以直接进入蚂蚁森林，所以下面这段多步骤进入蚂蚁森林的代码就没用了 */
 // /* 等待进入支付宝中 */

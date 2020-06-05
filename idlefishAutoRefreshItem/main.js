@@ -9,7 +9,12 @@ if(!images.requestScreenCapture(false)){
 }
 
 /* 引入工具箱 */
-let utils = require('utils/main.js')
+let utils
+try {
+  utils = require('utils/main.js')
+} catch (e) {
+  utils = require('../utils/main.js')
+}
 
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
