@@ -49,22 +49,12 @@ depth(0)
 while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
   
 /* 确认选择到微信最近对话页面 */
-while (true) {
-  try {
-    className('android.widget.RelativeLayout')
-      .depth(2) 
-      .findOne()
-      .findOne(
-        className('android.widget.TextView')
-          .depth(3)
-          .text('微信'))
-      .parent()
-      .click()
-    break
-  } catch (e) {
-    sleep(250)
-  }
-}
+className('android.widget.TextView')
+  .depth(3)
+  .text('微信')
+  .findOne()
+  .parent()
+  .click()
 
 /* 阻塞等待切换到微信最近对话框页面，并点击右上角搜索按钮 */
 while (true) {
