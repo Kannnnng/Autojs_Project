@@ -47,13 +47,13 @@ app.startActivity({
   data: "alipayqr://platformapi/startapp?saId=60000002"
 })
 
-/* Autojs 打开支付宝提示窗，只检测 5 秒，如果没检测到就跳过 */
+/* Autojs 打开支付宝提示窗，只检测 3 秒，如果没检测到就跳过 */
 try {
   packageName('com.eg.android.AlipayGphone')
     .className('android.widget.Button')
     .depth(1)
     .textContains('打开')
-    .findOne(5000)
+    .findOne(3000)
     .click()
 } catch (e) {}
 
@@ -105,9 +105,9 @@ className('android.widget.Button')
   
 /* 通过识别能量球图像来点击相对应位置 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
-images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   click(point.x + 40, point.y)
-  sleep(500)
+  sleep(250)
 })
 
 /* 能量球识别颜色 */
@@ -172,9 +172,9 @@ while (!isFoundEnd) {
     /* 2.颜色识别存在识别错误的情况，比如检测到背景颜色与能量球颜色相同时， */
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
-    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
       click(point.x + 40, point.y)
-      sleep(500)
+      sleep(250)
     })
       
     /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件，因此使用 untilFind 函数 */
