@@ -116,7 +116,7 @@ const ENERGY_BALL_IDENTIFY_COLOR = '#CFFF5E'
 /* 找到能量球颜色位置，即找到能量球的位置，相比于图像匹配，颜色匹配速度更快，但有些情况下会匹配到不属于能量球的错误位置，导致一直点击错误位置而不能继续执行，因此换用图像匹配方式 */
 let energyPoint
 let counter = 0
-while (counter++ < 5 && energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
+while (counter++ < 5 && (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] }))) {
   click(energyPoint.x, energyPoint.y)
   sleep(250)
 }
@@ -165,7 +165,7 @@ while (!isFoundEnd) {
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
     let energyPoint
     let counter = 0
-    while (counter++ < 5 && energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
+    while (counter++ < 5 && (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] }))) {
       click(energyPoint.x, energyPoint.y)
       sleep(250)
     }
