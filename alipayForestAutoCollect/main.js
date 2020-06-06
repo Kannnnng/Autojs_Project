@@ -47,13 +47,13 @@ app.startActivity({
   data: "alipayqr://platformapi/startapp?saId=60000002"
 })
 
-/* Autojs 打开支付宝提示窗，只检测 500 毫秒，如果没检测到就跳过 */
+/* Autojs 打开支付宝提示窗，只检测 5 秒，如果没检测到就跳过 */
 try {
   packageName('com.eg.android.AlipayGphone')
     .className('android.widget.Button')
     .depth(1)
     .textContains('打开')
-    .findOne(500)
+    .findOne(5000)
     .click()
 } catch (e) {}
 
@@ -102,7 +102,7 @@ className('android.widget.Button')
   .depth(7)
   .textContains('背包')
   .waitFor()
-
+  
 /* 通过识别能量球图像来点击相对应位置 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
