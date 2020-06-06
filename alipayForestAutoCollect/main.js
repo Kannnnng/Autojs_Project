@@ -104,21 +104,22 @@ className('android.widget.Button')
   .waitFor()
   
 /* 通过识别能量球图像来点击相对应位置 */
-let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
-images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-  click(point.x + 40, point.y)
-  sleep(250)
-})
+// let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
+// images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+//   click(point.x + 40, point.y)
+//   sleep(250)
+// })
 
 /* 能量球识别颜色 */
-// const ENERGY_BALL_IDENTIFY_COLOR = '#CFFF5E'
+const ENERGY_BALL_IDENTIFY_COLOR = '#CFFF5E'
 
 /* 找到能量球颜色位置，即找到能量球的位置，相比于图像匹配，颜色匹配速度更快，但有些情况下会匹配到不属于能量球的错误位置，导致一直点击错误位置而不能继续执行，因此换用图像匹配方式 */
-// let point
-// while (point = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
-//   click(point.x, point.y)
-//   sleep(250)
-// }
+let energyPoint
+let counter = 0
+while (counter++ < 5 && energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
+  click(energyPoint.x, energyPoint.y)
+  sleep(250)
+}
 
 /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件 */
 // className('android.widget.Button')
@@ -157,25 +158,26 @@ while (!isFoundEnd) {
     click(point.x - 100, point.y + 80) // 这里的偏移是手动测量后设置的
     
     className('android.widget.Button')
-    .depth(7)
-    .textContains('浇水')
-    .waitFor()
+      .depth(7)
+      .textContains('浇水')
+      .waitFor()
     
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
-    // let energyPoint
-    // while (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
-    //   click(energyPoint.x, energyPoint.y)
-    //   sleep(250)
-    // }
+    let energyPoint
+    let counter = 0
+    while (counter++ < 5 && energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
+      click(energyPoint.x, energyPoint.y)
+      sleep(250)
+    }
       
     /* 1.颜色识别因为存在等待获取的能量球标识，所以不能正确识别 */
     /* 2.颜色识别存在识别错误的情况，比如检测到背景颜色与能量球颜色相同时， */
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
-    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-      click(point.x + 40, point.y)
-      sleep(250)
-    })
+    // images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+    //   click(point.x + 40, point.y)
+    //   sleep(250)
+    // })
       
     /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件，因此使用 untilFind 函数 */
     // className('android.widget.Button')
@@ -199,7 +201,7 @@ while (!isFoundEnd) {
   if (className('android.view.View')
     .depth(7)
     .text('没有更多了')
-    .findOne(100)) isFoundEnd = true
+    .findOne(250)) isFoundEnd = true
 
   if (!isFoundEnd) {
     /* 向下滑动的实现方式由模拟滑动改为调用控件滑动方法实现 */
@@ -211,7 +213,7 @@ while (!isFoundEnd) {
   }
 }
 
-energyBallIcon.recycle()
+// energyBallIcon.recycle()
 pickableIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
