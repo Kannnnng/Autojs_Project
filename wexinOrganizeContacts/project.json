@@ -6,7 +6,7 @@
     },
     "useFeatures": [],
     "name": "整理微信联系人",
-    "main": "main.js",
+    "main": "getFriendsInfo.js",
     "ignore": [
         "build"
     ],
