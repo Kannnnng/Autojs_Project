@@ -10,23 +10,27 @@ if(!images.requestScreenCapture(false)){
 
 /* 引入工具箱 */
 let utils
+let uniqBy
 try {
   utils = require('utils/main.js')
+  uniqBy = require('wexinOrganizeContacts/node_modules/lodash.uniqby/index.js')
 } catch (e) {
   utils = require('../utils/main.js')
+  uniqBy = require('./node_modules/lodash.uniqby/index.js')
 }
 
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
-
-/* 超时停止检测线程 */
-utils.stopWhenTimeout(1000 * 60 * 2)
 
 /* 当前设备的一些信息 */
 let deviceWidth = device.width
 let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
 let designedHeight = 2248 // 设计代码时的屏幕高度
+
+const WAIT_FOR_FIND_TAGS_TIME = 500
+const WAIT_FOR_FIND_END_TIME = 500
+const WAIT_FOR_FIND_ME_TIME = 500
 
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
@@ -53,24 +57,66 @@ className('android.widget.TextView')
   .parent()
   .click()
 
+let friendsInformations = []
 let isFoundEnd = false
 while (!isFoundEnd) {
+  className('android.view.View')
+    .depth(6)
+    .drawingOrder(4)
+    .find()
+    .forEach((child) => {
+      let tags = []
+      
+      child.parent().parent().click()
 
+      if (className('android.widget.TextView').depth(4).textContains('标签').findOne(WAIT_FOR_FIND_ME_TIME)) {
+        className('android.widget.TextView')
+          .depth(4)
+          .textContains('标签')
+          .findOne()
+          .parent()
+          .click()
 
-  className('android.widget.TextView')
+        if (className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME)) {
+          className('android.view.ViewGroup')
+            .depth(3)
+            .findOne()
+            .children()
+            .forEach((child) => { tags.push(child.text()) })
+  
+          friendsInformations.push({
+            name: child.text(),
+            tags: tags,
+          })
+  
+          log({
+            name: child.text(),
+            tags: tags,
+          })
+
+        }
+
+        back()
+        sleep(250)
+      }
+      
+      back()
+      sleep(250)
+    })
+    
+  className('android.widget.ListView')
+    .depth(3)
+    .drawingOrder(5)
+    .findOne()
+    .scrollForward()
+
+  if (className('android.widget.TextView')
     .depth(5)
     .textContains('位联系人')
+    .findOne(WAIT_FOR_FIND_END_TIME)) break
 }
 
-className('android.widget.ListView')
-  .depth(3)
-  .drawingOrder(5)
-  .findOne()
-  .children()
-  .forEach((child) => {
-
-  })
-
+log(JSON.stringify(uniqBy(friendsInformations, (item) => item.name)))
 
 /* 执行完毕退出程序返回到最开始的桌面 */
 for (let i = 0; i < 3; i++) {

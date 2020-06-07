@@ -250,12 +250,24 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //   .drawingOrder(3)
 //   .findOne()
 //   .scrollForward()
-log(className('android.widget.ListView')
-.depth(3)
-.drawingOrder(5)
-.find().length)
+// log(className('android.widget.ListView')
+// .depth(3)
+// .drawingOrder(5)
+// .find().length)
+// className('android.view.View')
+//     .depth(6)
+//     .drawingOrder(4)
+//     .find()
+//     .forEach((item) => {
+//       log(item.text())
+//     })
+className('android.widget.ListView')
+    .depth(3)
+    .drawingOrder(5)
+    .findOne()
+    .scrollForward()
+
 toast('执行完毕')
 
-// importPackage(java.io)
-// log(new java.util.Date())
+
 
