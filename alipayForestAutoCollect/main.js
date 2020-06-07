@@ -47,16 +47,14 @@ app.startActivity({
   data: "alipayqr://platformapi/startapp?saId=60000002"
 })
 
-/* Autojs 打开支付宝提示窗，只检测 3 秒，如果没检测到就跳过 */
-try {
-  packageName('com.eg.android.AlipayGphone')
-    .className('android.widget.Button')
-    .depth(1)
-    .textContains('打开')
-    .findOne(3000)
-    .click()
-} catch (e) {}
-
+/* Autojs 打开支付宝提示窗 */
+packageName('com.eg.android.AlipayGphone')
+  .className('android.widget.Button')
+  .depth(1)
+  .textContains('打开')
+  .findOne()
+  .click()
+  
 /* 因为可以直接进入蚂蚁森林，所以下面这段多步骤进入蚂蚁森林的代码就没用了 */
 // /* 等待进入支付宝中 */
 // depth(0)
@@ -116,7 +114,7 @@ const ENERGY_BALL_IDENTIFY_COLOR = '#CFFF5E'
 /* 找到能量球颜色位置，即找到能量球的位置，相比于图像匹配，颜色匹配速度更快，但有些情况下会匹配到不属于能量球的错误位置，导致一直点击错误位置而不能继续执行，因此换用图像匹配方式 */
 let energyPoint
 let counter = 0
-while (counter++ < 5 && (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] }))) {
+while (counter++ < 10 && (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] }))) {
   click(energyPoint.x, energyPoint.y)
   sleep(250)
 }
@@ -165,7 +163,7 @@ while (!isFoundEnd) {
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
     let energyPoint
     let counter = 0
-    while (counter++ < 5 && (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] }))) {
+    while (counter++ < 10 && (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] }))) {
       click(energyPoint.x, energyPoint.y)
       sleep(250)
     }
