@@ -3,6 +3,8 @@ let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
 let designedHeight = 2248 // 设计代码时的屏幕高度
 
+let isNeedLockScreen = false // 是否需要息屏，如果程序运行前屏幕亮，则程序运行完成后不需要息屏
+
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
 
@@ -11,9 +13,13 @@ function unlockDevice() {
   /* 手机屏幕开着且不处于解锁页面，则手机没有锁屏，直接返回 */
   while (true) {
     if (device.isScreenOn() && currentPackage() !== 'com.android.systemui') {
+      isNeedLockScreen = false
+      
       if (confirm('设定的程序即将执行')) return
       else exit()
     } else {
+      isNeedLockScreen = true
+      
       device.wakeUpIfNeeded()
       sleep(500)
 
@@ -52,6 +58,9 @@ function unlockDevice() {
 /* 锁定设备，适用于手机处于正常开启状态，且桌面首页要有锁屏快捷方式 */
 function lockDevice() {
   home()
+
+  if (!isNeedLockScreen) return
+  
   waitForPackage('com.miui.home')
 
   className('android.widget.TextView')
