@@ -56,12 +56,12 @@ className('android.widget.TextView')
   .parent()
   .click()
 
-let friendsInformations = []
+let friendsInformations = {}
 let isFoundEnd = false
 
 /* 程序退出时将获取到的数据保存下来 */
 events.on('exit', () => {
-  files.write('./联系人信息.json', JSON.stringify(uniqBy(friendsInformations, (item) => item.name)))
+  files.write('./联系人信息.json', JSON.stringify(friendsInformations))
 })
 
 while (!isFoundEnd) {
@@ -95,15 +95,15 @@ while (!isFoundEnd) {
         sleep(250)
       }
 
-      friendsInformations.push({
+      friendsInformations[className('android.widget.TextView')
+        .textContains('微信号:')
+        .findOne()
+        .text()
+        .replace(/微信号:|\x20/g, '')] = {
         name: child.text(),
         tags: tags,
-        id: className('android.widget.TextView')
-          .textContains('微信号:')
-          .findOne()
-          .text()
-          .replace(/微信号:|\x20/g, '')
-      })
+        moreInfo: '',
+      }
 
       log({
         name: child.text(),
