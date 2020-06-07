@@ -92,10 +92,14 @@ while (!isFoundEnd) {
   
         }
 
-        moreInfo = className('android.widget.EditText')
+        className('android.widget.TextView')
           .depth(3)
-          .drawingOrder(11)
-          .findOne()
+          .text('描述')
+          .waitFor()
+        
+        moreInfo = className('android.widget.TextView')
+          .depth(3)
+          .findOnce(1)
           .text()
 
         back()
@@ -112,17 +116,6 @@ while (!isFoundEnd) {
         moreInfo: moreInfo,
       }
 
-      log({
-        name: child.text(),
-        tags: tags,
-        id: className('android.widget.TextView')
-          .textContains('微信号:')
-          .findOne()
-          .text()
-          .replace(/微信号:|\x20/g, ''),
-        moreInfo: moreInfo,
-      })
-      
       back()
       sleep(250)
     })
