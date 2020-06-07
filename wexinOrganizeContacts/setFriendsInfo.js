@@ -28,6 +28,9 @@ let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
 let designedHeight = 2248 // 设计代码时的屏幕高度
 
+const WAIT_FOR_FIND_TAGS_TIME = 500
+const WAIT_FOR_FIND_END_TIME = 500
+
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
 
@@ -53,13 +56,8 @@ className('android.widget.TextView')
   .parent()
   .click()
 
-let friendsInformations = []
+let friendsInformations = JSON.stringify(JSON.parse(files.read('./联系人信息.json')))
 let isFoundEnd = false
-
-/* 程序退出时将获取到的数据保存下来 */
-events.on('exit', () => {
-  files.write('./联系人信息.json', JSON.stringify(uniqBy(friendsInformations, (item) => item.name)))
-})
 
 while (!isFoundEnd) {
   className('android.view.View')
@@ -71,6 +69,14 @@ while (!isFoundEnd) {
       
       child.parent().parent().click()
 
+      let weixinId = className('android.widget.TextView')
+        .textContains('微信号:')
+        .findOne()
+        .text()
+        .replace(/微信号:|\x20/g, '')
+
+      let friendInformation = friendsInformations[weixinId]
+
       if (className('android.widget.TextView').depth(4).text('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
         className('android.widget.TextView')
           .depth(4)
@@ -78,34 +84,91 @@ while (!isFoundEnd) {
           .findOne()
           .parent()
           .click()
+          log(friendInformation.name)
+
+        /* 修改备注 */
+        className('android.widget.TextView')
+          .depth(3)
+          .drawingOrder(3)
+          .findOne()
+          .click()
+          log(friendInformation.name)
+
+        className('android.widget.EditView')
+          .depth(3)
+          .drawingOrder(2)
+          .waitFor()
+        
+        log(friendInformation.name)
+        setText(friendInformation.name)
 
         if (className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME)) {
           className('android.view.ViewGroup')
             .depth(3)
             .findOne()
+            .click()
+
+          className('android.widget.TextView')
+            .depth(2)
+            .text('添加标签')
+            .waitFor()
+
+          let parent = className('android.view.ViewGroup')
+            .depth(3)
+            .drawingOrder(1)
+            .findOne()
+            
+          /* 删除现有的标签 */
+          parent
             .children()
-            .forEach((child) => { tags.push(child.text()) })
-  
-          friendsInformations.push({
-            name: child.text(),
-            tags: tags,
+            .forEach((child) => {
+              if (child.className() !== 'android.widget.TextView') return
+
+              child.click()
+              sleep(100)
+              child.click()
+            })
+
+          friendInformation.tags.forEach((tag) => {
+            setText(tag)
+
+            className('android.widget.ListView')
+              .depth(2)
+              .waitFor()
+            
+            click(parent.bounds().right - 2, parent.bounds().centerY())
+
+            className('android.view.ViewGroup')
+              .depth(3)
+              .drawingOrder(2)
+              .waitFor()
           })
-  
-          log({
-            name: child.text(),
-            tags: tags,
-          })
+
+          /* 点击保存 */
+          className('android.widget.Button')
+            .depth(2)
+            .text('保存')
+            .findOne()
+            .click()
         }
 
-        back()
-        sleep(250)
-      } else {
-        log({
-          name: child.text(),
-          tags: [],
-        })
+        /* 修改更多信息 */
+        className('android.widget.EditView')
+          .depth(3)
+          .drawingOrder(13)
+          .findOne()
+          .setText(friendInformation.moreInfo)
+
+        /* 点击完成 */
+        className('android.widget.Button')
+          .depth(2)
+          .text('完成')
+          .findOne()
+          .click()
       }
-      
+
+      back()
+      sleep(250)
       back()
       sleep(250)
     })

@@ -261,11 +261,111 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //     .forEach((item) => {
 //       log(item.text())
 //     })
-className('android.widget.ListView')
-    .depth(3)
-    .drawingOrder(5)
-    .findOne()
-    .scrollForward()
+// className('android.widget.ListView')
+//     .depth(3)
+//     .drawingOrder(5)
+//     .findOne()
+//     .scrollForward()
+// log(JSON.stringify(JSON.parse(files.read('./联系人信息.json')).map((item) => {
+//   item.moreInfo = ''
+//   return item
+// })))
+// className('android.view.ViewGroup')
+//             .depth(3)
+//             .findOne()
+//             .click()
+
+//           className('android.widget.TextView')
+//             .depth(2)
+//             .text('添加标签')
+//             .waitFor()
+
+// className('android.view.ViewGroup')
+//             .depth(3)
+//             .findOne()
+//             .children()
+//             .forEach((child) => {
+//               if (child.className() !== 'android.widget.TextView') return
+
+//               child.click()
+//               sleep(100)
+//               child.click()
+//             })
+// className('android.view.ViewGroup')
+// .depth(3)
+// .findOne()
+// .children()
+// .forEach((child) => log(child.className()))
+// let parent = className('android.view.ViewGroup')
+//               .depth(3)
+//               .drawingOrder(1)
+//               .findOne()
+
+//               setText('nihaod7')
+                
+//               className('android.widget.ListView')
+//                 .depth(2)
+//                 .waitFor()
+              
+//               click(parent.bounds().right - 2, parent.bounds().centerY())
+
+//               className('android.view.ViewGroup')
+//                 .depth(3)
+//                 .drawingOrder(2)
+//                 .waitFor()
+
+//               setText('nihaod8')
+                
+//               className('android.widget.ListView')
+//                 .depth(2)
+//                 .waitFor()
+              
+//               click(parent.bounds().right - 2, parent.bounds().centerY())
+
+//               className('android.view.ViewGroup')
+//               .depth(3)
+//               .drawingOrder(2)
+//               .waitFor()
+
+//               setText('nihaod9')
+                
+//               className('android.widget.ListView')
+//                 .depth(2)
+//                 .waitFor()
+              
+//               click(parent.bounds().right - 2, parent.bounds().centerY())
+
+let parent = className('android.view.ViewGroup')
+            .depth(3)
+            .drawingOrder(1)
+            .findOne()
+            
+          /* 删除现有的标签 */
+          parent
+            .children()
+            .forEach((child) => {
+              if (child.className() !== 'android.widget.TextView') return
+
+              child.click()
+              sleep(100)
+              child.click()
+            })
+
+          Array('123131', '23', '12313').forEach((tag) => {
+            log(tag)
+            setText(tag)
+
+            className('android.widget.ListView')
+              .depth(2)
+              .waitFor()
+            
+            click(parent.bounds().right - 2, parent.bounds().centerY())
+
+            className('android.view.ViewGroup')
+              .depth(3)
+              .drawingOrder(2)
+              .waitFor()
+          })
 
 toast('执行完毕')
 
