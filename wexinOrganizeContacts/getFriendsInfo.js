@@ -71,6 +71,7 @@ while (!isFoundEnd) {
     .find()
     .forEach((child) => {
       let tags = []
+      let moreInfo = ''
       
       child.parent().parent().click()
 
@@ -91,6 +92,12 @@ while (!isFoundEnd) {
   
         }
 
+        moreInfo = className('android.widget.EditText')
+          .depth(3)
+          .drawingOrder(11)
+          .findOne()
+          .text()
+
         back()
         sleep(250)
       }
@@ -102,7 +109,7 @@ while (!isFoundEnd) {
         .replace(/微信号:|\x20/g, '')] = {
         name: child.text(),
         tags: tags,
-        moreInfo: '',
+        moreInfo: moreInfo,
       }
 
       log({
@@ -112,7 +119,8 @@ while (!isFoundEnd) {
           .textContains('微信号:')
           .findOne()
           .text()
-          .replace(/微信号:|\x20/g, '')
+          .replace(/微信号:|\x20/g, ''),
+        moreInfo: moreInfo,
       })
       
       back()
