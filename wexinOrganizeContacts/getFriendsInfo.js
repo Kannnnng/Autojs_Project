@@ -16,7 +16,7 @@ try {
   uniqBy = require('wexinOrganizeContacts/node_modules/lodash.uniqby/index.js')
 } catch (e) {
   utils = require('../utils/main.js')
-  uniqBy = require('./node_modules/lodash.uniqby/index.js')
+  uniqBy = require('lodash.uniqby')
 }
 
 /* 防止当前代码被重复执行 */
@@ -30,7 +30,6 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 
 const WAIT_FOR_FIND_TAGS_TIME = 500
 const WAIT_FOR_FIND_END_TIME = 500
-const WAIT_FOR_FIND_ME_TIME = 500
 
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
@@ -59,6 +58,12 @@ className('android.widget.TextView')
 
 let friendsInformations = []
 let isFoundEnd = false
+
+/* 程序退出时将获取到的数据保存下来 */
+events.on('exit', () => {
+  files.write('./联系人信息.json', JSON.stringify(uniqBy(friendsInformations, (item) => item.name)))
+})
+
 while (!isFoundEnd) {
   className('android.view.View')
     .depth(6)
@@ -69,10 +74,10 @@ while (!isFoundEnd) {
       
       child.parent().parent().click()
 
-      if (className('android.widget.TextView').depth(4).textContains('标签').findOne(WAIT_FOR_FIND_ME_TIME)) {
+      if (className('android.widget.TextView').depth(4).text('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
         className('android.widget.TextView')
           .depth(4)
-          .textContains('标签')
+          .text('标签')
           .findOne()
           .parent()
           .click()
@@ -93,11 +98,15 @@ while (!isFoundEnd) {
             name: child.text(),
             tags: tags,
           })
-
         }
 
         back()
         sleep(250)
+      } else {
+        log({
+          name: child.text(),
+          tags: [],
+        })
       }
       
       back()
@@ -115,8 +124,6 @@ while (!isFoundEnd) {
     .textContains('位联系人')
     .findOne(WAIT_FOR_FIND_END_TIME)) break
 }
-
-log(JSON.stringify(uniqBy(friendsInformations, (item) => item.name)))
 
 /* 执行完毕退出程序返回到最开始的桌面 */
 for (let i = 0; i < 3; i++) {
