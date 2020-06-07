@@ -89,25 +89,31 @@ while (!isFoundEnd) {
             .children()
             .forEach((child) => { tags.push(child.text()) })
   
-          friendsInformations.push({
-            name: child.text(),
-            tags: tags,
-          })
-  
-          log({
-            name: child.text(),
-            tags: tags,
-          })
         }
 
         back()
         sleep(250)
-      } else {
-        log({
-          name: child.text(),
-          tags: [],
-        })
       }
+
+      friendsInformations.push({
+        name: child.text(),
+        tags: tags,
+        id: className('android.widget.TextView')
+          .textContains('微信号:')
+          .findOne()
+          .text()
+          .replace(/微信号:|\x20/g, '')
+      })
+
+      log({
+        name: child.text(),
+        tags: tags,
+        id: className('android.widget.TextView')
+          .textContains('微信号:')
+          .findOne()
+          .text()
+          .replace(/微信号:|\x20/g, '')
+      })
       
       back()
       sleep(250)
