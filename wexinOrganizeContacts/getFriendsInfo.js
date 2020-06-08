@@ -97,10 +97,17 @@ while (!isFoundEnd) {
           .text('描述')
           .waitFor()
         
-        moreInfo = className('android.widget.TextView')
-          .depth(3)
-          .findOnce(1)
-          .text()
+        let nextIsInfo = false
+
+        className('android.widget.ScrollView')
+          .depth(2)
+          .drawingOrder(1)
+          .findOne()
+          .children()
+          .forEach((child) => {
+            if (nextIsInfo) moreInfo = child.text()
+            if (child.text() === '描述') nextIsInfo = true
+          })
 
         back()
         sleep(250)
