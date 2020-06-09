@@ -77,14 +77,19 @@ while (!isFoundEnd) {
 
       let friendInformation = friendsInformations[weixinId]
 
-      if (className('android.widget.TextView').depth(4).text('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
+      if (
+        friendInformation &&
+        !friendInformation.isFinished &&
+        className('android.widget.TextView').depth(4).text('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
+      ) {
+        friendInformation.isFinished = true
+
         className('android.widget.TextView')
           .depth(4)
-          .text('标签')
+          .textContains('标签')
           .findOne()
           .parent()
           .click()
-          log(friendInformation.name)
 
         /* 修改备注 */
         className('android.widget.TextView')
@@ -92,21 +97,18 @@ while (!isFoundEnd) {
           .drawingOrder(3)
           .findOne()
           .click()
-          log(friendInformation.name)
-
         className('android.widget.EditView')
           .depth(3)
           .drawingOrder(2)
           .waitFor()
-        
-        log(friendInformation.name)
         setText(friendInformation.name)
 
-        if (className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME)) {
-          className('android.view.ViewGroup')
-            .depth(3)
-            .findOne()
-            .click()
+        /* 原本有标签和没有标签的选择器不同，因此在这里合并这两种搜索方式 */
+        let tagEditor = 
+          className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME) ||
+          className('android.widget.TextView').depth(3).textContains('添加标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
+        if (tagEditor) {
+          tagEditor.click()
 
           className('android.widget.TextView')
             .depth(2)
@@ -144,12 +146,16 @@ while (!isFoundEnd) {
               .waitFor()
           })
 
-          /* 点击保存 */
-          className('android.widget.Button')
+          let saveButton = className('android.widget.Button')
             .depth(2)
             .text('保存')
             .findOne()
-            .click()
+          if (saveButton.clickable()) {
+            saveButton.click()
+          } else {
+            back()
+            sleep(250)
+          }
         }
 
         /* 修改更多信息 */
@@ -159,16 +165,18 @@ while (!isFoundEnd) {
           .findOne()
           .setText(friendInformation.moreInfo)
 
-        /* 点击完成 */
-        className('android.widget.Button')
+        let finishButton = className('android.widget.Button')
           .depth(2)
           .text('完成')
           .findOne()
-          .click()
+        if (finishButton.clickable()) {
+          finishButton.click()
+        } else {
+          back()
+          sleep(250)
+        }
       }
 
-      back()
-      sleep(250)
       back()
       sleep(250)
     })
