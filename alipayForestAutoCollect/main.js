@@ -47,13 +47,15 @@ app.startActivity({
   data: "alipayqr://platformapi/startapp?saId=60000002"
 })
 
-/* Autojs 打开支付宝提示窗 */
-packageName('com.eg.android.AlipayGphone')
-  .className('android.widget.Button')
-  .depth(1)
-  .textContains('打开')
-  .findOne()
-  .click()
+/* Autojs 打开支付宝提示窗，检测 10 秒钟，超过时间不再检测 */
+try {
+  packageName('com.eg.android.AlipayGphone')
+    .className('android.widget.Button')
+    .depth(1)
+    .textContains('打开')
+    .findOne(10000)
+    .click()
+} catch (e) {}
   
 /* 因为可以直接进入蚂蚁森林，所以下面这段多步骤进入蚂蚁森林的代码就没用了 */
 // /* 等待进入支付宝中 */
@@ -96,9 +98,9 @@ packageName('com.eg.android.AlipayGphone')
 //   .click()
 
 /* 等待进入蚂蚁森林 */
-className('android.widget.Button')
-  .depth(7)
-  .textContains('背包')
+className('android.widget.TextView')
+  .depth(1)
+  .text('蚂蚁森林')
   .waitFor()
   
 /* 通过识别能量球图像来点击相对应位置 */
