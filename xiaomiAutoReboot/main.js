@@ -32,7 +32,7 @@ powerDialog()
 waitForPackage('android')
 
 /* 选择不同的语句执行不同的操作 */
-sleep(250)
+sleep(1000)
 // click(712, 1288) // 关机
 // click(716, 896) // 静音模式
 click(368, 1296) // 重新启动
