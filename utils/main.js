@@ -59,16 +59,16 @@ function unlockDevice() {
 function lockDevice() {
   home()
 
-  if (!isNeedLockScreen) return
+  if (isNeedLockScreen) {
+    waitForPackage('com.miui.home')
   
-  waitForPackage('com.miui.home')
-
-  className('android.widget.TextView')
-    .text('锁屏')
-    .depth(3)
-    .findOne()
-    .parent()
-    .click()
+    className('android.widget.TextView')
+      .text('锁屏')
+      .depth(3)
+      .findOne()
+      .parent()
+      .click()
+  }
 
   /* 锁屏后一般情况下需要停止程序运行 */
   exit()
