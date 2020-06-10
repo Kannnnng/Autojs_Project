@@ -105,7 +105,10 @@ while (!isFoundEnd) {
           .findOne()
           .children()
           .forEach((child) => {
-            if (nextIsInfo) moreInfo = child.text()
+            if (nextIsInfo) {
+              nextIsInfo = false
+              moreInfo = child.text()
+            }
             if (child.text() === '描述') nextIsInfo = true
           })
 
