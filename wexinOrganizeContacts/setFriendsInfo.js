@@ -79,8 +79,11 @@ while (!isFoundEnd) {
 
       if (
         friendInformation &&
+        !friendInformation.isFinished &&
         className('android.widget.TextView').depth(4).textContains('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
       ) {
+        friendInformation.isFinished = true
+        
         className('android.widget.TextView')
           .depth(4)
           .textContains('标签')
