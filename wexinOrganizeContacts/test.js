@@ -335,37 +335,37 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
               
 //               click(parent.bounds().right - 2, parent.bounds().centerY())
 
-let parent = className('android.view.ViewGroup')
-            .depth(3)
-            .drawingOrder(1)
-            .findOne()
+// let parent = className('android.view.ViewGroup')
+//             .depth(3)
+//             .drawingOrder(1)
+//             .findOne()
             
-          /* 删除现有的标签 */
-          parent
-            .children()
-            .forEach((child) => {
-              if (child.className() !== 'android.widget.TextView') return
+//           /* 删除现有的标签 */
+//           parent
+//             .children()
+//             .forEach((child) => {
+//               if (child.className() !== 'android.widget.TextView') return
 
-              child.click()
-              sleep(100)
-              child.click()
-            })
+//               child.click()
+//               sleep(100)
+//               child.click()
+//             })
 
-          Array('123131', '23', '12313').forEach((tag) => {
-            log(tag)
-            setText(tag)
+//           Array('123131', '23', '12313').forEach((tag) => {
+//             log(tag)
+//             setText(tag)
 
-            className('android.widget.ListView')
-              .depth(2)
-              .waitFor()
+//             className('android.widget.ListView')
+//               .depth(2)
+//               .waitFor()
             
-            click(parent.bounds().right - 2, parent.bounds().centerY())
+//             click(parent.bounds().right - 2, parent.bounds().centerY())
 
-            className('android.view.ViewGroup')
-              .depth(3)
-              .drawingOrder(2)
-              .waitFor()
-          })
+//             className('android.view.ViewGroup')
+//               .depth(3)
+//               .drawingOrder(2)
+//               .waitFor()
+//           })
 
 toast('执行完毕')
 

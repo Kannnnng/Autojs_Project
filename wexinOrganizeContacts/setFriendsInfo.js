@@ -56,7 +56,7 @@ className('android.widget.TextView')
   .parent()
   .click()
 
-let friendsInformations = JSON.stringify(JSON.parse(files.read('./联系人信息.json')))
+let friendsInformations = JSON.parse(files.read('./联系人信息.json'))
 let isFoundEnd = false
 
 while (!isFoundEnd) {
@@ -97,11 +97,11 @@ while (!isFoundEnd) {
           .drawingOrder(3)
           .findOne()
           .click()
-        className('android.widget.EditView')
+        className('android.widget.EditText')
           .depth(3)
           .drawingOrder(2)
-          .waitFor()
-        setText(friendInformation.name)
+          .findOne()
+          .setText(friendInformation.name)
 
         /* 原本有标签和没有标签的选择器不同，因此在这里合并这两种搜索方式 */
         let tagEditor = 
@@ -132,6 +132,8 @@ while (!isFoundEnd) {
             })
 
           friendInformation.tags.forEach((tag) => {
+            if (!tag) return
+            
             setText(tag)
 
             className('android.widget.ListView')
@@ -150,7 +152,7 @@ while (!isFoundEnd) {
             .depth(2)
             .text('保存')
             .findOne()
-          if (saveButton.clickable()) {
+          if (saveButton.enabled()) {
             saveButton.click()
           } else {
             back()
@@ -158,27 +160,52 @@ while (!isFoundEnd) {
           }
         }
 
-        /* 修改更多信息 */
-        className('android.widget.EditView')
+        /* 修改更多个人信息 */
+        className('android.widget.TextView')
           .depth(3)
-          .drawingOrder(13)
+          .text('描述')
+          .waitFor()
+        let nextIsInfo = false
+        className('android.widget.ScrollView')
+          .depth(2)
+          .drawingOrder(1)
           .findOne()
-          .setText(friendInformation.moreInfo)
+          .children()
+          .forEach((child) => {
+            if (nextIsInfo) {
+              nextIsInfo = false
+
+              child.click()
+
+              /* 这里非常不稳定，因为不同版本的微信此处控件对应的 ID 不同 */
+              id('b0_')
+                .findOne()
+                .setText(friendInformation.moreInfo)
+              sleep(100)
+              back()
+            } else if (child.text() === '描述') nextIsInfo = true
+          })
 
         let finishButton = className('android.widget.Button')
           .depth(2)
           .text('完成')
           .findOne()
-        if (finishButton.clickable()) {
+        if (finishButton.enabled()) {
           finishButton.click()
         } else {
           back()
-          sleep(250)
         }
       }
 
+      className('android.widget.TextView')
+        .depth(4)
+        .text('发消息')
+        .waitFor()
       back()
-      sleep(250)
+      className('android.widget.TextView')
+        .depth(3)
+        .text('通讯录')
+        .waitFor()
     })
     
   className('android.widget.ListView')

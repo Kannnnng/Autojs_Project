@@ -1,1548 +1,2498 @@
 {
   "wxid_797c6812hdpw22": {
+    "id": "wxid_797c6812hdpw22",
     "name": "爸妈",
-    "tags": ["亲人"],
-    "moreInfo": "爸妈"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "xyf15253171072": {
+    "id": "xyf15253171072",
     "name": "艺芳同学",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "艺芳同学"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": "小丫头"
   },
   "baijialuo": {
+    "id": "baijialuo",
     "name": "柏嘉洛",
-    "tags": ["华中科技大学"],
-    "moreInfo": "柏嘉洛"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": "华中科技大学"
   },
   "BMCL8008208820": {
-    "name": "白玛次仁-浙江省台州市公安局",
-    "tags": ["工作相关"],
-    "moreInfo": "白玛次仁-浙江省台州市公安局"
+    "id": "BMCL8008208820",
+    "name": "白玛次仁",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "台州警校认识，工作在浙江省台州市公安局集聚区分局"
   },
   "b2468336321": {
+    "id": "b2468336321",
     "name": "包邦贵",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "包邦贵"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": "浙江省公安厅反恐怖总队"
   },
   "bifangzhou123": {
-    "name": "毕方舟-浙江省审计厅",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "毕方舟-浙江省审计厅"
+    "id": "bifangzhou123",
+    "name": "毕方舟",
+    "tags": ["工作", "老乡", "", ""],
+    "moreInfo": "浙江省审计厅"
   },
   "buyunde": {
+    "id": "buyunde",
     "name": "卜云德",
-    "tags": ["一组", "华中科技大学", "大学舍友", "工作相关"],
-    "moreInfo": "卜云德"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "Ckbeyourself": {
+    "id": "Ckbeyourself",
     "name": "蔡奎-知乎",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "蔡奎-知乎"
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": "知乎"
   },
   "cxz1006219023": {
+    "id": "cxz1006219023",
     "name": "蔡孝直",
-    "tags": ["一组", "华中科技大学", "工作相关"],
-    "moreInfo": "蔡孝直"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
-  "shaka0808": { "name": "曹阳", "tags": ["工作相关"], "moreInfo": "曹阳" },
+  "shaka0808": {
+    "id": "shaka0808",
+    "name": "曹阳",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
   "wxid_zq7wu4d2yesb21": {
+    "id": "wxid_zq7wu4d2yesb21",
     "name": "常帅",
-    "tags": ["一组", "华中科技大学"],
-    "moreInfo": "常帅"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "CGB_PLA_NAVY": {
+    "id": "CGB_PLA_NAVY",
     "name": "陈贵斌",
-    "tags": ["一组", "华中科技大学"],
-    "moreInfo": "陈贵斌"
+    "tags": ["本科", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "chengwq0928": {
+    "id": "chengwq0928",
     "name": "程文青老师",
-    "tags": ["一组", "华中科技大学"],
-    "moreInfo": "程文青老师"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": "老师"
   },
   "q32816422": {
+    "id": "q32816422",
     "name": "陈佳",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "陈佳"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
   "jqchen1989": {
-    "name": "陈军权-浙江华科校友会学长",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "陈军权-浙江华科校友会学长"
+    "id": "jqchen1989",
+    "name": "陈军权",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "浙江华科校友会学长"
   },
   "hello_chenjun": {
-    "name": "陈峻-浙江省人民政府办公厅大数据局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "陈峻-浙江省人民政府办公厅大数据局"
+    "id": "hello_chenjun",
+    "name": "陈峻",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省人民政府办公厅大数据局"
   },
   "ckp111222333": {
+    "id": "ckp111222333",
     "name": "陈坤鹏",
-    "tags": ["华中科技大学"],
-    "moreInfo": "陈坤鹏"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "CP0903140217": {
-    "name": "陈鹏-母校电信学院学弟",
-    "tags": ["一组", "华中科技大学"],
-    "moreInfo": "陈鹏-母校电信学院学弟"
+    "id": "CP0903140217",
+    "name": "陈鹏",
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": "母校电信学院学弟"
   },
-  "world_soldier": { "name": "陈世兵-华科校友", "tags": [], "moreInfo": "" },
+  "world_soldier": {
+    "id": "world_soldier",
+    "name": "陈世兵",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": ""
+  },
   "CTB1318429822": {
+    "id": "CTB1318429822",
     "name": "陈桃斌",
-    "tags": ["华中科技大学"],
-    "moreInfo": "陈桃斌"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
-  "wxid_8ko7y28j2eqt22": { "name": "陈威", "tags": [], "moreInfo": "" },
-  "Lucyalwayss": { "name": "陈文佳", "tags": [], "moreInfo": "" },
-  "snzwf_c": { "name": "陈曦", "tags": [], "moreInfo": "" },
+  "wxid_8ko7y28j2eqt22": {
+    "id": "wxid_8ko7y28j2eqt22",
+    "name": "陈威",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
+  "Lucyalwayss": {
+    "id": "Lucyalwayss",
+    "name": "陈文佳",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "snzwf_c": {
+    "id": "snzwf_c",
+    "name": "陈曦",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "summertree1893": {
-    "name": "陈夏彬-浙江省经济与信息化厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "陈夏彬-浙江省经济与信息化厅"
+    "id": "summertree1893",
+    "name": "陈夏彬",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省经济与信息化厅"
   },
   "c15380933107": {
-    "name": "陈晓敏-浙江省金融办",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "陈晓敏-浙江省金融办"
+    "id": "c15380933107",
+    "name": "陈晓敏",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省金融办"
   },
-  "chenxun870727": { "name": "陈勋", "tags": [], "moreInfo": "" },
+  "chenxun870727": {
+    "id": "chenxun870727",
+    "name": "陈勋",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
   "chenyiyu1994": {
-    "name": "陈奕宇-浙江省台州市公安局玉环分局",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "陈奕宇-浙江省台州市公安局玉环分局"
+    "id": "chenyiyu1994",
+    "name": "陈奕宇",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局玉环分局"
   },
   "God243698": {
+    "id": "God243698",
     "name": "陈瑜",
-    "tags": ["工作相关", "浙江省台州市公安局温岭分局"],
-    "moreInfo": "陈瑜"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局温岭分局"
   },
   "cyh18805156307": {
-    "name": "陈毓恒-浙江省司法厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "陈毓恒-浙江省司法厅"
+    "id": "cyh18805156307",
+    "name": "陈毓恒",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省司法厅"
   },
-  "cmh13090012006": { "name": "崔明航", "tags": [], "moreInfo": "" },
+  "cmh13090012006": {
+    "id": "cmh13090012006",
+    "name": "崔明航",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "Y18753601129": {
+    "id": "Y18753601129",
     "name": "大哥哥",
-    "tags": ["亲人", "工作相关"],
-    "moreInfo": "大哥哥"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
-  "dai1309569656": { "name": "代成名", "tags": [], "moreInfo": "" },
-  "yang2815183641": { "name": "代港", "tags": [], "moreInfo": "" },
-  "daishao1994": { "name": "代建国", "tags": [], "moreInfo": "" },
+  "dai1309569656": {
+    "id": "dai1309569656",
+    "name": "代成名",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "yang2815183641": {
+    "id": "yang2815183641",
+    "name": "代港",
+    "tags": ["小学", "", "", ""],
+    "moreInfo": ""
+  },
+  "daishao1994": {
+    "id": "daishao1994",
+    "name": "代建国",
+    "tags": ["小学", "", "", ""],
+    "moreInfo": ""
+  },
   "dai543717592": {
+    "id": "dai543717592",
     "name": "戴峥",
-    "tags": ["华中科技大学"],
-    "moreInfo": "戴峥"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "sdaqwgd": {
+    "id": "sdaqwgd",
     "name": "大姐夫",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "大姐夫"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "YLL15953626847": {
+    "id": "YLL15953626847",
     "name": "大姐姐",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "大姐姐"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "tfryy0824": {
-    "name": "大良造-法学院",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "大良造-法学院"
+    "id": "tfryy0824",
+    "name": "大良造",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "法学院同届毕业生"
   },
   "AAdandan123789": {
+    "id": "AAdandan123789",
     "name": "丹丹姐",
-    "tags": ["亲人", "工作相关"],
-    "moreInfo": "丹丹姐"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "dyq13770258789": {
-    "name": "邓银秋-浙江省发展改革委能源局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "邓银秋-浙江省发展改革委能源局"
+    "id": "dyq13770258789",
+    "name": "邓银秋",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省发展改革委能源局"
   },
   "koy9104": {
-    "name": "丁春彪-浙江省公安厅技侦总队",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "丁春彪-浙江省公安厅技侦总队"
+    "id": "koy9104",
+    "name": "丁春彪",
+    "tags": ["工作", "浙江省公安厅技侦总队", "", ""],
+    "moreInfo": "浙江省公安厅技侦总队"
   },
   "dingguangcheng": {
-    "name": "丁广诚-浙江省台州市公安局玉环分局",
-    "tags": ["工作相关"],
-    "moreInfo": "丁广诚-浙江省台州市公安局玉环分局"
+    "id": "dingguangcheng",
+    "name": "丁广诚",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局玉环分局"
   },
-  "dinghaii": { "name": "丁海", "tags": ["华中科技大学"], "moreInfo": "丁海" },
+  "dinghaii": {
+    "id": "dinghaii",
+    "name": "丁海",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "一起学车的同届毕业生"
+  },
   "DD__0203": {
+    "id": "DD__0203",
     "name": "丁如雪",
-    "tags": ["华中科技大学"],
-    "moreInfo": "丁如雪"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
-  "wxid_us292at1bwon21": { "name": "董一良", "tags": [], "moreInfo": "" },
+  "wxid_us292at1bwon21": {
+    "id": "wxid_us292at1bwon21",
+    "name": "董一良",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
   "dcy940125": {
-    "name": "段崇艳-浙江省金融监管局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "段崇艳-浙江省金融监管局"
+    "id": "dcy940125",
+    "name": "段崇艳",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省金融监管局"
   },
   "hi-dgw": {
-    "name": "杜国伟-浙江省发改委能源局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "杜国伟-浙江省发改委能源局"
+    "id": "hi-dgw",
+    "name": "杜国伟",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省发改委能源局"
   },
   "dupeng1160058696": {
+    "id": "dupeng1160058696",
     "name": "杜鹏",
-    "tags": ["华中科技大学"],
-    "moreInfo": "杜鹏"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "dunya241": {
-    "name": "顿雅-浙江省台州市公安局",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "顿雅-浙江省台州市公安局"
+    "id": "dunya241",
+    "name": "顿雅",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局"
   },
   "yanlijuan136163": {
+    "id": "yanlijuan136163",
     "name": "二姐",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "二姐"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "yututaotao": {
+    "id": "yututaotao",
     "name": "二姐夫",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "二姐夫"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "function-U-": {
+    "id": "function-U-",
     "name": "方妍",
-    "tags": ["华中科技大学"],
-    "moreInfo": "方妍"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "love543210123": {
-    "name": "樊海云-浙江省台州市三门县公安局派出所",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "樊海云-浙江省台州市三门县公安局派出所"
+    "id": "love543210123",
+    "name": "樊海云",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市温岭市公安局生物化学"
   },
   "ElaineTT520": {
-    "name": "范琳-中共浙江省委党校研究生马克思主义理论专业",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "范琳-中共浙江省委党校研究生马克思主义理论专业"
+    "id": "ElaineTT520",
+    "name": "范琳",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "中共浙江省委党校研究生马克思主义理论专业"
   },
   "fanruifanruifanrui": {
-    "name": "范瑞-浙江省司法厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "范瑞-浙江省司法厅"
+    "id": "fanruifanruifanrui",
+    "name": "范瑞",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省司法厅"
   },
   "Leroy_0502": {
+    "id": "Leroy_0502",
     "name": "冯凯东",
-    "tags": ["工作相关"],
-    "moreInfo": "冯凯东"
+    "tags": ["工作", "", "", ""],
+    "moreInfo": ""
   },
   "Hey___Mickey": {
+    "id": "Hey___Mickey",
     "name": "冯美琪",
-    "tags": [
-      "一组",
-      "浙江省公安厅选调小分队",
-      "浙江省直机关选调生",
-      "浙江台州警察培训学校",
-      "工作相关"
-    ],
-    "moreInfo": "冯美琪"
+    "tags": ["工作", "浙江省公安厅国保总队", "省厅选调小分队", ""],
+    "moreInfo": "浙江省公安厅国保总队"
   },
   "wxid_96srqrputuyd22": {
+    "id": "wxid_96srqrputuyd22",
     "name": "冯乐",
-    "tags": ["杭州中奥科技有限公司"],
-    "moreInfo": "冯乐"
+    "tags": ["工作", "中奥", "", ""],
+    "moreInfo": "杭州中奥科技有限公司"
   },
   "chenbaobaoguai": {
+    "id": "chenbaobaoguai",
     "name": "傅晨柠",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "傅晨柠"
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省地方金融监管局"
   },
   "fecuing": {
-    "name": "傅铁铮-浙江省经济与信息化厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "傅铁铮-浙江省经济与信息化厅"
+    "id": "fecuing",
+    "name": "傅铁铮",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省经济与信息化厅"
   },
   "pinocchio_25": {
-    "name": "付照-浙江省高级检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "付照-浙江省高级检察院"
+    "id": "pinocchio_25",
+    "name": "付照",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级检察院"
   },
-  "Jasmine1245870361": { "name": "高航", "tags": [], "moreInfo": "" },
+  "Jasmine1245870361": {
+    "id": "Jasmine1245870361",
+    "name": "高航",
+    "tags": ["高中", "挚友", "", ""],
+    "moreInfo": ""
+  },
   "U201313494": {
+    "id": "U201313494",
     "name": "高杨",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "高杨"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "gaozihan4": {
+    "id": "gaozihan4",
     "name": "高子涵",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "高子涵"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
-  "piaoyidai179091": { "name": "耿学亮-六一表叔", "tags": [], "moreInfo": "" },
-  "mia_0226": { "name": "龚萱", "tags": ["华中科技大学"], "moreInfo": "龚萱" },
+  "piaoyidai179091": {
+    "id": "piaoyidai179091",
+    "name": "耿学亮",
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": "六一表叔"
+  },
+  "mia_0226": {
+    "id": "mia_0226",
+    "name": "龚萱",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "wxid_3mvt5853szlf22": {
+    "id": "wxid_3mvt5853szlf22",
     "name": "郭春麟",
-    "tags": ["华中科技大学"],
-    "moreInfo": "郭春麟"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "sa522571774": {
-    "name": "郭林雄-浙江省纪委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "郭林雄-浙江省纪委"
+    "id": "sa522571774",
+    "name": "郭林雄",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委"
   },
   "x13210688788": {
+    "id": "x13210688788",
     "name": "国庆哥",
-    "tags": ["一组", "亲人", "工作相关"],
-    "moreInfo": "国庆哥"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "wxid_8553915539112": {
+    "id": "wxid_8553915539112",
     "name": "郭求是",
-    "tags": ["阿里巴巴", "工作相关"],
-    "moreInfo": "郭求是"
+    "tags": ["工作", "阿里巴巴", "", ""],
+    "moreInfo": ""
   },
-  "wxid_4fyl5bsukr8k21": { "name": "郭伟", "tags": [], "moreInfo": "" },
-  "rizenguo": { "name": "郭小帅-Rizen-微信复试官", "tags": [], "moreInfo": "" },
+  "wxid_4fyl5bsukr8k21": {
+    "id": "wxid_4fyl5bsukr8k21",
+    "name": "郭伟",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "rizenguo": {
+    "id": "rizenguo",
+    "name": "郭小帅",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "Rizen-微信复试官"
+  },
   "gss3210": {
-    "name": "谷莎莎-浙江省温州市公安局",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "谷莎莎-浙江省温州市公安局"
+    "id": "gss3210",
+    "name": "谷莎莎",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "浙江省温州市公安局"
   },
   "heky1107": {
-    "name": "贺开元-北京大学金融专业",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "贺开元-北京大学金融专业"
+    "id": "heky1107",
+    "name": "贺开元",
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": "北京大学金融专业"
   },
   "hkr19971127": {
+    "id": "hkr19971127",
     "name": "何可人",
-    "tags": ["工作相关", "浙江省台州市公安局玉环分局"],
-    "moreInfo": "何可人"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局玉环分局"
   },
   "pkuzwhsh": {
-    "name": "何诗航-浙江省委宣传部",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "何诗航-浙江省委宣传部"
+    "id": "pkuzwhsh",
+    "name": "何诗航",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省委宣传部"
   },
   "hryspa4488": {
-    "name": "黄彩朵-浙江省委党校班主任",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "黄彩朵-浙江省委党校班主任"
+    "id": "hryspa4488",
+    "name": "黄彩朵",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省委党校班主任"
   },
-  "huangjie976": { "name": "黄杰", "tags": [], "moreInfo": "" },
+  "huangjie976": {
+    "id": "huangjie976",
+    "name": "黄杰",
+    "tags": ["小学", "", "", ""],
+    "moreInfo": ""
+  },
   "hlk84247122": {
-    "name": "黄良凯-浙江省宁波市公安局奉化分局",
-    "tags": ["工作相关"],
-    "moreInfo": "黄良凯-浙江省宁波市公安局奉化分局"
+    "id": "hlk84247122",
+    "name": "黄良凯",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省宁波市公安局奉化分局"
   },
   "woaiqingxie-hnu": {
+    "id": "woaiqingxie-hnu",
     "name": "黄如歌",
-    "tags": ["华中科技大学"],
-    "moreInfo": "黄如歌"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
-  "hwf1982383111": { "name": "黄文飞", "tags": [], "moreInfo": "" },
-  "hyl15169567687": { "name": "黄永录", "tags": [], "moreInfo": "" },
+  "hwf1982383111": {
+    "id": "hwf1982383111",
+    "name": "黄文飞",
+    "tags": ["小学", "", "", ""],
+    "moreInfo": ""
+  },
+  "hyl15169567687": {
+    "id": "hyl15169567687",
+    "name": "黄永录",
+    "tags": ["老乡", "", "", ""],
+    "moreInfo": ""
+  },
   "huangaudi": {
+    "id": "huangaudi",
     "name": "黄乐祥",
-    "tags": ["华中科技大学"],
-    "moreInfo": "黄乐祥"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "hyt_echojose": {
+    "id": "hyt_echojose",
     "name": "黄玉甜",
-    "tags": ["华中科技大学"],
-    "moreInfo": "黄玉甜"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "pikaqiudepipiniao": {
+    "id": "pikaqiudepipiniao",
     "name": "黄子廷",
-    "tags": ["华中科技大学"],
-    "moreInfo": "黄子廷"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "huchangwei123": {
+    "id": "huchangwei123",
     "name": "胡昌伟",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "胡昌伟"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": "浙江省公安厅反恐怖总队"
   },
   "hhhhhh5757": {
-    "name": "胡琪-浙江省台州市公安局临海分局",
-    "tags": ["工作相关"],
-    "moreInfo": "胡琪-浙江省台州市公安局临海分局"
+    "id": "hhhhhh5757",
+    "name": "胡琪",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局临海分局"
   },
   "hudidit": {
+    "id": "hudidit",
     "name": "胡钺",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "胡钺"
+    "tags": ["阿里巴巴", "", "", ""],
+    "moreInfo": ""
   },
   "j781185131": {
-    "name": "贾昊东-杭州市富阳城管",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "贾昊东-杭州市富阳城管"
+    "id": "j781185131",
+    "name": "贾昊东",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "杭州市富阳城管"
   },
-  "lin--yv": { "name": "姜博", "tags": ["华中科技大学"], "moreInfo": "姜博" },
-  "jll198861": { "name": "姜黎-华科马院博士", "tags": [], "moreInfo": "" },
+  "lin--yv": {
+    "id": "lin--yv",
+    "name": "姜博",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "jll198861": {
+    "id": "jll198861",
+    "name": "姜黎",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "华科马院博士"
+  },
   "huaerzhanfangchana": {
-    "name": "姜黎黎-软件学院",
-    "tags": ["一组", "华中科技大学"],
-    "moreInfo": "姜黎黎-软件学院"
+    "id": "huaerzhanfangchana",
+    "name": "姜黎黎",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "软件学院，一个经常咨询选调问题的学妹"
   },
   "wxid_gxbzni6541pd22": {
+    "id": "wxid_gxbzni6541pd22",
     "name": "蒋梦怡",
-    "tags": ["浙江省台州市公安局三门分局"],
-    "moreInfo": "蒋梦怡"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局三门分局"
   },
   "jnn1014422791": {
+    "id": "jnn1014422791",
     "name": "江妮娜",
-    "tags": ["华中科技大学"],
-    "moreInfo": "江妮娜"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "jyt941212": {
+    "id": "jyt941212",
     "name": "姜云天",
-    "tags": ["一组", "阿里巴巴", "工作相关"],
-    "moreInfo": "姜云天"
+    "tags": ["工作", "阿里巴巴", "", ""],
+    "moreInfo": ""
   },
   "wxid_k3d7u5ursq3121": {
+    "id": "wxid_k3d7u5ursq3121",
     "name": "江子山",
-    "tags": ["华中科技大学"],
-    "moreInfo": "江子山"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "guozhi519315": {
-    "name": "金健-浙江省台州市人民警察培训学校-13819688571",
-    "tags": ["工作相关"],
-    "moreInfo": "金健-浙江省台州市人民警察培训学校-13819688571"
+    "id": "guozhi519315",
+    "name": "金健",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市人民警察培训学校-13819688571"
   },
   "pigprincejyx": {
-    "name": "金玉笑-浙江省发展改革委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "金玉笑-浙江省发展改革委"
+    "id": "pigprincejyx",
+    "name": "金玉笑",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省发展改革委"
   },
   "jslfszf": {
-    "name": "吉善雷-浙江省纪委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "吉善雷-浙江省纪委"
+    "id": "jslfszf",
+    "name": "吉善雷",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委"
   },
   "youjuzi_rjm": {
+    "id": "youjuzi_rjm",
     "name": "菊梅学姐",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "菊梅学姐"
+    "tags": ["阿里巴巴", "", "", ""],
+    "moreInfo": ""
   },
-  "jqy754337732": { "name": "鞠秋雨", "tags": [], "moreInfo": "" },
-  "jyh20030404": { "name": "鞠颖慧老师", "tags": [], "moreInfo": "" },
+  "jqy754337732": {
+    "id": "jqy754337732",
+    "name": "鞠秋雨",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "jyh20030404": {
+    "id": "jyh20030404",
+    "name": "鞠颖慧老师",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": "最喜欢的物理老师"
+  },
   "kqz0808": {
+    "id": "kqz0808",
     "name": "孔琼卓",
-    "tags": ["华中科技大学"],
-    "moreInfo": "孔琼卓"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "KSC_GOGOGO": {
+    "id": "KSC_GOGOGO",
     "name": "孔小葱",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "孔小葱"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "koala-BlueBaBy": {
+    "id": "koala-BlueBaBy",
     "name": "雷荣",
-    "tags": ["杭州中奥科技有限公司"],
-    "moreInfo": "雷荣"
+    "tags": ["工作", "中奥", "", ""],
+    "moreInfo": "杭州中奥科技有限公司"
   },
   "Rebecca_rio": {
-    "name": "梁博-浙江省高级人民检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "梁博-浙江省高级人民检察院"
+    "id": "Rebecca_rio",
+    "name": "梁博",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民检察院"
   },
   "liang1098320356": {
+    "id": "liang1098320356",
     "name": "梁迪斋",
-    "tags": ["华中科技大学"],
-    "moreInfo": "梁迪斋"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
-  "Jie-WChat": { "name": "梁洁", "tags": ["华中科技大学"], "moreInfo": "梁洁" },
+  "Jie-WChat": {
+    "id": "Jie-WChat",
+    "name": "梁洁",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "beastlian": {
+    "id": "beastlian",
     "name": "连振宇",
-    "tags": ["华中科技大学"],
-    "moreInfo": "连振宇"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "ayinian698": {
+    "id": "ayinian698",
     "name": "连振宇",
-    "tags": ["华中科技大学"],
-    "moreInfo": "连振宇"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "wxid_6557065570111": {
-    "name": "李长青-浙江省台州市人民警察培训学校副校长",
-    "tags": ["工作相关"],
-    "moreInfo": "李长青-浙江省台州市人民警察培训学校副校长"
+    "id": "wxid_6557065570111",
+    "name": "李长青",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市人民警察培训学校副校长"
   },
   "a2578320756": {
-    "name": "李枫-前外交部面试学长",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "李枫-前外交部面试学长"
+    "id": "a2578320756",
+    "name": "李枫",
+    "tags": ["外交部", "", "", ""],
+    "moreInfo": "前外交部面试学长"
   },
   "prince19900201": {
-    "name": "李鸿鹏-浙江省台州市温岭市公安局",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "李鸿鹏-浙江省台州市温岭市公安局"
+    "id": "prince19900201",
+    "name": "李鸿鹏",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市温岭市公安局"
   },
-  "lihui774398": { "name": "李慧-潍柴动力", "tags": [], "moreInfo": "" },
+  "lihui774398": {
+    "id": "lihui774398",
+    "name": "李慧",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "潍柴动力，一个很好的面试官姐姐"
+  },
   "ljt245032340": {
+    "id": "ljt245032340",
     "name": "李江腾",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "李江腾"
+    "tags": ["硕士", "陌生人", "", ""],
+    "moreInfo": ""
   },
   "joe807274798": {
-    "name": "李佳宁-宁波海事法院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "李佳宁-宁波海事法院"
+    "id": "joe807274798",
+    "name": "李佳宁",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "宁波海事法院"
   },
-  "lijing237": { "name": "李静", "tags": ["工作相关"], "moreInfo": "李静" },
+  "lijing237": {
+    "id": "lijing237",
+    "name": "李静",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省宁波市强制戒毒所"
+  },
   "LiJiaJia0817": {
-    "name": "李婧-美团HR",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "李婧-美团HR"
+    "id": "LiJiaJia0817",
+    "name": "李婧",
+    "tags": ["硕士", "美团", "", ""],
+    "moreInfo": "美团HR"
   },
   "yxylkb1314": {
+    "id": "yxylkb1314",
     "name": "李军",
-    "tags": ["华中科技大学"],
-    "moreInfo": "李军"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
-  "L838482627": { "name": "李坤", "tags": [], "moreInfo": "" },
+  "L838482627": {
+    "id": "L838482627",
+    "name": "李坤",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "cassiopeia-qingqing": {
-    "name": "林冰茹-浙江省高级检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "林冰茹-浙江省高级检察院"
+    "id": "cassiopeia-qingqing",
+    "name": "林冰茹",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级检察院"
   },
   "lcylovewwy": {
+    "id": "lcylovewwy",
     "name": "凌春园",
-    "tags": ["浙江省湖州市公安局", "反恐怖支队", "副支队长"],
-    "moreInfo": "凌春园"
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "浙江省湖州市公安局反恐怖支队副支队长"
   },
   "zhulingzi001": {
-    "name": "灵珠紫-腾讯HR",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "灵珠紫-腾讯HR"
+    "id": "zhulingzi001",
+    "name": "灵珠紫",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "腾讯HR"
   },
   "luna00006": {
+    "id": "luna00006",
     "name": "林露",
-    "tags": [
-      "一组",
-      "浙江省公安厅选调小分队",
-      "浙江省直机关选调生",
-      "浙江台州警察培训学校",
-      "工作相关"
-    ],
-    "moreInfo": "林露"
+    "tags": ["工作", "省厅选调小分队", "浙江省公安厅科技信息化局", ""],
+    "moreInfo": ""
   },
-  "ls296508249": { "name": "林圣", "tags": [], "moreInfo": "" },
+  "ls296508249": {
+    "id": "ls296508249",
+    "name": "林圣",
+    "tags": ["很少联系", "", "", ""],
+    "moreInfo": "在外交部面试的时候认识的一个学弟"
+  },
   "wxid_xa7s12kskjgz21": {
+    "id": "wxid_xa7s12kskjgz21",
     "name": "李鹏",
-    "tags": ["华中科技大学"],
-    "moreInfo": "李鹏"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "liqi13476103951": {
+    "id": "liqi13476103951",
     "name": "李琪",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "李琪"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "bluesky-Sofia": {
-    "name": "李茜-浙江华科校友学姐",
-    "tags": ["工作相关"],
-    "moreInfo": "李茜-浙江华科校友学姐"
+    "id": "bluesky-Sofia",
+    "name": "李茜",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "浙江华科校友学姐"
   },
   "Nemo-0404": {
-    "name": "李庆龙-浙江华科校友会学长",
-    "tags": ["工作相关"],
-    "moreInfo": "李庆龙-浙江华科校友会学长"
+    "id": "Nemo-0404",
+    "name": "李庆龙",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": "浙江华科校友会学长"
   },
-  "lynate123": { "name": "李仁洁", "tags": [], "moreInfo": "" },
+  "lynate123": {
+    "id": "lynate123",
+    "name": "李仁洁",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "liuhao-leo": {
+    "id": "liuhao-leo",
     "name": "刘昊",
-    "tags": ["一组", "华中科技大学", "大学舍友", "工作相关"],
-    "moreInfo": "刘昊"
+    "tags": ["本科", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
-  "liuhuixin00": { "name": "刘慧欣", "tags": [], "moreInfo": "" },
+  "liuhuixin00": {
+    "id": "liuhuixin00",
+    "name": "刘慧欣",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "liujialiangstyle": {
-    "name": "刘佳良-浙江省第三监狱",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "刘佳良-浙江省第三监狱"
+    "id": "liujialiangstyle",
+    "name": "刘佳良",
+    "tags": ["工作", "老乡", "", ""],
+    "moreInfo": "浙江省第三监狱"
   },
-  "LIUJH3317": { "name": "刘建辉", "tags": [], "moreInfo": "" },
-  "shibing2014": { "name": "刘教练-绅宝驾校", "tags": [], "moreInfo": "" },
+  "LIUJH3317": {
+    "id": "LIUJH3317",
+    "name": "刘建辉",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "shibing2014": {
+    "id": "shibing2014",
+    "name": "刘教练",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "绅宝驾校教练"
+  },
   "ting96_jj": {
+    "id": "ting96_jj",
     "name": "刘娟町",
-    "tags": ["华中科技大学"],
-    "moreInfo": "刘娟町"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "nickcliu": {
+    "id": "nickcliu",
     "name": "刘侃学长",
-    "tags": ["华中科技大学"],
-    "moreInfo": "刘侃学长"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
-  "lqyh1529135973": { "name": "刘琪", "tags": [], "moreInfo": "" },
-  "lqq694778188": { "name": "刘倩倩", "tags": [], "moreInfo": "" },
+  "lqyh1529135973": {
+    "id": "lqyh1529135973",
+    "name": "刘琪",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "lqq694778188": {
+    "id": "lqq694778188",
+    "name": "刘倩倩",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "sissiniu": {
+    "id": "sissiniu",
     "name": "刘思辅导员",
-    "tags": ["一组", "华中科技大学", "工作相关"],
-    "moreInfo": "刘思辅导员"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "liu1995sheng": {
+    "id": "liu1995sheng",
     "name": "刘盛",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "刘盛"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "wliumail": {
+    "id": "wliumail",
     "name": "刘威老师",
-    "tags": ["华中科技大学"],
-    "moreInfo": "刘威老师"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "lwtao333": {
+    "id": "lwtao333",
     "name": "刘文涛",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "刘文涛"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "louiswt599": {
+    "id": "louiswt599",
     "name": "刘文同",
-    "tags": ["华中科技大学"],
-    "moreInfo": "刘文同"
+    "tags": ["本科", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "lwz_neoye": {
+    "id": "lwz_neoye",
     "name": "刘文哲",
-    "tags": ["华中科技大学"],
-    "moreInfo": "刘文哲"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
-  "xiaoxiangke92": { "name": "刘晓娟学姐-外交部", "tags": [], "moreInfo": "" },
+  "xiaoxiangke92": {
+    "id": "xiaoxiangke92",
+    "name": "刘晓娟学姐",
+    "tags": ["外交部", "校友", "", ""],
+    "moreInfo": "外交部"
+  },
   "qhlxm6688": {
+    "id": "qhlxm6688",
     "name": "刘小蒙",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "刘小蒙"
+    "tags": ["初中", "", "", ""],
+    "moreInfo": ""
   },
   "liuxin754605": {
+    "id": "liuxin754605",
     "name": "刘馨",
-    "tags": ["华中科技大学"],
-    "moreInfo": "刘馨"
+    "tags": ["硕士", "华中科技大学", "校友", ""],
+    "moreInfo": ""
   },
   "zhiranwenxin": {
-    "name": "刘新然-浙江省高级人民检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "刘新然-浙江省高级人民检察院"
+    "id": "zhiranwenxin",
+    "name": "刘新然",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民检察院"
   },
   "wxid_9wcdicsug3c521": {
+    "id": "wxid_9wcdicsug3c521",
     "name": "柳颖政委",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "柳颖政委"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": "总队领导，政委"
   },
   "liwanting0404": {
-    "name": "李婉婷-宁波海事法院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "李婉婷-宁波海事法院"
+    "id": "liwanting0404",
+    "name": "李婉婷",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "宁波海事法院"
   },
   "Wx1010859235": {
+    "id": "Wx1010859235",
     "name": "李伟东",
-    "tags": ["华中科技大学"],
-    "moreInfo": "李伟东"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
   "zhengxiuqizhi": {
-    "name": "李伟杰-浙江省绍兴市选调生",
-    "tags": ["一组", "华中科技大学", "工作相关"],
-    "moreInfo": "李伟杰-浙江省绍兴市选调生"
+    "id": "zhengxiuqizhi",
+    "name": "李伟杰",
+    "tags": ["工作", "华中科技大学", "", ""],
+    "moreInfo": "浙江省绍兴市选调生"
   },
   "lwt5290": {
-    "name": "李文涛-深圳华为",
-    "tags": ["华中科技大学", "警校事务不想看到"],
-    "moreInfo": "李文涛-深圳华为"
+    "id": "lwt5290",
+    "name": "李文涛",
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": "深圳华为"
   },
   "U200812984": {
+    "id": "U200812984",
     "name": "李曦",
-    "tags": ["华中科技大学"],
-    "moreInfo": "李曦"
+    "tags": ["本科", "华中科技大学", "", ""],
+    "moreInfo": "本科学生班主任"
   },
   "quee3648": {
-    "name": "李晓军-13级建规学院-浙江省招标办",
-    "tags": ["工作相关"],
-    "moreInfo": "李晓军-13级建规学院-浙江省招标办"
+    "id": "quee3648",
+    "name": "李晓军",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "13级建规学院-浙江省招标办"
   },
-  "lang8239359": { "name": "李小龙", "tags": [], "moreInfo": "" },
-  "wxid_7aeip5zi18rs22": {
-    "name": "李学标",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "李学标"
-  },
-  "TraumYI": { "name": "李毅", "tags": [], "moreInfo": "" },
-  "lyle8341": {
-    "name": "李玉龙-杭州中奥信息技术有限公司",
-    "tags": ["工作相关"],
-    "moreInfo": "李玉龙-杭州中奥信息技术有限公司"
-  },
-  "wxid_35frhoay373y22": { "name": "李昱琦", "tags": [], "moreInfo": "" },
-  "lzx178141838": {
-    "name": "李泽贤-外交部外交一局",
-    "tags": [],
+  "lang8239359": {
+    "id": "lang8239359",
+    "name": "李小龙",
+    "tags": ["高中", "", "", ""],
     "moreInfo": ""
+  },
+  "wxid_7aeip5zi18rs22": {
+    "id": "wxid_7aeip5zi18rs22",
+    "name": "李学标",
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": "总队调研员"
+  },
+  "TraumYI": {
+    "id": "TraumYI",
+    "name": "李毅",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "lyle8341": {
+    "id": "lyle8341",
+    "name": "李玉龙",
+    "tags": ["工作", "中奥", "", ""],
+    "moreInfo": "杭州中奥信息技术有限公司"
+  },
+  "wxid_35frhoay373y22": {
+    "id": "wxid_35frhoay373y22",
+    "name": "李昱琦",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "lzx178141838": {
+    "id": "lzx178141838",
+    "name": "李泽贤",
+    "tags": ["外交部", "", "", ""],
+    "moreInfo": "一起考外交部的同学，现在在外交一局工作"
   },
   "lzb_1214": {
+    "id": "lzb_1214",
     "name": "李志斌",
-    "tags": ["华中科技大学"],
-    "moreInfo": "李志斌"
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "hust_lzs": {
-    "name": "李至善-华科15级船舶学弟",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "李至善-华科15级船舶学弟"
+    "id": "hust_lzs",
+    "name": "李至善",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "华科15级船舶学弟，浙大读研"
   },
   "lizhiwang001": {
-    "name": "李志旺-05级电信学长-杭州诺基亚销售",
-    "tags": ["工作相关"],
-    "moreInfo": "李志旺-05级电信学长-杭州诺基亚销售"
+    "id": "lizhiwang001",
+    "name": "李志旺",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "05级电信学长-杭州诺基亚销售"
   },
-  "Macro363784838": { "name": "李志雄-绅宝驾校", "tags": [], "moreInfo": "" },
+  "Macro363784838": {
+    "id": "Macro363784838",
+    "name": "李志雄",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "绅宝驾校，这个人一般般"
+  },
   "Vxp4396": {
+    "id": "Vxp4396",
     "name": "李祖韩",
-    "tags": ["华中科技大学"],
-    "moreInfo": "李祖韩"
+    "tags": ["高中", "本科", "华中科技大学", ""],
+    "moreInfo": ""
   },
   "longfeng-1208": {
-    "name": "龙凤-浙江省高级人民检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "龙凤-浙江省高级人民检察院"
+    "id": "longfeng-1208",
+    "name": "龙凤",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民检察院"
   },
   "Louzhengkunxz": {
+    "id": "Louzhengkunxz",
     "name": "娄正坤",
-    "tags": ["一组", "华中科技大学", "工作相关"],
-    "moreInfo": "娄正坤"
+    "tags": ["工作", "华中科技大学", "校友", ""],
+    "moreInfo": "浙江省嘉兴市经信局"
   },
-  "lc04251995": { "name": "鹿超", "tags": [], "moreInfo": "" },
+  "lc04251995": {
+    "id": "lc04251995",
+    "name": "鹿超",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": "晓凯妹妹"
+  },
   "Lugegelexi": {
-    "name": "陆格格-浙江省国资委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "陆格格-浙江省国资委"
+    "id": "Lugegelexi",
+    "name": "陆格格",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省国资委"
   },
   "cuplljk0794": {
-    "name": "芦金科-浙江省纪委驻省生态环境厅纪检监察组",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "芦金科-浙江省纪委驻省生态环境厅纪检监察组"
+    "id": "cuplljk0794",
+    "name": "芦金科",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委驻省生态环境厅纪检监察组"
   },
   "Ljb19890218": {
+    "id": "Ljb19890218",
     "name": "陆军斌",
-    "tags": ["浙江台州警察培训学校"],
-    "moreInfo": "陆军斌"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
   },
   "LUO_HONG_XUN": {
-    "name": "罗东东-浙江省宁波市警校",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "罗东东-浙江省宁波市警校"
+    "id": "LUO_HONG_XUN",
+    "name": "罗东东",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省宁波市警校"
   },
   "LLT_77": {
-    "name": "罗凌涛-华科选调生发展协会",
-    "tags": ["华中科技大学"],
-    "moreInfo": "罗凌涛-华科选调生发展协会"
+    "id": "LLT_77",
+    "name": "罗凌涛",
+    "tags": ["硕士", "华中科技大学", "", ""],
+    "moreInfo": "华科选调生发展协会"
   },
   "Shuman_94": {
+    "id": "Shuman_94",
     "name": "罗淑曼",
-    "tags": ["华中科技大学"],
-    "moreInfo": "罗淑曼"
+    "tags": ["本科", "华中科技大学", "", ""],
+    "moreInfo": ""
   },
   "A6826998": {
-    "name": "罗淞文-浙江大华股份有限公司",
-    "tags": [],
-    "moreInfo": ""
+    "id": "A6826998",
+    "name": "罗淞文",
+    "tags": ["工作", "大华", "", ""],
+    "moreInfo": "浙江大华股份有限公司"
   },
   "Lm70435350": {
-    "name": "卢伟-浙江台州特警教官",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "卢伟-浙江台州特警教官"
+    "id": "Lm70435350",
+    "name": "卢伟",
+    "tags": ["工作", "台州警校", "老乡", ""],
+    "moreInfo": "浙江台州特警教官"
   },
-  "ItGirlWind": { "name": "绿子", "tags": [], "moreInfo": "" },
+  "ItGirlWind": {
+    "id": "ItGirlWind",
+    "name": "绿子",
+    "tags": ["很少联系", "", "", ""],
+    "moreInfo": ""
+  },
   "pppppdm918": {
+    "id": "pppppdm918",
     "name": "马飞",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "马飞"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "mmr13006370818": { "name": "马明瑞", "tags": [], "moreInfo": "" },
+  "mmr13006370818": {
+    "id": "mmr13006370818",
+    "name": "马明瑞",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "mmcai2016": {
+    "id": "mmcai2016",
     "name": "毛诚乾",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "毛诚乾"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
   "Mao_Chenyang": {
-    "name": "毛晨炀-浙江省大数据局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "毛晨炀-浙江省大数据局"
+    "id": "Mao_Chenyang",
+    "name": "毛晨炀",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省大数据局"
   },
   "GZQ1223527079": {
+    "id": "GZQ1223527079",
     "name": "髦爷",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "髦爷"
+    "tags": ["初中", "", "", ""],
+    "moreInfo": ""
   },
-  "wxid_s88ytwtaklvp21": { "name": "马潇", "tags": [], "moreInfo": "" },
-  "mx880280": { "name": "马潇", "tags": [], "moreInfo": "" },
-  "NAVY-mzp0729": { "name": "马志鹏", "tags": [], "moreInfo": "" },
+  "wxid_s88ytwtaklvp21": {
+    "id": "wxid_s88ytwtaklvp21",
+    "name": "马潇",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "mx880280": {
+    "id": "mx880280",
+    "name": "马潇",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "NAVY-mzp0729": {
+    "id": "NAVY-mzp0729",
+    "name": "马志鹏",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "LIANFEISHALUN": {
+    "id": "LIANFEISHALUN",
     "name": "梅阳",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "梅阳"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
   "aaa4861314": {
-    "name": "孟遥-浙江省高级人民法院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "孟遥-浙江省高级人民法院"
+    "id": "aaa4861314",
+    "name": "孟遥",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民法院"
   },
-  "MZP1012": { "name": "莫中平", "tags": [], "moreInfo": "" },
-  "U201313791": { "name": "木叶", "tags": [], "moreInfo": "" },
-  "Y330733744": { "name": "娜娜姐", "tags": ["亲人"], "moreInfo": "娜娜姐" },
-  "yffcgg": { "name": "潘冬冬", "tags": [], "moreInfo": "" },
+  "MZP1012": {
+    "id": "MZP1012",
+    "name": "莫中平",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "Y330733744": {
+    "id": "Y330733744",
+    "name": "娜娜姐",
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
+  },
+  "yffcgg": {
+    "id": "yffcgg",
+    "name": "潘冬冬",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "pxdejiayuan": {
+    "id": "pxdejiayuan",
     "name": "庞旭",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "庞旭"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
-  "P1293575689": { "name": "潘静文", "tags": [], "moreInfo": "" },
-  "colorfulsin": { "name": "潘玉婷-华科电信学妹", "tags": [], "moreInfo": "" },
-  "GOAT60": { "name": "彭丁巍-研究生就业指导中心", "tags": [], "moreInfo": "" },
-  "pmin_yni99": { "name": "彭敏学姐", "tags": [], "moreInfo": "" },
-  "ZEG0317": { "name": "钱途光明的二狗子", "tags": [], "moreInfo": "" },
-  "UndefinedStyle": {
-    "name": "谦行学长-阿里巴巴",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "谦行学长-阿里巴巴"
+  "P1293575689": {
+    "id": "P1293575689",
+    "name": "潘静文",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "colorfulsin": {
+    "id": "colorfulsin",
+    "name": "潘玉婷",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "华科电信学妹"
+  },
+  "GOAT60": {
+    "id": "GOAT60",
+    "name": "彭丁巍",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "研究生就业指导中心"
+  },
+  "pmin_yni99": {
+    "id": "pmin_yni99",
+    "name": "彭敏学姐",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "ZEG0317": {
+    "id": "ZEG0317",
+    "name": "钱途光明的二狗子",
+    "tags": ["很少联系", "", "", ""],
+    "moreInfo": ""
+  },
+  "Style": {
+    "id": "Style",
+    "name": "谦行学长",
+    "tags": ["阿里巴巴", "工作", "", ""],
+    "moreInfo": "阿里巴巴"
   },
   "q28930178": {
-    "name": "仇晨悦-国家数据中心浙江分中心对接人",
-    "tags": [],
-    "moreInfo": ""
+    "id": "q28930178",
+    "name": "仇晨悦",
+    "tags": ["工作", "很少联系", "", ""],
+    "moreInfo": "国家数据中心浙江分中心对接人"
   },
   "TX_Qiu": {
-    "name": "裘叶城-浙江省国资委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "裘叶城-浙江省国资委"
+    "id": "TX_Qiu",
+    "name": "裘叶城",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省国资委"
   },
-  "Hust1994": { "name": "屈俊", "tags": [], "moreInfo": "" },
+  "Hust1994": {
+    "id": "Hust1994",
+    "name": "屈俊",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "qukai01": {
+    "id": "qukai01",
     "name": "曲锴",
-    "tags": ["一组", "大学舍友", "工作相关"],
-    "moreInfo": "曲锴"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
-  "qkcnzh": { "name": "曲凯朝", "tags": [], "moreInfo": "" },
+  "qkcnzh": {
+    "id": "qkcnzh",
+    "name": "曲凯朝",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "qu503843998": {
+    "id": "qu503843998",
     "name": "瞿晓晔",
-    "tags": ["一组", "大学舍友", "工作相关"],
-    "moreInfo": "瞿晓晔"
+    "tags": ["本科", "挚友", "", ""],
+    "moreInfo": ""
   },
-  "mac_rao": { "name": "饶小力-实验室前端学弟", "tags": [], "moreInfo": "" },
-  "ai_couer_xt": { "name": "任柄安", "tags": [], "moreInfo": "" },
-  "rxs112358": { "name": "任行胜", "tags": ["工作相关"], "moreInfo": "任行胜" },
+  "mac_rao": {
+    "id": "mac_rao",
+    "name": "饶小力",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "实验室前端学弟"
+  },
+  "ai_couer_xt": {
+    "id": "ai_couer_xt",
+    "name": "任柄安",
+    "tags": ["朋友", "", "", ""],
+    "moreInfo": "一起考山东电网"
+  },
+  "rxs112358": {
+    "id": "rxs112358",
+    "name": "任行胜",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": ""
+  },
   "yanliping3": {
+    "id": "yanliping3",
     "name": "三姐",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "三姐"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "wang636959": {
+    "id": "wang636959",
     "name": "三姐夫",
-    "tags": ["一组", "亲人", "家人", "工作相关"],
-    "moreInfo": "三姐夫"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "wangjie-two": {
-    "name": "珊若学姐-阿里巴巴",
-    "tags": ["阿里巴巴"],
-    "moreInfo": "珊若学姐-阿里巴巴"
+    "id": "wangjie-two",
+    "name": "珊若学姐",
+    "tags": ["阿里巴巴", "工作", "", ""],
+    "moreInfo": "阿里巴巴"
   },
-  "sbf1196455199": { "name": "邵斌峰", "tags": [], "moreInfo": "" },
-  "sqavalon": { "name": "邵琦-浙江省舟山市公安局", "tags": [], "moreInfo": "" },
-  "Shawn95Williams": { "name": "沙翔", "tags": [], "moreInfo": "" },
-  "shenchenhs": { "name": "申晨-国网山东电力公司", "tags": [], "moreInfo": "" },
-  "ljj18770052738": {
-    "name": "沈疏桐-阿里巴巴西溪园区机器学习",
-    "tags": [],
+  "sbf1196455199": {
+    "id": "sbf1196455199",
+    "name": "邵斌峰",
+    "tags": ["硕士", "", "", ""],
     "moreInfo": ""
+  },
+  "sqavalon": {
+    "id": "sqavalon",
+    "name": "邵琦",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省舟山市公安局"
+  },
+  "Shawn95Williams": {
+    "id": "Shawn95Williams",
+    "name": "沙翔",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "shenchenhs": {
+    "id": "shenchenhs",
+    "name": "申晨",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "国网山东电力公司"
+  },
+  "ljj18770052738": {
+    "id": "ljj18770052738",
+    "name": "沈疏桐",
+    "tags": ["很少联系", "阿里巴巴", "", ""],
+    "moreInfo": "阿里巴巴西溪园区机器学习"
   },
   "syjsyj25": {
-    "name": "沈彦君-浙江省高级人民法院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "沈彦君-浙江省高级人民法院"
+    "id": "syjsyj25",
+    "name": "沈彦君",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民法院"
   },
   "shiwenbo-1997": {
+    "id": "shiwenbo-1997",
     "name": "石文博",
-    "tags": ["阿里巴巴"],
-    "moreInfo": "石文博"
-  },
-  "savase19941117": { "name": "史煜华", "tags": [], "moreInfo": "" },
-  "s18482187504": { "name": "宋建霖", "tags": [], "moreInfo": "" },
-  "wxid_xhbpzxb744io21": { "name": "宋雨", "tags": [], "moreInfo": "" },
-  "specyci": { "name": "Special-微信小程序团队", "tags": [], "moreInfo": "" },
-  "Muniao0": {
-    "name": "孙炳成",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "孙炳成"
-  },
-  "scq709391191": { "name": "孙辰晴", "tags": [], "moreInfo": "" },
-  "yueguan002": {
-    "name": "孙春雷-西湖大学讲师",
-    "tags": ["工作相关"],
-    "moreInfo": "孙春雷-西湖大学讲师"
-  },
-  "sunguoqi433x": { "name": "孙国奇", "tags": ["一组"], "moreInfo": "孙国奇" },
-  "sjc19950207": { "name": "孙建才", "tags": [], "moreInfo": "" },
-  "HEREICOMING": {
-    "name": "孙铭谦-计算机学院学弟",
-    "tags": [],
+    "tags": ["阿里巴巴", "工作", "", ""],
     "moreInfo": ""
   },
-  "cold_like_S": { "name": "孙若寒", "tags": [], "moreInfo": "" },
-  "hzsunwenbo": {
-    "name": "孙文波",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "孙文波"
+  "savase19941117": {
+    "id": "savase19941117",
+    "name": "史煜华",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
   },
-  "yan1031537195": { "name": "孙晓燕", "tags": [], "moreInfo": "" },
-  "sunxukobe": { "name": "孙旭", "tags": [], "moreInfo": "" },
-  "sgg920359824": { "name": "孙元国", "tags": [], "moreInfo": "" },
+  "s18482187504": {
+    "id": "s18482187504",
+    "name": "宋建霖",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wxid_xhbpzxb744io21": {
+    "id": "wxid_xhbpzxb744io21",
+    "name": "宋雨",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "specyci": {
+    "id": "specyci",
+    "name": "Special",
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": "微信小程序团队面试官"
+  },
+  "Muniao0": {
+    "id": "Muniao0",
+    "name": "孙炳成",
+    "tags": ["警校事务不想看到", "", "", ""],
+    "moreInfo": ""
+  },
+  "scq709391191": {
+    "id": "scq709391191",
+    "name": "孙辰晴",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "yueguan002": {
+    "id": "yueguan002",
+    "name": "孙春雷-西湖大学讲师",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "西湖大学讲师"
+  },
+  "sunguoqi433x": {
+    "id": "sunguoqi433x",
+    "name": "孙国奇",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "sjc19950207": {
+    "id": "sjc19950207",
+    "name": "孙建才",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "HEREICOMING": {
+    "id": "HEREICOMING",
+    "name": "孙铭谦",
+    "tags": ["硕士", "外交部", "", ""],
+    "moreInfo": "计算机学院学弟，一起参加外交部的考试"
+  },
+  "cold_like_S": {
+    "id": "cold_like_S",
+    "name": "孙若寒",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "hzsunwenbo": {
+    "id": "hzsunwenbo",
+    "name": "孙文波",
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
+  },
+  "yan1031537195": {
+    "id": "yan1031537195",
+    "name": "孙晓燕",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "sunxukobe": {
+    "id": "sunxukobe",
+    "name": "孙旭",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "sgg920359824": {
+    "id": "sgg920359824",
+    "name": "孙元国",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "tch950223": {
-    "name": "汤承翰-浙江省舟山市公安局普陀分局",
-    "tags": ["工作相关"],
-    "moreInfo": "汤承翰-浙江省舟山市公安局普陀分局"
+    "id": "tch950223",
+    "name": "汤承翰",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省舟山市公安局普陀分局"
   },
   "huitang0905": {
-    "name": "汤惠-浙江大学医学院病理学科",
-    "tags": [],
-    "moreInfo": ""
+    "id": "huitang0905",
+    "name": "汤惠",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "浙江大学医学院病理学科"
   },
   "tanwendong2013": {
-    "name": "谈文栋-浙江省高级人民检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "谈文栋-浙江省高级人民检察院"
+    "id": "tanwendong2013",
+    "name": "谈文栋",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民检察院"
   },
-  "Eternal_TT": { "name": "陶林伟", "tags": [], "moreInfo": "" },
-  "___nimo": { "name": "陶圆圆", "tags": ["工作相关"], "moreInfo": "陶圆圆" },
-  "woshixiatian---": { "name": "田健", "tags": [], "moreInfo": "" },
-  "tianweininghust": { "name": "田伟宁", "tags": [], "moreInfo": "" },
-  "tcfcy9123": { "name": "童晨峰", "tags": ["工作相关"], "moreInfo": "童晨峰" },
+  "Eternal_TT": {
+    "id": "Eternal_TT",
+    "name": "陶林伟",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "___nimo": {
+    "id": "___nimo",
+    "name": "陶圆圆",
+    "tags": ["工作", "", "", ""],
+    "moreInfo": ""
+  },
+  "woshixiatian---": {
+    "id": "woshixiatian---",
+    "name": "田健",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "tianweininghust": {
+    "id": "tianweininghust",
+    "name": "田伟宁",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "tcfcy9123": {
+    "id": "tcfcy9123",
+    "name": "童晨峰",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
   "TGC-henry": {
-    "name": "童国川-浙江省公安厅科信局",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "童国川-浙江省公安厅科信局"
+    "id": "TGC-henry",
+    "name": "童国川",
+    "tags": ["工作", "浙江省公安厅科技信息化局", "", ""],
+    "moreInfo": "浙江省公安厅科信局"
   },
   "knightli87698": {
-    "name": "桐木学长-阿里巴巴",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "桐木学长-阿里巴巴"
+    "id": "knightli87698",
+    "name": "桐木学长",
+    "tags": ["工作", "阿里巴巴", "", ""],
+    "moreInfo": "阿里巴巴"
   },
   "wxid_fkz4r40ef97m11": {
+    "id": "wxid_fkz4r40ef97m11",
     "name": "王爱军副支队长",
-    "tags": ["浙江省台州市公安局反恐怖支队"],
-    "moreInfo": "王爱军副支队长"
+    "tags": ["工作", "很少联系", "", ""],
+    "moreInfo": "浙江省台州市公安局反恐怖支队副支队长"
   },
-  "TheWangC": { "name": "王超", "tags": [], "moreInfo": "" },
-  "wsy1257177550": { "name": "王晟嫣", "tags": [], "moreInfo": "" },
-  "wangdy95": { "name": "王丹阳", "tags": [], "moreInfo": "" },
-  "wg2196773673": { "name": "王刚", "tags": [], "moreInfo": "" },
-  "WGF13575801995": { "name": "王国福-府前派出所", "tags": [], "moreInfo": "" },
+  "TheWangC": {
+    "id": "TheWangC",
+    "name": "王超",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wsy1257177550": {
+    "id": "wsy1257177550",
+    "name": "王晟嫣",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wangdy95": {
+    "id": "wangdy95",
+    "name": "王丹阳",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "wg2196773673": {
+    "id": "wg2196773673",
+    "name": "王刚",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "WGF13575801995": {
+    "id": "WGF13575801995",
+    "name": "王国福",
+    "tags": ["工作", "很少联系", "", ""],
+    "moreInfo": "府前派出所带班师傅"
+  },
   "haolong1010": {
+    "id": "haolong1010",
     "name": "王昊龙",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "王昊龙"
+    "tags": ["高中", "挚友", "", ""],
+    "moreInfo": ""
   },
   "Big_stream": {
-    "name": "王浩-浙江省经济与信息化厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "王浩-浙江省经济与信息化厅"
+    "id": "Big_stream",
+    "name": "王浩",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省经济与信息化厅"
   },
-  "W-fatherandmother520": { "name": "王佳静", "tags": [], "moreInfo": "" },
+  "W-fatherandmother520": {
+    "id": "W-fatherandmother520",
+    "name": "王佳静",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "wangdingding12138": {
+    "id": "wangdingding12138",
     "name": "王俊杰",
-    "tags": ["工作相关"],
-    "moreInfo": "王俊杰"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
   },
   "wangkuang196": {
+    "id": "wangkuang196",
     "name": "王旷-阿里巴巴实习",
-    "tags": ["阿里巴巴"],
-    "moreInfo": "王旷-阿里巴巴实习"
+    "tags": ["阿里巴巴", "很少联系", "", ""],
+    "moreInfo": "阿里巴巴实习"
   },
   "wlztiantian520": {
-    "name": "王俪蓁-浙江省宁波市鄞州公安分局",
-    "tags": ["工作相关"],
-    "moreInfo": "王俪蓁-浙江省宁波市鄞州公安分局"
+    "id": "wlztiantian520",
+    "name": "王俪蓁",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省宁波市鄞州公安分局"
   },
   "wmizzr334334": {
-    "name": "汪明-电信18级硕士学弟",
-    "tags": [],
-    "moreInfo": ""
+    "id": "wmizzr334334",
+    "name": "汪明",
+    "tags": ["硕士", "很少联系", "", ""],
+    "moreInfo": "电信18级硕士学弟"
   },
   "wq1119081164": {
+    "id": "wq1119081164",
     "name": "王倩",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "王倩"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "wqhhhhyy18": { "name": "王清华", "tags": [], "moreInfo": "" },
-  "wangrui018588": { "name": "王睿学姐", "tags": [], "moreInfo": "" },
+  "wqhhhhyy18": {
+    "id": "wqhhhhyy18",
+    "name": "王清华",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wangrui018588": {
+    "id": "wangrui018588",
+    "name": "王睿学姐",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "sandybutsha": {
-    "name": "王莎-浙江省委组织部",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "王莎-浙江省委组织部"
+    "id": "sandybutsha",
+    "name": "王莎",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省委组织部"
   },
-  "weixin-wuu1010": { "name": "王双优", "tags": [], "moreInfo": "" },
-  "Y2580136219": { "name": "王术英", "tags": [], "moreInfo": "" },
+  "weixin-wuu1010": {
+    "id": "weixin-wuu1010",
+    "name": "王双优",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "Y2580136219": {
+    "id": "Y2580136219",
+    "name": "王术英",
+    "tags": ["初中", "", "", ""],
+    "moreInfo": ""
+  },
   "wt727348402": {
+    "id": "wt727348402",
     "name": "王通",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "王通"
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
   },
   "ever_god": {
-    "name": "王文韬-浙江省高级人民法院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "王文韬-浙江省高级人民法院"
+    "id": "ever_god",
+    "name": "王文韬",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民法院"
   },
   "wxid_6845968461912": {
-    "name": "王文卓-浙江省高级检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "王文卓-浙江省高级检察院"
+    "id": "wxid_6845968461912",
+    "name": "王文卓",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级检察院"
   },
   "xinjingrudao": {
+    "id": "xinjingrudao",
     "name": "王熹",
-    "tags": ["浙江省公安厅反恐怖总队", "工作相关"],
-    "moreInfo": "王熹"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "lifeisamirror": { "name": "王兴建", "tags": [], "moreInfo": "" },
+  "lifeisamirror": {
+    "id": "lifeisamirror",
+    "name": "王兴建",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "WXT2010G": {
+    "id": "WXT2010G",
     "name": "王旭腾",
-    "tags": ["府前派出所"],
-    "moreInfo": "王旭腾"
+    "tags": ["府前派出所", "很少联系", "", ""],
+    "moreInfo": ""
   },
-  "Wine_ying": { "name": "王英", "tags": [], "moreInfo": "" },
+  "Wine_ying": {
+    "id": "Wine_ying",
+    "name": "王英",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "xiaoyou19921007": {
+    "id": "xiaoyou19921007",
     "name": "王莹",
-    "tags": ["浙江省台州市公安局温岭分局"],
-    "moreInfo": "王莹"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局温岭分局"
   },
-  "qq393585468": { "name": "王远涵", "tags": [], "moreInfo": "" },
+  "qq393585468": {
+    "id": "qq393585468",
+    "name": "王远涵",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "Yuzhu-Wang-1995": {
+    "id": "Yuzhu-Wang-1995",
     "name": "王玉竹",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "王玉竹"
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
   },
-  "wzszcp": { "name": "王增森", "tags": [], "moreInfo": "" },
-  "wangzhenyu084455": { "name": "王振宇", "tags": [], "moreInfo": "" },
-  "wz851438578": { "name": "汪哲-实验室前端学弟", "tags": [], "moreInfo": "" },
+  "wzszcp": {
+    "id": "wzszcp",
+    "name": "王增森",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wangzhenyu084455": {
+    "id": "wangzhenyu084455",
+    "name": "王振宇",
+    "tags": ["工作", "陌生人", "", ""],
+    "moreInfo": ""
+  },
+  "wz851438578": {
+    "id": "wz851438578",
+    "name": "汪哲",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "实验室前端学弟"
+  },
   "QQ761312387": {
+    "id": "QQ761312387",
     "name": "王志",
-    "tags": [
-      "一组",
-      "浙江台州警察培训学校",
-      "工作相关",
-      "浙江省台州市公安局三门分局"
-    ],
-    "moreInfo": "王志"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局三门分局"
   },
-  "Love520YHbaby": { "name": "王志辉", "tags": [], "moreInfo": "" },
+  "Love520YHbaby": {
+    "id": "Love520YHbaby",
+    "name": "王志辉",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "q962387649": {
-    "name": "王壮飞-浙江省卫生健康委员会",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "王壮飞-浙江省卫生健康委员会"
+    "id": "q962387649",
+    "name": "王壮飞",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省卫生健康委员会"
   },
   "wan124": {
+    "id": "wan124",
     "name": "万俊毅",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "万俊毅"
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": ""
   },
   "weiqiang132": {
-    "name": "魏强-中共浙江省委党校研究生",
-    "tags": ["工作相关"],
-    "moreInfo": "魏强-中共浙江省委党校研究生"
+    "id": "weiqiang132",
+    "name": "魏强",
+    "tags": ["工作", "朋友", "", ""],
+    "moreInfo": "中共浙江省委党校研究生"
   },
   "wxid_0ya4350ylrn421": {
+    "id": "wxid_0ya4350ylrn421",
     "name": "伟伟哥",
-    "tags": ["亲人", "工作相关"],
-    "moreInfo": "伟伟哥"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
-  "weixin": { "name": "微信团队", "tags": [], "moreInfo": "" },
-  "weiyiming111": { "name": "魏一鸣", "tags": [], "moreInfo": "" },
-  "alan18502408607": { "name": "文春阳", "tags": [], "moreInfo": "" },
-  "filehelper": { "name": "文件传输助手", "tags": [], "moreInfo": "" },
+  "weiyiming111": {
+    "id": "weiyiming111",
+    "name": "魏一鸣",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "alan18502408607": {
+    "id": "alan18502408607",
+    "name": "文春阳",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "monayimihua": {
-    "name": "温娜-浙江华科校友学姐",
-    "tags": ["工作相关"],
-    "moreInfo": "温娜-浙江华科校友学姐"
+    "id": "monayimihua",
+    "name": "温娜",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "浙江华科校友学姐"
   },
-  "wxid_o5xtvr3q9mlf21": { "name": "雯雯嫂子", "tags": [], "moreInfo": "" },
+  "wxid_o5xtvr3q9mlf21": {
+    "id": "wxid_o5xtvr3q9mlf21",
+    "name": "雯雯嫂子",
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
+  },
   "wdqyym": {
-    "name": "吴冬晴-浙江华科校友会负责人",
-    "tags": ["工作相关"],
-    "moreInfo": "吴冬晴-浙江华科校友会负责人"
+    "id": "wdqyym",
+    "name": "吴冬晴",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "浙江华科校友会负责人"
   },
-  "JAKEY-W": { "name": "吴佳琪", "tags": [], "moreInfo": "" },
+  "JAKEY-W": {
+    "id": "JAKEY-W",
+    "name": "吴佳琪",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "wumastor": {
-    "name": "吴金华-杭州中奥科技有限公司",
-    "tags": ["工作相关"],
-    "moreInfo": "吴金华-杭州中奥科技有限公司"
+    "id": "wumastor",
+    "name": "吴金华",
+    "tags": ["工作", "中奥", "", ""],
+    "moreInfo": "杭州中奥科技有限公司"
   },
   "baobolangman": {
+    "id": "baobolangman",
     "name": "吴康",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "吴康"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
   "kaluodo": {
+    "id": "kaluodo",
     "name": "吴琦",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "吴琦"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "Aqwqy_1108": { "name": "吴晴昀", "tags": [], "moreInfo": "" },
+  "Aqwqy_1108": {
+    "id": "Aqwqy_1108",
+    "name": "吴晴昀",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "wuranhong_": {
-    "name": "吴冉洪-浙江省地方金融监管局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "吴冉洪-浙江省地方金融监管局"
+    "id": "wuranhong_",
+    "name": "吴冉洪",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省地方金融监管局"
   },
   "wu263668": {
-    "name": "吴学明-杭州市规划和自然资源局萧山分局",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "吴学明-杭州市规划和自然资源局萧山分局"
+    "id": "wu263668",
+    "name": "吴学明",
+    "tags": ["工作", "陌生人", "", ""],
+    "moreInfo": "杭州市规划和自然资源局萧山分局"
   },
   "YZ960611": {
-    "name": "武堰-浙江省商务厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "武堰-浙江省商务厅"
+    "id": "YZ960611",
+    "name": "武堰",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省商务厅"
   },
   "sunxian1227": {
-    "name": "咸咸-石墨文档HR",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "咸咸-石墨文档HR"
+    "id": "sunxian1227",
+    "name": "咸咸",
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": "石墨文档HR"
   },
   "xct19911213": {
-    "name": "肖朝廷-南京苏宁PHP",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "肖朝廷-南京苏宁PHP"
+    "id": "xct19911213",
+    "name": "肖朝廷",
+    "tags": ["很少联系", "", "", ""],
+    "moreInfo": "南京苏宁PHP"
   },
-  "lcsh004": {
-    "name": "小脸猫9132",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "小脸猫9132"
+  "wxid_5p328d8abny712": {
+    "id": "wxid_5p328d8abny712",
+    "name": "小妮",
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
-  "wxid_5p328d8abny712": { "name": "小妮", "tags": [], "moreInfo": "" },
   "XRH578114086": {
-    "name": "夏润禾-浙江省大数据局",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "夏润禾-浙江省大数据局"
+    "id": "XRH578114086",
+    "name": "夏润禾",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省大数据局"
   },
   "xiayilu1994": {
+    "id": "xiayilu1994",
     "name": "夏一路-浙江省审计厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "夏一路-浙江省审计厅"
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省审计厅"
   },
-  "xieweicheng2012": { "name": "谢伟程", "tags": [], "moreInfo": "" },
+  "xieweicheng2012": {
+    "id": "xieweicheng2012",
+    "name": "谢伟程",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
   "zcjxxf520": {
-    "name": "谢新福-浙江省台州市玉环县公安局",
-    "tags": ["一组", "浙江台州警察培训学校", "工作相关"],
-    "moreInfo": "谢新福-浙江省台州市玉环县公安局"
+    "id": "zcjxxf520",
+    "name": "谢新福",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市玉环县公安局"
   },
-  "fx2016fx2017": { "name": "熊琛", "tags": [], "moreInfo": "" },
+  "fx2016fx2017": {
+    "id": "fx2016fx2017",
+    "name": "熊琛",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "xuqingwen0927": {
-    "name": "徐阿姨-浙江省公安厅警务保障部",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "徐阿姨-浙江省公安厅警务保障部"
+    "id": "xuqingwen0927",
+    "name": "徐阿姨",
+    "tags": ["工作", "浙江省公安厅警务保障部", "", ""],
+    "moreInfo": "浙江省公安厅警务保障部"
   },
   "xuxuejie290288": {
-    "name": "学杰杰杰杰.",
-    "tags": ["一组", "大学舍友", "工作相关"],
-    "moreInfo": "学杰杰杰杰."
+    "id": "xuxuejie290288",
+    "name": "许学杰",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "."
   },
   "xu735919595": {
-    "name": "许繁华-浙江省纪委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "许繁华-浙江省纪委"
+    "id": "xu735919595",
+    "name": "许繁华",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委"
   },
-  "aka253041": { "name": "徐晶老师", "tags": [], "moreInfo": "" },
-  "wxid_79tv7xl8p0f721": { "name": "徐妙奕", "tags": [], "moreInfo": "" },
+  "aka253041": {
+    "id": "aka253041",
+    "name": "徐晶老师",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": "老师"
+  },
+  "wxid_79tv7xl8p0f721": {
+    "id": "wxid_79tv7xl8p0f721",
+    "name": "徐妙奕",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "xq88492410": {
-    "name": "徐强-浙江省中小企业经济发展促进会",
-    "tags": ["工作相关"],
-    "moreInfo": "徐强-浙江省中小企业经济发展促进会"
+    "id": "xq88492410",
+    "name": "徐强",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "浙江省中小企业经济发展促进会"
   },
-  "vapour_x": { "name": "徐水灵", "tags": [], "moreInfo": "" },
-  "tainyXu": { "name": "许炜老师", "tags": [], "moreInfo": "" },
-  "cesare4869": { "name": "许晓凯", "tags": [], "moreInfo": "" },
-  "WiaiNi80231314": { "name": "徐学谦", "tags": [], "moreInfo": "" },
-  "cl249913607": { "name": "栩栩静", "tags": [], "moreInfo": "" },
+  "vapour_x": {
+    "id": "vapour_x",
+    "name": "徐水灵",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "tainyXu": {
+    "id": "tainyXu",
+    "name": "许炜老师",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "老师"
+  },
+  "cesare4869": {
+    "id": "cesare4869",
+    "name": "许晓凯",
+    "tags": ["高中", "挚友", "", ""],
+    "moreInfo": ""
+  },
+  "WiaiNi80231314": {
+    "id": "WiaiNi80231314",
+    "name": "徐学谦",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "cl249913607": {
+    "id": "cl249913607",
+    "name": "栩栩静",
+    "tags": ["朋友", "", "", ""],
+    "moreInfo": ""
+  },
   "wxid_fmr7e2chstzw22": {
+    "id": "wxid_fmr7e2chstzw22",
     "name": "徐艺芳",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "徐艺芳"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
   "baohuiu": {
+    "id": "baohuiu",
     "name": "许颖",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "许颖"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "JenniePanpan": { "name": "徐子菁", "tags": [], "moreInfo": "" },
-  "yangang199309": { "name": "闫刚", "tags": [], "moreInfo": "" },
+  "JenniePanpan": {
+    "id": "JenniePanpan",
+    "name": "徐子菁",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "yangang199309": {
+    "id": "yangang199309",
+    "name": "闫刚",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "kele527": {
-    "name": "杨闯-腾讯面试官",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "杨闯-腾讯面试官"
+    "id": "kele527",
+    "name": "杨闯",
+    "tags": ["工作", "很少联系", "", ""],
+    "moreInfo": "腾讯面试官"
   },
   "wxid_8nwusq31c96w22": {
-    "name": "杨春琦-中电36所",
-    "tags": ["工作相关"],
-    "moreInfo": "杨春琦-中电36所"
+    "id": "wxid_8nwusq31c96w22",
+    "name": "杨春琦",
+    "tags": ["工作", "朋友", "校友", ""],
+    "moreInfo": "中电36所"
   },
   "yang517176221": {
-    "name": "杨大葱-浙江华科校友会负责人",
-    "tags": ["工作相关"],
-    "moreInfo": "杨大葱-浙江华科校友会负责人"
+    "id": "yang517176221",
+    "name": "杨大葱",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "浙江华科校友会负责人"
   },
-  "mAImAIfan625": { "name": "杨帆-管理学院", "tags": [], "moreInfo": "" },
-  "yn550415": { "name": "杨楠学姐", "tags": [], "moreInfo": "" },
+  "mAImAIfan625": {
+    "id": "mAImAIfan625",
+    "name": "杨帆-管理学院",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "yn550415": {
+    "id": "yn550415",
+    "name": "杨楠学姐",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
   "xr1028998682": {
-    "name": "杨小容-杭州中奥科技有限公司",
-    "tags": ["工作相关"],
-    "moreInfo": "杨小容-杭州中奥科技有限公司"
+    "id": "xr1028998682",
+    "name": "杨小容",
+    "tags": ["工作", "中奥", "", ""],
+    "moreInfo": "杭州中奥科技有限公司"
   },
   "ZeMingff": {
-    "name": "杨泽明-选调生协会工作人员",
-    "tags": [],
+    "id": "ZeMingff",
+    "name": "杨泽明",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "选调生协会工作人员"
+  },
+  "ye2625443263": {
+    "id": "ye2625443263",
+    "name": "闫立业",
+    "tags": ["小学", "", "", ""],
     "moreInfo": ""
   },
-  "ye2625443263": { "name": "闫立业", "tags": [], "moreInfo": "" },
-  "yl13589140331": { "name": "闫龙", "tags": [], "moreInfo": "" },
+  "yl13589140331": {
+    "id": "yl13589140331",
+    "name": "闫龙",
+    "tags": ["初中", "", "", ""],
+    "moreInfo": ""
+  },
   "LIN_4589": {
-    "name": "严梦玲-浙江省经信厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "严梦玲-浙江省经信厅"
+    "id": "LIN_4589",
+    "name": "严梦玲",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省经信厅"
   },
   "yanshoufa": {
+    "id": "yanshoufa",
     "name": "闫守法",
-    "tags": ["亲人", "工作相关"],
-    "moreInfo": "闫守法"
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
   },
-  "ysm249454": { "name": "闫守民", "tags": [], "moreInfo": "" },
-  "yan1436172621": { "name": "闫松", "tags": ["亲人"], "moreInfo": "闫松" },
+  "ysm249454": {
+    "id": "ysm249454",
+    "name": "闫守民",
+    "tags": ["小学", "", "", ""],
+    "moreInfo": ""
+  },
+  "yan1436172621": {
+    "id": "yan1436172621",
+    "name": "闫松",
+    "tags": ["亲人", "", "", ""],
+    "moreInfo": ""
+  },
   "yaohanxin666": {
-    "name": "姚汉鑫-中共浙江省委党校研究生",
-    "tags": ["工作相关"],
-    "moreInfo": "姚汉鑫-中共浙江省委党校研究生"
+    "id": "yaohanxin666",
+    "name": "姚汉鑫",
+    "tags": ["工作", "朋友", "", ""],
+    "moreInfo": "中共浙江省委党校研究生"
   },
   "WeWalkinBeauty": {
+    "id": "WeWalkinBeauty",
     "name": "姚凯宇",
-    "tags": [
-      "一组",
-      "浙江省公安厅选调小分队",
-      "浙江省直机关选调生",
-      "浙江台州警察培训学校",
-      "工作相关"
-    ],
-    "moreInfo": "姚凯宇"
+    "tags": ["工作", "省厅选调小分队", "", ""],
+    "moreInfo": ""
   },
-  "yaoyuxi19931225": { "name": "姚宇希-微信HR", "tags": [], "moreInfo": "" },
+  "yaoyuxi19931225": {
+    "id": "yaoyuxi19931225",
+    "name": "姚宇希",
+    "tags": ["工作", "陌生人", "", ""],
+    "moreInfo": "微信HR"
+  },
   "yeheng1110": {
+    "id": "yeheng1110",
     "name": "叶恒",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "叶恒"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
   "womendoushidadoubi": {
+    "id": "womendoushidadoubi",
     "name": "叶显秀",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "叶显秀"
+    "tags": ["阿里巴巴", "硕士", "", ""],
+    "moreInfo": ""
   },
   "movinghorse": {
-    "name": "叶兴军-阿里巴巴",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "叶兴军-阿里巴巴"
+    "id": "movinghorse",
+    "name": "叶兴军",
+    "tags": ["阿里巴巴", "", "", ""],
+    "moreInfo": "阿里巴巴"
   },
   "yeyunbin": {
+    "id": "yeyunbin",
     "name": "叶云斌",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "叶云斌"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "Qlilililili": { "name": "艺芳同学的室友", "tags": [], "moreInfo": "" },
+  "Qlilililili": {
+    "id": "Qlilililili",
+    "name": "艺芳同学的室友",
+    "tags": ["朋友", "", "", ""],
+    "moreInfo": ""
+  },
   "yjt709247253": {
+    "id": "yjt709247253",
     "name": "应佳添",
-    "tags": ["浙江省台州市公安局仙居分局"],
-    "moreInfo": "应佳添"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省台州市公安局仙居分局"
   },
   "ywb_biubiubiu": {
+    "id": "ywb_biubiubiu",
     "name": "尹文博",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "尹文博"
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
   },
-  "shendy421": { "name": "一一", "tags": [], "moreInfo": "" },
+  "shendy421": {
+    "id": "shendy421",
+    "name": "一一",
+    "tags": ["很少联系", "", "", ""],
+    "moreInfo": "最早的一个微信好友，通过漂流瓶认识"
+  },
   "ziyan-fighting": {
+    "id": "ziyan-fighting",
     "name": "邮储储蓄银行总行校招工作人员",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "邮储储蓄银行总行校招工作人员"
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": ""
   },
   "julyfer": {
-    "name": "游媚媚-浙江省公安厅政治部",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "游媚媚-浙江省公安厅政治部"
+    "id": "julyfer",
+    "name": "游媚媚",
+    "tags": ["工作", "浙江省公安厅政治部", "", ""],
+    "moreInfo": "浙江省公安厅政治部"
   },
-  "lanclesshhh": { "name": "袁聪聪", "tags": [], "moreInfo": "" },
+  "lanclesshhh": {
+    "id": "lanclesshhh",
+    "name": "袁聪聪",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "Terrence1008": {
-    "name": "袁力奇-腾讯微信HR-深圳大疆",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "袁力奇-腾讯微信HR-深圳大疆"
+    "id": "Terrence1008",
+    "name": "袁力奇",
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": "腾讯微信HR-深圳大疆"
   },
   "yuanna0607": {
-    "name": "袁娜学姐-温州",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "袁娜学姐-温州"
+    "id": "yuanna0607",
+    "name": "袁娜学姐",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "温州"
   },
-  "Phoenix__Yuan": { "name": "袁沛涵", "tags": [], "moreInfo": "" },
-  "bb2030ss": { "name": "于贝贝", "tags": [], "moreInfo": "" },
-  "WY_15239868079": {
-    "name": "岳小杰-电信研三-深圳华为",
-    "tags": [],
+  "Phoenix__Yuan": {
+    "id": "Phoenix__Yuan",
+    "name": "袁沛涵",
+    "tags": ["本科", "", "", ""],
     "moreInfo": ""
+  },
+  "bb2030ss": {
+    "id": "bb2030ss",
+    "name": "于贝贝",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "WY_15239868079": {
+    "id": "WY_15239868079",
+    "name": "岳小杰",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "电信研三-深圳华为"
   },
   "mhmy123": {
+    "id": "mhmy123",
     "name": "俞戈云",
-    "tags": ["浙江省舟山市公安局经侦支队"],
-    "moreInfo": "俞戈云"
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省舟山市公安局经侦支队"
   },
-  "YGL1174583753": { "name": "于国玲", "tags": [], "moreInfo": "" },
-  "yu18758360655": {
-    "name": "余杭-浙江省宁波市公安局海宁分局",
-    "tags": ["工作相关"],
-    "moreInfo": "余杭-浙江省宁波市公安局海宁分局"
-  },
-  "FishPlusFlag": {
-    "name": "俞佳琪",
-    "tags": [
-      "一组",
-      "浙江省公安厅选调小分队",
-      "浙江省直机关选调生",
-      "浙江台州警察培训学校",
-      "工作相关"
-    ],
-    "moreInfo": "俞佳琪"
-  },
-  "fififishplusflag": { "name": "俞佳琪的小号", "tags": [], "moreInfo": "" },
-  "wangqianyu1028": { "name": "玉姐姐", "tags": [], "moreInfo": "" },
-  "chinayt1994": { "name": "云涛", "tags": [], "moreInfo": "" },
-  "yuqy_thu": {
-    "name": "余启翼-浙江省委办公厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "余启翼-浙江省委办公厅"
-  },
-  "weiweimao123456": {
-    "name": "余威",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "余威"
-  },
-  "yuyou19940526": {
-    "name": "余游",
-    "tags": [
-      "一组",
-      "浙江省公安厅选调小分队",
-      "浙江省直机关选调生",
-      "浙江台州警察培训学校",
-      "工作相关"
-    ],
-    "moreInfo": "余游"
-  },
-  "y374721563": {
-    "name": "ywz-未知学弟",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "ywz-未知学弟"
-  },
-  "n2303439": { "name": "曾名杨", "tags": ["阿里巴巴"], "moreInfo": "曾名杨" },
-  "real19942": {
-    "name": "曾蕊-浙江省军民融合办公室",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "曾蕊-浙江省军民融合办公室"
-  },
-  "l936493633": { "name": "翟桂蕾", "tags": [], "moreInfo": "" },
-  "Zhch950711": {
-    "name": "张晨",
-    "tags": ["阿里巴巴", "工作相关"],
-    "moreInfo": "张晨"
-  },
-  "zhang278171819": { "name": "张聪聪", "tags": [], "moreInfo": "" },
-  "wxid_4906oijb62il22": { "name": "张栋栋老师", "tags": [], "moreInfo": "" },
-  "zgy527667329": {
-    "name": "张广益-13级船海学院-17浙大数学",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "张广益-13级船海学院-17浙大数学"
-  },
-  "ZhangHao_HUSTer": {
-    "name": "张皓",
-    "tags": ["一组", "大学舍友", "工作相关"],
-    "moreInfo": "张皓"
-  },
-  "alienhaw": {
-    "name": "张豪",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "张豪"
-  },
-  "hao_19950209": { "name": "张昊鹏", "tags": [], "moreInfo": "" },
-  "ranran1064078085": { "name": "张浩然", "tags": [], "moreInfo": "" },
-  "xiaodazi2014": { "name": "张洪达", "tags": [], "moreInfo": "" },
-  "ZH722956": { "name": "张虎", "tags": [], "moreInfo": "" },
-  "zjx19920602": { "name": "张建兴", "tags": [], "moreInfo": "" },
-  "chenxiaozjr": {
-    "name": "张家睿",
-    "tags": [
-      "浙江省公安厅反恐怖总队情报侦查小组",
-      "浙江省公安厅反恐怖总队",
-      "一组",
-      "工作相关"
-    ],
-    "moreInfo": "张家睿"
-  },
-  "Jinzhi__Zhang": { "name": "张金志", "tags": [], "moreInfo": "" },
-  "zhangkun201055": {
-    "name": "张坤-浙江省纪委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张坤-浙江省纪委"
-  },
-  "manda_0526": {
-    "name": "张曼学姐-阿里巴巴",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "张曼学姐-阿里巴巴"
-  },
-  "zhangqiang5582": {
-    "name": "张强-浙江省台州市警察培训学校",
-    "tags": ["工作相关"],
-    "moreInfo": "张强-浙江省台州市警察培训学校"
-  },
-  "zhangrj0956": {
-    "name": "张仁将",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "张仁将"
-  },
-  "Mrrenyu": {
-    "name": "张仁宇-阿里巴巴",
-    "tags": ["阿里巴巴", "警校事务不想看到"],
-    "moreInfo": "张仁宇-阿里巴巴"
-  },
-  "zhangshiyu1993": {
-    "name": "张诗妤-浙江省委宣传部",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张诗妤-浙江省委宣传部"
-  },
-  "zhang712704": {
-    "name": "张坦",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "张坦"
-  },
-  "y1jintian": {
-    "name": "张天锡",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "张天锡"
-  },
-  "tianye459701": { "name": "张田野", "tags": [], "moreInfo": "" },
-  "zhangwenfei518132": { "name": "张文飞", "tags": [], "moreInfo": "" },
-  "zhangxhzm": { "name": "张晓华", "tags": [], "moreInfo": "" },
-  "wxid_516292836": {
-    "name": "张心怡",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张心怡"
-  },
-  "weeone0731": {
-    "name": "张扬-浙江省纪委驻省教育厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张扬-浙江省纪委驻省教育厅"
-  },
-  "Elain_ZYP": {
-    "name": "张艳萍-浙江省高级人民检察院",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张艳萍-浙江省高级人民检察院"
-  },
-  "zhangyan3931185": { "name": "张言学姐", "tags": [], "moreInfo": "" },
-  "zyxndkx": {
-    "name": "张云祥-浙江省委网信办",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张云祥-浙江省委网信办"
-  },
-  "zhangyuzhen135": {
-    "name": "张宇震-浙江省纪委驻省财政厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "张宇震-浙江省纪委驻省财政厅"
-  },
-  "Zero_WhiteRock": { "name": "张震寰", "tags": [], "moreInfo": "" },
-  "zhan1031845741": { "name": "詹晓庆", "tags": [], "moreInfo": "" },
-  "zdman10162012": {
-    "name": "赵东民-浙江省宁波市公安局宁州分局",
-    "tags": ["工作相关"],
-    "moreInfo": "赵东民-浙江省宁波市公安局宁州分局"
-  },
-  "zhaoshikang295421": {
-    "name": "赵时康-浙江省商务厅",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "赵时康-浙江省商务厅"
-  },
-  "zhaoww15757133287": {
-    "name": "赵微微-浙江省纪委驻省发改委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "赵微微-浙江省纪委驻省发改委"
-  },
-  "Feimadadinli": { "name": "郑安源", "tags": [], "moreInfo": "" },
-  "zhengjian_1314": {
-    "name": "郑建",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "郑建"
-  },
-  "WeDoHUST": {
-    "name": "郑名扬-研究生就业指导中心",
-    "tags": [],
+  "YGL1174583753": {
+    "id": "YGL1174583753",
+    "name": "于国玲",
+    "tags": ["高中", "", "", ""],
     "moreInfo": ""
   },
-  "zyl1289823316": { "name": "郑艳莉", "tags": [], "moreInfo": "" },
+  "yu18758360655": {
+    "id": "yu18758360655",
+    "name": "余杭",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省宁波市公安局海宁分局"
+  },
+  "FishPlusFlag": {
+    "id": "FishPlusFlag",
+    "name": "俞佳琪",
+    "tags": ["工作", "省厅选调小分队", "浙江省公安厅刑侦总队", ""],
+    "moreInfo": ""
+  },
+  "fififishplusflag": {
+    "id": "fififishplusflag",
+    "name": "俞佳琪的小号",
+    "tags": ["工作", "省厅选调小分队", "", ""],
+    "moreInfo": ""
+  },
+  "wangqianyu1028": {
+    "id": "wangqianyu1028",
+    "name": "玉姐姐",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": "王倩玉，安丘老乡，天大读研，北京工作"
+  },
+  "chinayt1994": {
+    "id": "chinayt1994",
+    "name": "云涛",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "yuqy_thu": {
+    "id": "yuqy_thu",
+    "name": "余启翼",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省委办公厅"
+  },
+  "weiweimao123456": {
+    "id": "weiweimao123456",
+    "name": "余威",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": ""
+  },
+  "yuyou19940526": {
+    "id": "yuyou19940526",
+    "name": "余游",
+    "tags": ["工作", "省厅选调小分队", "", ""],
+    "moreInfo": ""
+  },
+  "y374721563": {
+    "id": "y374721563",
+    "name": "ywz",
+    "tags": ["陌生人", "", "", ""],
+    "moreInfo": "未知学弟，来自知乎，海康威视工作"
+  },
+  "n2303439": {
+    "id": "n2303439",
+    "name": "曾名杨",
+    "tags": ["阿里巴巴", "", "", ""],
+    "moreInfo": ""
+  },
+  "real19942": {
+    "id": "real19942",
+    "name": "曾蕊",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省军民融合办公室"
+  },
+  "l936493633": {
+    "id": "l936493633",
+    "name": "翟桂蕾",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "Zhch950711": {
+    "id": "Zhch950711",
+    "name": "张晨",
+    "tags": ["阿里巴巴", "硕士", "", ""],
+    "moreInfo": ""
+  },
+  "zhang278171819": {
+    "id": "zhang278171819",
+    "name": "张聪聪",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wxid_4906oijb62il22": {
+    "id": "wxid_4906oijb62il22",
+    "name": "张栋栋老师",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": "老师"
+  },
+  "zgy527667329": {
+    "id": "zgy527667329",
+    "name": "张广益",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "13级船海学院-17浙大数学"
+  },
+  "ZhangHao_HUSTer": {
+    "id": "ZhangHao_HUSTer",
+    "name": "张皓",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "alienhaw": {
+    "id": "alienhaw",
+    "name": "张豪",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "深圳大疆"
+  },
+  "hao_19950209": {
+    "id": "hao_19950209",
+    "name": "张昊鹏",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "ranran1064078085": {
+    "id": "ranran1064078085",
+    "name": "张浩然",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "xiaodazi2014": {
+    "id": "xiaodazi2014",
+    "name": "张洪达",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "ZH722956": {
+    "id": "ZH722956",
+    "name": "张虎",
+    "tags": ["初中", "", "", ""],
+    "moreInfo": ""
+  },
+  "zjx19920602": {
+    "id": "zjx19920602",
+    "name": "张建兴",
+    "tags": ["老乡", "", "", ""],
+    "moreInfo": ""
+  },
+  "chenxiaozjr": {
+    "id": "chenxiaozjr",
+    "name": "张家睿",
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
+  },
+  "Jinzhi__Zhang": {
+    "id": "Jinzhi__Zhang",
+    "name": "张金志",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "zhangkun201055": {
+    "id": "zhangkun201055",
+    "name": "张坤",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委"
+  },
+  "manda_0526": {
+    "id": "manda_0526",
+    "name": "张曼学姐",
+    "tags": ["阿里巴巴", "校友", "", ""],
+    "moreInfo": "阿里巴巴"
+  },
+  "zhangqiang5582": {
+    "id": "zhangqiang5582",
+    "name": "张强",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": ""
+  },
+  "zhangrj0956": {
+    "id": "zhangrj0956",
+    "name": "张仁将",
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
+  },
+  "Mrrenyu": {
+    "id": "Mrrenyu",
+    "name": "张仁宇",
+    "tags": ["阿里巴巴", "工作", "", ""],
+    "moreInfo": "阿里巴巴"
+  },
+  "zhangshiyu1993": {
+    "id": "zhangshiyu1993",
+    "name": "张诗妤",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省委宣传部"
+  },
+  "zhang712704": {
+    "id": "zhang712704",
+    "name": "张坦",
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
+  },
+  "y1jintian": {
+    "id": "y1jintian",
+    "name": "张天锡",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "tianye459701": {
+    "id": "tianye459701",
+    "name": "张田野",
+    "tags": ["朋友", "", "", ""],
+    "moreInfo": ""
+  },
+  "zhangwenfei518132": {
+    "id": "zhangwenfei518132",
+    "name": "张文飞",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "zhangxhzm": {
+    "id": "zhangxhzm",
+    "name": "张晓华",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "wxid_516292836": {
+    "id": "wxid_516292836",
+    "name": "张心怡",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委"
+  },
+  "weeone0731": {
+    "id": "weeone0731",
+    "name": "张扬",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委驻省教育厅"
+  },
+  "Elain_ZYP": {
+    "id": "Elain_ZYP",
+    "name": "张艳萍",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省高级人民检察院"
+  },
+  "zhangyan3931185": {
+    "id": "zhangyan3931185",
+    "name": "张言学姐",
+    "tags": ["硕士", "字节跳动", "", ""],
+    "moreInfo": ""
+  },
+  "zyxndkx": {
+    "id": "zyxndkx",
+    "name": "张云祥",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省委网信办"
+  },
+  "zhangyuzhen135": {
+    "id": "zhangyuzhen135",
+    "name": "张宇震",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委驻省财政厅"
+  },
+  "Zero_WhiteRock": {
+    "id": "Zero_WhiteRock",
+    "name": "张震寰",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "zhan1031845741": {
+    "id": "zhan1031845741",
+    "name": "詹晓庆",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "zdman10162012": {
+    "id": "zdman10162012",
+    "name": "赵东民",
+    "tags": ["工作", "台州警校", "", ""],
+    "moreInfo": "浙江省宁波市公安局鄞州分局"
+  },
+  "zhaoshikang295421": {
+    "id": "zhaoshikang295421",
+    "name": "赵时康",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省商务厅"
+  },
+  "zhaoww15757133287": {
+    "id": "zhaoww15757133287",
+    "name": "赵微微",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委驻省发改委"
+  },
+  "Feimadadinli": {
+    "id": "Feimadadinli",
+    "name": "郑安源",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": ""
+  },
+  "zhengjian_1314": {
+    "id": "zhengjian_1314",
+    "name": "郑建",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
+  "WeDoHUST": {
+    "id": "WeDoHUST",
+    "name": "郑名扬",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "研究生就业指导中心老师"
+  },
+  "zyl1289823316": {
+    "id": "zyl1289823316",
+    "name": "郑艳莉",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  },
   "wxid_8guv32v3nph821": {
-    "name": "郑越-衢州定向选调",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "郑越-衢州定向选调"
+    "id": "wxid_8guv32v3nph821",
+    "name": "郑越",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "衢州定向选调"
   },
   "zhengyujia": {
+    "id": "zhengyujia",
     "name": "郑豫家",
-    "tags": ["浙江省公安厅反恐怖总队", "一组", "工作相关"],
-    "moreInfo": "郑豫家"
+    "tags": ["工作", "浙江省公安厅反恐怖总队", "", ""],
+    "moreInfo": ""
   },
-  "wxid_47hvwnv9ihoq21": { "name": "钟金荣", "tags": [], "moreInfo": "" },
-  "xuejiaoAML": { "name": "钟雪娇", "tags": [], "moreInfo": "" },
+  "wxid_47hvwnv9ihoq21": {
+    "id": "wxid_47hvwnv9ihoq21",
+    "name": "钟金荣",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
+  "xuejiaoAML": {
+    "id": "xuejiaoAML",
+    "name": "钟雪娇",
+    "tags": ["朋友", "初中", "", ""],
+    "moreInfo": ""
+  },
   "qqqqqqqqaaaa": {
+    "id": "qqqqqqqqaaaa",
     "name": "周超",
-    "tags": ["警校事务不想看到"],
-    "moreInfo": "周超"
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
   },
-  "JamesZhou32": { "name": "周国靖", "tags": ["一组"], "moreInfo": "周国靖" },
-  "Xiaochen_Zhou": { "name": "周晓晨", "tags": [], "moreInfo": "" },
+  "JamesZhou32": {
+    "id": "JamesZhou32",
+    "name": "周国靖",
+    "tags": ["高中", "挚友", "", ""],
+    "moreInfo": ""
+  },
+  "Xiaochen_Zhou": {
+    "id": "Xiaochen_Zhou",
+    "name": "周晓晨",
+    "tags": ["本科", "", "", ""],
+    "moreInfo": ""
+  },
   "qqttzhou": {
-    "name": "周玉琦-公安-青州",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "周玉琦-公安-青州"
+    "id": "qqttzhou",
+    "name": "周玉琦",
+    "tags": ["工作", "老乡", "", ""],
+    "moreInfo": "公安-青州"
   },
   "weibohaluo3705": {
-    "name": "周自成-专硕1709班",
-    "tags": ["一组"],
-    "moreInfo": "周自成-专硕1709班"
+    "id": "weibohaluo3705",
+    "name": "周自成",
+    "tags": ["硕士", "", "", ""],
+    "moreInfo": "专硕1709班"
   },
   "zhulinjiong": {
-    "name": "朱林炯-浙江省纪委",
-    "tags": ["一组", "浙江省直机关选调生", "工作相关"],
-    "moreInfo": "朱林炯-浙江省纪委"
+    "id": "zhulinjiong",
+    "name": "朱林炯",
+    "tags": ["工作", "浙江省直机关选调生", "", ""],
+    "moreInfo": "浙江省纪委"
   },
   "zyh2984898070": {
-    "name": "朱瑛辉—社会学院—嘉兴",
-    "tags": ["一组", "工作相关"],
-    "moreInfo": "朱瑛辉—社会学院—嘉兴"
+    "id": "zyh2984898070",
+    "name": "朱瑛辉",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "社会学院，嘉兴市选调生"
   },
   "zzyzd0725": {
-    "name": "朱真仪-19级新闻学院",
-    "tags": ["工作相关"],
-    "moreInfo": "朱真仪-19级新闻学院"
+    "id": "zzyzd0725",
+    "name": "朱真仪",
+    "tags": ["工作", "校友", "", ""],
+    "moreInfo": "19级新闻学院"
   },
-  "wxid_jrbmwcjy5l7s21": { "name": "紫爱步", "tags": [], "moreInfo": "" },
-  "H121225lly": { "name": "邹晓龙", "tags": [], "moreInfo": "" }
+  "wxid_jrbmwcjy5l7s21": {
+    "id": "wxid_jrbmwcjy5l7s21",
+    "name": "紫爱步",
+    "tags": ["朋友", "", "", ""],
+    "moreInfo": ""
+  },
+  "H121225lly": {
+    "id": "H121225lly",
+    "name": "邹晓龙",
+    "tags": ["高中", "", "", ""],
+    "moreInfo": ""
+  }
 }
