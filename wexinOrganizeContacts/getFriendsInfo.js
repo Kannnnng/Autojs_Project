@@ -11,12 +11,15 @@ if(!images.requestScreenCapture(false)){
 /* 引入工具箱 */
 let utils
 let uniqBy
+let forEach
 try {
   utils = require('utils/main.js')
   uniqBy = require('wexinOrganizeContacts/node_modules/lodash.uniqby/index.js')
+  forEach = require('wexinOrganizeContacts/node_modules/lodash.foreach/index.js')
 } catch (e) {
   utils = require('../utils/main.js')
-  uniqBy = require('lodash.uniqby')
+  uniqBy = require('./node_modules/lodash.uniqby/index.js')
+  forEach = require('./node_modules/lodash.foreach/index.js')
 }
 
 /* 防止当前代码被重复执行 */
@@ -61,7 +64,14 @@ let isFoundEnd = false
 
 /* 程序退出时将获取到的数据保存下来 */
 events.on('exit', () => {
-  files.write('./联系人信息.json', JSON.stringify(friendsInformations))
+  let resultString = '微信ID,姓名,标签,,,,,,其他信息'
+
+  forEach(friendsInformations, (value, key) => {
+    resultString += '\n' + `${key},${value.name},${value.tags[0]},${value.tags[1]},${value.tags[2]},${value.tags[3]},${value.tags[4]},${value.tags[5]},${value.moreInfo}`
+  })
+  
+  /* 保存成表格格式方便修改 */
+  files.write('./联系人信息.csv', resultString)
 })
 
 while (!isFoundEnd) {
