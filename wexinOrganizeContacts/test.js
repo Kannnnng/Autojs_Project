@@ -367,6 +367,9 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //               .waitFor()
 //           })
 
+const parseXlsx = require('excel').default
+const iconv = require("iconv-jschardet")
+
 toast('执行完毕')
 
 
