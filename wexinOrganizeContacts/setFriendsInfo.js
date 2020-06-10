@@ -79,11 +79,8 @@ while (!isFoundEnd) {
 
       if (
         friendInformation &&
-        !friendInformation.isFinished &&
-        className('android.widget.TextView').depth(4).text('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
+        className('android.widget.TextView').depth(4).textContains('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
       ) {
-        friendInformation.isFinished = true
-
         className('android.widget.TextView')
           .depth(4)
           .textContains('标签')
@@ -129,6 +126,7 @@ while (!isFoundEnd) {
               child.click()
               sleep(100)
               child.click()
+              sleep(100)
             })
 
           friendInformation.tags.forEach((tag) => {
@@ -140,7 +138,7 @@ while (!isFoundEnd) {
               .depth(2)
               .waitFor()
             
-            click(parent.bounds().right - 2, parent.bounds().centerY())
+            click(parent.bounds().right - 5, parent.bounds().bottom - 5)
 
             className('android.view.ViewGroup')
               .depth(3)
