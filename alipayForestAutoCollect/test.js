@@ -118,8 +118,13 @@ if(!images.requestScreenCapture(false)){
 //   log("Toast内容: " + toast.getText() + " 包名: " + toast.getPackageName());
 // });
 
-let i = 0
+// let i = 0
 
-while (++i < 5) console.log(i)
+// while (++i < 5) console.log(i)
+let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
+images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.5 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+  log(point)
+})
+
 
 toast('执行完成')
