@@ -58,19 +58,19 @@ desc('我的问答')
 sleep(250)
   
 /* 更新擦亮按钮图标 */
-let caliangbuttonImage = images.read('./caliangbutton.jpg') ||　images.read('idlefishAutoRefreshItem/caliangbutton.jpg') // 擦亮按钮图片
-let endtitleImage = images.read('./endtitle.jpg') ||　images.read('idlefishAutoRefreshItem/endtitle.jpg') // 底部横标图片
+let caliangbuttonImage = images.read('./assets/caliangbutton.jpg') ||　images.read('idlefishAutoRefreshItem/assets/caliangbutton.jpg') // 擦亮按钮图片
+let endtitleImage = images.read('./assets/endtitle.jpg') ||　images.read('idlefishAutoRefreshItem/assets/endtitle.jpg') // 底部横标图片
 
 let productCaptureScreenImage // Autojs脚本引擎不支持块级作用域
 while (true) {
   productCaptureScreenImage = images.captureScreen()
 
   images.matchTemplate(productCaptureScreenImage, caliangbuttonImage).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-    click(point.x + 86, point.y + 47) // 这里的偏移是手动测量后设置的
+    longClick(point.x + 86, point.y + 47) // 这里的偏移是手动测量后设置的
     sleep(250)
   })
   
-  if (!images.matchTemplate(productCaptureScreenImage, endtitleImage).best()) {
+  if (!images.findImage(productCaptureScreenImage, endtitleImage)) {
     swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 0, 250)
     sleep(250)
   } else {
