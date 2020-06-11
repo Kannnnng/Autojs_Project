@@ -25,14 +25,31 @@ utils.stopWhenTimeout(1000 * 60 * 0.5)
 /* 解锁设备 */
 utils.unlockDevice()
 
+/* 当前设备的一些信息 */
+let deviceWidth = device.width
+let deviceHeight = device.height
+let designedWidth = 1080 // 设计代码时的屏幕宽度
+let designedHeight = 2248 // 设计代码时的屏幕高度
+
+/* 设置屏幕分辨率，当前数据来源于小米 8 */
+setScreenMetrics(designedWidth, designedHeight)
+
 /* 电源键菜单 */
 powerDialog()
+sleep(1000)
 
 /* 等待电源菜单弹出 */
-waitForPackage('android')
+let rebootIcon = images.read('assets/reboot-icon.jpg') || images.read('xiaomiAutoReboot/assets/reboot-icon.jpg')
+while (true) {
+  if (images.findImage(images.captureScreen(), rebootIcon, { region: [260, 1380, 240, 120] })) break
+  else sleep(5000)
+}
 
-/* 选择不同的语句执行不同的操作 */
-sleep(1000)
 // click(712, 1288) // 关机
 // click(716, 896) // 静音模式
 click(368, 1296) // 重新启动
+
+rebootIcon.recycle()
+
+/* 为了防止程序不能马上退出，在代码的最后加上 exit 语句主动退出 */
+exit()
