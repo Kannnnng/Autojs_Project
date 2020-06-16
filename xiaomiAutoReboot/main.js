@@ -42,14 +42,19 @@ sleep(1000)
 let rebootIcon = images.read('assets/reboot-icon.jpg') || images.read('xiaomiAutoReboot/assets/reboot-icon.jpg')
 while (true) {
   if (images.findImage(images.captureScreen(), rebootIcon, { region: [260, 1380, 240, 120] })) break
-  else sleep(5000)
+  else sleep(1000)
 }
 
-// click(712, 1288) // 关机
-// click(716, 896) // 静音模式
 click(368, 1296) // 重新启动
 
-rebootIcon.recycle()
+/* 等待重新启动页面弹出 */
+let rebootConfirmIcon = images.read('assets/reboot-confirm.jpg') || images.read('xiaomiAutoReboot/assets/reboot-confirm.jpg')
+while (true) {
+  if (images.matchTemplate(images.captureScreen(), rebootConfirmIcon, { region: [0, 920, 1080, 600], threshold: 0.75 }).best()) break
+  else sleep(1000)
+}
+
+click(540, 1125) // 确认重新启动
 
 /* 为了防止程序不能马上退出，在代码的最后加上 exit 语句主动退出 */
 exit()
