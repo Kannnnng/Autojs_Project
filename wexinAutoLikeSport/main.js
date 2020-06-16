@@ -56,25 +56,13 @@ className('android.widget.TextView')
   .parent()
   .click()
 
-/* 阻塞等待切换到微信最近对话框页面，并点击右上角搜索按钮 */
-while (true) {
-  try {
-    className('android.view.ViewGroup')
-      .depth(2)
-      .findOne()
-      .child(0)
-      .child(0)
-      .findOne(textContains('微信('))
-      .parent()
-      .parent()
-      .child(1)
-      .findOne(desc('搜索'))
-      .click()
-    break
-  } catch (e) {
-    sleep(250)
-  }
-}
+/* 切换用一种更加简单的方式进入搜索页面 */
+className('android.widget.RelativeLayout')
+  .depth(3)
+  .desc('搜索')
+  .drawingOrder(2)
+  .findOne()
+  .click()
 
 /* 在搜索栏中填入微信运动 */
 className('android.widget.TextView')

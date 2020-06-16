@@ -245,12 +245,16 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //   .packageName('com.tencent.mm')
 //   .findOne()
 // swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 0, 250)
-className('android.widget.ListView')
-  .depth(2)
-  .drawingOrder(3)
-  .findOne()
-  .scrollForward()
-
+// className('android.widget.ListView')
+//   .depth(2)
+//   .drawingOrder(3)
+//   .findOne()
+//   .scrollForward()
+log(className('android.widget.RelativeLayout')
+  .depth(3)
+  .desc('搜索')
+  .drawingOrder(2)
+  .find())
 
 toast('执行完毕')
 
