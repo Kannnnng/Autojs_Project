@@ -103,11 +103,11 @@ className('android.widget.TextView')
   .text('蚂蚁森林')
   .waitFor()
 sleep(1000)
-  
+
 /* 通过识别能量球图像来点击相对应位置 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
-images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.9 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-  longClick(point.x, point.y)
+images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+  press(point.x, point.y, 250)
   sleep(250)
 })
 
@@ -145,11 +145,15 @@ className('android.view.View')
   .findOne()
   .click()
 
+toastLog('正在进入总排行榜')  
+
 className('android.view.View')
   .depth(10)
   .text('李小龙')
   .waitFor()
 sleep(250)
+
+toastLog('已经进入排行榜')  
 
 /* 向下滑动寻找可以获取的能量 */
 let pickableIcon = images.read('assets/pickable-icon.jpg') || images.read('alipayForestAutoCollect/assets/pickable-icon.jpg')
@@ -175,8 +179,8 @@ while (!isFoundEnd) {
     /* 2.颜色识别存在识别错误的情况，比如检测到背景颜色与能量球颜色相同时， */
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
-    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.9 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-      longClick(point.x, point.y)
+    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+      press(point.x, point.y, 250)
       sleep(250)
     })
       
