@@ -147,11 +147,12 @@ className('android.view.View')
 
 toastLog('正在进入总排行榜')  
 
-className('android.view.View')
-  .depth(10)
-  .text('李小龙')
-  .waitFor()
-sleep(250)
+/* 等待进入排行榜 */
+let weeklyLeaderboardIcon = images.read('assets/weekly-leaderboard.jpg') || images.read('alipayForestAutoCollect/assets/weekly-leaderboard.jpg')
+while (true) {
+  if (images.matchTemplate(images.captureScreen(), weeklyLeaderboardIcon, { region: [0, 0, 1080, 500], threshold: 0.8 }).best()) break
+  else sleep(1000)
+}
 
 toastLog('已经进入排行榜')  
 
@@ -220,6 +221,7 @@ while (!isFoundEnd) {
 
 energyBallIcon.recycle()
 pickableIcon.recycle()
+weeklyLeaderboardIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
 back()
