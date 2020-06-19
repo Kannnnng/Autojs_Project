@@ -158,5 +158,5 @@ for (let i = 0; i < 3; i++) {
   sleep(250)
 }
 
-/* 锁定设备 */
-utils.lockDevice()
+/* 退出程序 */
+exit()

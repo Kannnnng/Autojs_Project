@@ -92,6 +92,9 @@ function stopWhenTimeout(timeout) {
   let thread = threads.start(function() {
     setTimeout(function() {
       engines.myEngine().forceStop()
+
+      /* 确保程序停止 */
+      exit()
     }, timeout)
   })
 
