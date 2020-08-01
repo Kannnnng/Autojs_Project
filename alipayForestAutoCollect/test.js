@@ -128,14 +128,20 @@ if(!images.requestScreenCapture(false)){
 // log(images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.5 }).matches)
 // toastLog('已经进入蚂蚁森林')  
 /* 通过识别能量球图像来点击相对应位置 */
-let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
-let energyBallIconWidth = energyBallIcon.getWidth()
-let energyBallIconHeight = energyBallIcon.getHeight()
+// let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
+// let energyBallIconWidth = energyBallIcon.getWidth()
+// let energyBallIconHeight = energyBallIcon.getHeight()
 
-images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-  press(point.x, point.y, 250)
-  sleep(250)
-})
+// images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+//   press(point.x, point.y, 250)
+//   sleep(250)
+// })
+
+className('android.support.v7.widget.RecyclerView')
+      .depth(2)
+      .findOne()
+      .scrollForward()
+
 
 
 toast('执行完成')

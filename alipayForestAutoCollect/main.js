@@ -107,7 +107,10 @@ sleep(1000)
 /* 通过识别能量球图像来点击相对应位置 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-  press(point.x, point.y, 250)
+  /* 多次点击防止触发不了 */
+  click(point.x, point.y)
+  click(point.x, point.y)
+  click(point.x, point.y)
   sleep(250)
 })
 
@@ -135,13 +138,13 @@ images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 
 
 className('android.view.View')
   .depth(6)
-  .textContains('总排行榜')
+  .text('总排行榜')
   .findOne()
   .click()
 
 className('android.view.View')
   .depth(6)
-  .textContains('查看更多好友')
+  .text('查看更多好友')
   .findOne()
   .click()
 
@@ -181,7 +184,9 @@ while (!isFoundEnd) {
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
     images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-      press(point.x, point.y, 250)
+      click(point.x, point.y)
+      click(point.x, point.y)
+      click(point.x, point.y)
       sleep(250)
     })
       
@@ -211,8 +216,8 @@ while (!isFoundEnd) {
 
   if (!isFoundEnd) {
     /* 向下滑动的实现方式由模拟滑动改为调用控件滑动方法实现 */
-    className('android.webkit.WebView')
-      .depth(3)
+    className('android.support.v7.widget.RecyclerView')
+      .depth(2)
       .findOne()
       .scrollForward()
     sleep(250)
