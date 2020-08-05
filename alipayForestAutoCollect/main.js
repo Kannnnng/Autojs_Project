@@ -202,9 +202,8 @@ while (!isFoundEnd) {
     //   })
     
     back()
-    className('android.view.View')
-      .depth(8)
-      .text('总排行榜')
+    className('android.support.v7.widget.RecyclerView')
+      .depth(2)
       .waitFor()
     sleep(250)
   })
