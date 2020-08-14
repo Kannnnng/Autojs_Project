@@ -103,9 +103,17 @@ function stopWhenTimeout(timeout) {
   return thread
 }
 
+/* 点击同一个地方 counter 次 */
+function multipleClicks(point, counter) {
+  for (let i = 0; i < counter; i++) {
+    click(point.x, point.y)
+  }
+}
+
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
   stopRepeatExecution: stopRepeatExecution,
   stopWhenTimeout: stopWhenTimeout,
+  multipleClicks： multipleClicks,
 }

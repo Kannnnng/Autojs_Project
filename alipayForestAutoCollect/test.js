@@ -137,11 +137,13 @@ if(!images.requestScreenCapture(false)){
 //   sleep(250)
 // })
 
-className('android.support.v7.widget.RecyclerView')
-      .depth(2)
-      .findOne()
+// className('android.support.v7.widget.RecyclerView')
+//       .depth(2)
+//       .findOne()
+//       .scrollForward()
+className('android.webkit.WebView')
+      .depth(5)
+      .findOne(500)
       .scrollForward()
-
-
 
 toast('执行完成')

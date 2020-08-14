@@ -98,9 +98,8 @@ try {
 //   .click()
 
 /* 等待进入蚂蚁森林 */
-className('android.widget.TextView')
-  .depth(1)
-  .text('蚂蚁森林')
+className('android.view.View')
+  .depth(4)
   .waitFor()
 sleep(1000)
 
@@ -108,11 +107,17 @@ sleep(1000)
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   /* 多次点击防止触发不了 */
-  click(point.x, point.y)
-  click(point.x, point.y)
-  click(point.x, point.y)
+  utils.multipleClicks(point, 3)
   sleep(250)
 })
+
+/* 有时收集完能量后会弹出推广提示框，点击其包含的关闭按钮关闭该提示框 */
+try {
+  className('android.widget.Button')
+    .text('关闭')
+    .findOne(1000)
+    .click()
+} catch (e) {}
 
 /* 能量球识别颜色 */
 // const ENERGY_BALL_IDENTIFY_COLOR = '#CFFF5E'
@@ -184,9 +189,7 @@ while (!isFoundEnd) {
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
     images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-      click(point.x, point.y)
-      click(point.x, point.y)
-      click(point.x, point.y)
+      utils.multipleClicks(point, 3)
       sleep(250)
     })
       
@@ -202,8 +205,8 @@ while (!isFoundEnd) {
     //   })
     
     back()
-    className('android.support.v7.widget.RecyclerView')
-      .depth(2)
+    className('android.webkit.WebView')
+      .depth(3)
       .waitFor()
     sleep(250)
   })
@@ -215,8 +218,8 @@ while (!isFoundEnd) {
 
   if (!isFoundEnd) {
     /* 向下滑动的实现方式由模拟滑动改为调用控件滑动方法实现 */
-    className('android.support.v7.widget.RecyclerView')
-      .depth(2)
+    className('android.webkit.WebView')
+      .depth(3)
       .findOne()
       .scrollForward()
     sleep(250)
