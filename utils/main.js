@@ -8,8 +8,8 @@ let isNeedLockScreen = false // 是否需要息屏，如果程序运行前屏幕
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
 
-/* 解锁设备，适用于手机处于锁屏状态，且解锁方式为指定的手势解锁方案 */
-function unlockDevice() {
+/* 解锁设备，type 为锁屏类型 */
+function unlockDevice(type) {
   /* 手机屏幕开着且不处于解锁页面，则手机没有锁屏，直接返回 */
   while (true) {
     if (device.isScreenOn() && currentPackage() !== 'com.android.systemui') {
@@ -40,13 +40,31 @@ function unlockDevice() {
 
   /* 点击设置按钮，呼出解锁页面 */
   desc('设置').findOne().click()
-
+  
   /* 阻塞等待解锁页面出现 */
   text('返回').findOne()
   sleep(250)
-  /* 复杂手势解锁，与设置的具体手势有关，具体的坐标位置信息依赖于手机分辨率 */
 
-  gesture(750, [541, 1329], [253, 1612], [832, 1616], [536, 1900])
+  if (type === 'picture') {
+    /* 复杂手势解锁，与设置的具体手势有关，具体的坐标位置信息依赖于手机分辨率 */
+    gesture(750, [541, 1329], [253, 1612], [832, 1616], [536, 1900])
+
+  } else if (type === 'number') {
+    /* 数字解锁 */
+    click(290, 1515)
+    sleep(50)
+    click(790, 1515)
+    sleep(50)
+    click(290, 1515)
+    sleep(50)
+    click(790, 1515)
+    sleep(50)
+  } else {
+    /* 没有匹配到对应的解锁方式，直接退出 */
+    exit()
+  }
+
+  /* 等待成功解锁后进入手机设置页面 */
   waitForActivity('com.android.settings.MiuiSettings')
 
   /* 从设置页面返回到主页，直到发现锁屏快捷按键，并在此之后统一等待 500 毫秒，让页面缓冲好 */
