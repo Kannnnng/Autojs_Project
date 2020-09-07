@@ -132,8 +132,6 @@ function multipleClicks(point, counter) {
   }
 }
 
-unlockDevice('number')
-
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,

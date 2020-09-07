@@ -23,7 +23,7 @@ utils.stopRepeatExecution()
 utils.stopWhenTimeout(1000 * 60 * 2)
 
 /* 解锁设备 */
-utils.unlockDevice()
+utils.unlockDevice('number')
 
 /* 当前设备的一些信息 */
 let deviceWidth = device.width
@@ -44,6 +44,7 @@ app.startActivity({
 depth(0)
   .packageName('com.tencent.mm')
   .waitFor()
+sleep(500)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
 while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
