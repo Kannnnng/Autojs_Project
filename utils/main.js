@@ -31,19 +31,23 @@ function unlockDevice(type) {
   /* 阻塞等待手机被唤醒 */
   /* 1.充电时不显示上滑解锁而显示当前正在快速充电，无法进行后面的步骤 */
   /* 2.等到一秒应该换成等到当前活动应用 */
-  waitForPackage('com.android.systemui')
+  /* 3.不能通过判断当前处于活动状态的应用知道是否进行下一步，很大概率上会判断错误，所以用最简单的办法，延迟时间 */
+  sleep(250)
 
   /* 下滑手势呼出状态栏 */
   // swipe(deviceWidth / 2, 10, deviceWidth / 2, deviceHeight * 2 / 3, 250)
   /* 这里改用直接显示快速设置 API */
   quickSettings()
+  log(2)
 
   /* 点击设置按钮，呼出解锁页面 */
   desc('设置').findOne().click()
+  log(3)
   
   /* 阻塞等待解锁页面出现 */
   text('返回').findOne()
-  sleep(250)
+  sleep(500)
+  log(4)
 
   if (type === 'picture') {
     /* 复杂手势解锁，与设置的具体手势有关，具体的坐标位置信息依赖于手机分辨率 */
@@ -52,13 +56,13 @@ function unlockDevice(type) {
   } else if (type === 'number') {
     /* 数字解锁 */
     click(290, 1515)
-    sleep(50)
+    sleep(100)
     click(790, 1515)
-    sleep(50)
+    sleep(100)
     click(290, 1515)
-    sleep(50)
+    sleep(100)
     click(790, 1515)
-    sleep(50)
+    sleep(100)
   } else {
     /* 没有匹配到对应的解锁方式，直接退出 */
     exit()
@@ -128,10 +132,12 @@ function multipleClicks(point, counter) {
   }
 }
 
+unlockDevice('number')
+
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
   stopRepeatExecution: stopRepeatExecution,
   stopWhenTimeout: stopWhenTimeout,
-  multipleClicks： multipleClicks,
+  multipleClicks: multipleClicks,
 }
