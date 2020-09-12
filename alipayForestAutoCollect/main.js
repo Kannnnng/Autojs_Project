@@ -103,9 +103,10 @@ className('android.view.View')
   .waitFor()
 sleep(1000)
 
-/* 通过识别能量球图像来点击相对应位置 */
+/* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+  /* 对通过图像匹配匹配到的位置进行去重和按照从上到下的顺序排序 */
   /* 多次点击防止触发不了 */
   utils.multipleClicks(point, 3)
   sleep(250)
@@ -172,7 +173,6 @@ while (!isFoundEnd) {
     click(point.x - 100, point.y + 80) // 这里的偏移是手动测量后设置的
     
     className('android.widget.Button')
-      .depth(7)
       .textContains('浇水')
       .waitFor()
     
@@ -212,7 +212,6 @@ while (!isFoundEnd) {
   })
 
   if (className('android.view.View')
-    .depth(7)
     .text('没有更多了')
     .findOne(250)) isFoundEnd = true
 
