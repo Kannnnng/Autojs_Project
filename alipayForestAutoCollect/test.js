@@ -8,6 +8,15 @@ if(!images.requestScreenCapture(false)){
   sleep(250)
 }
 
+/* 当前设备的一些信息 */
+let deviceWidth = device.width
+let deviceHeight = device.height
+let designedWidth = 1080 // 设计代码时的屏幕宽度
+let designedHeight = 2248 // 设计代码时的屏幕高度
+
+/* 设置屏幕分辨率，当前数据来源于小米 8 */
+setScreenMetrics(designedWidth, designedHeight)
+
 // className('android.widget.Button')
 //   .depth(7)
 //   .textContains('收集能量')
@@ -145,14 +154,28 @@ if(!images.requestScreenCapture(false)){
 //       .depth(5)
 //       .findOne(500)
 //       .scrollForward()
-click(290, 1515)
-sleep(50)
-click(790, 1515)
-sleep(50)
-click(290, 1515)
-sleep(50)
-click(790, 1515)
-sleep(50)
+// click(290, 1515)
+// sleep(50)
+// click(790, 1515)
+// sleep(50)
+// click(290, 1515)
+// sleep(50)
+// click(790, 1515)
+// sleep(50)
 // click(289, 1516)
+
+log(device.fingerprint)
+log(device.serial)
+log(device.baseOS)
+log(device.getIMEI())
+log(device.buildId)
+log(device.broad)
+log(device.brand)
+log(device.width)
+log(device.height)
+log(device.brand)
+log(device.brand)
+swipe(parseInt(deviceWidth / 2, 10), parseInt(deviceHeight * 4 / 5, 10), parseInt(deviceWidth / 2, 10), 0, 200)
+
 
 toast('执行完成')

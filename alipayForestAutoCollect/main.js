@@ -47,13 +47,13 @@ app.startActivity({
   data: "alipayqr://platformapi/startapp?saId=60000002"
 })
 
-/* Autojs 打开支付宝提示窗，检测 10 秒钟，超过时间不再检测 */
+/* Autojs 打开支付宝提示窗，检测 0.5 秒钟，超过时间不再检测 */
 try {
   packageName('com.eg.android.AlipayGphone')
     .className('android.widget.Button')
     .depth(1)
     .textContains('打开')
-    .findOne(10000)
+    .findOne(500)
     .click()
 } catch (e) {}
   
@@ -103,6 +103,7 @@ className('android.view.View')
   .waitFor()
 sleep(1000)
 
+
 /* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
@@ -143,18 +144,14 @@ try {
 //   })
 
 className('android.view.View')
-  .depth(6)
   .text('总排行榜')
   .findOne()
   .click()
 
 className('android.view.View')
-  .depth(6)
   .text('查看更多好友')
   .findOne()
   .click()
-
-toastLog('正在进入总排行榜')  
 
 /* 等待进入排行榜 */
 let weeklyLeaderboardIcon = images.read('assets/weekly-leaderboard.jpg') || images.read('alipayForestAutoCollect/assets/weekly-leaderboard.jpg')
@@ -163,19 +160,22 @@ while (true) {
   else sleep(1000)
 }
 
-toastLog('已经进入排行榜')  
-
 /* 向下滑动寻找可以获取的能量 */
-let pickableIcon = images.read('assets/pickable-icon.jpg') || images.read('alipayForestAutoCollect/assets/pickable-icon.jpg')
 let isFoundEnd = false
+let pickableIcon = images.read('assets/pickable-icon.jpg') || images.read('alipayForestAutoCollect/assets/pickable-icon.jpg')
+let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || images.read('alipayForestAutoCollect/assets/energy-competition.jpg')
+let getTheEndIcon = images.read('assets/get-the-end.jpg') || images.read('alipayForestAutoCollect/assets/get-the-end.jpg')
 while (!isFoundEnd) {
   images.matchTemplate(images.captureScreen(), pickableIcon, { region: [950, 0] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
     click(point.x - 100, point.y + 80) // 这里的偏移是手动测量后设置的
     
-    className('android.widget.Button')
-      .textContains('浇水')
-      .waitFor()
-    
+    /* 等待页面加载完成 */
+    while (true) {
+      if (images.matchTemplate(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 }).best()) break
+      else sleep(1000)
+    }
+    sleep(250)
+
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
     // let energyPoint
     // let counter = 0
@@ -205,28 +205,30 @@ while (!isFoundEnd) {
     //   })
     
     back()
-    className('android.webkit.WebView')
-      .depth(3)
+    className('android.support.v7.widget.RecyclerView')
+      .depth(2)
       .waitFor()
     sleep(250)
   })
 
-  if (className('android.view.View')
-    .text('没有更多了')
-    .findOne(250)) isFoundEnd = true
+  /* 滑到底部以后识别底部的“没有更多了”字符 */
+  if (images.matchTemplate(images.captureScreen(), getTheEndIcon, { region: [0, 2000], threshold: 0.8 }).best()) isFoundEnd = true
 
   if (!isFoundEnd) {
     /* 向下滑动的实现方式由模拟滑动改为调用控件滑动方法实现 */
-    className('android.webkit.WebView')
-      .depth(3)
-      .findOne()
-      .scrollForward()
+    // scrollDown()
+    
+    /* 调用控件滑动无法加载触发加载下一页的逻辑，因此改用模拟方法 */
+    swipe(parseInt(designedWidth / 2, 10), parseInt(designedHeight * 4 / 5, 10), parseInt(designedWidth / 2, 10), 0, 200)
     sleep(250)
   }
 }
 
+/* 释放导入的图片资源 */
 energyBallIcon.recycle()
 pickableIcon.recycle()
+energyCompetitionIcon.recycle()
+getTheEndIcon.recycle()
 weeklyLeaderboardIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
