@@ -47,7 +47,7 @@ depth(0)
 sleep(500)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
-while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
+while (!className('android.widget.TextView').depth(3).text('我').findOne(1000)) back()
   
 /* 确认选择到微信最近对话页面 */
 className('android.widget.TextView')
@@ -109,7 +109,7 @@ className('android.widget.TextView')
 className('android.widget.TextView')
   .depth(2)
   .textContains('占领了封面')
-  .findOne()
+  .waitFor()
 
 let isFoundEnd = false
 while (!isFoundEnd) {
@@ -126,13 +126,10 @@ while (!isFoundEnd) {
         isFoundEnd = true
       } else {
         item.click()
-        sleep(50)
       }
     })
 
   if (!isFoundEnd) {
-    /* 模拟滑动会出现错误，且效率不如控件滑动好，因此将滑动的实现方式改为控件滑动 */
-    // swipe(deviceWidth / 2, deviceHeight - 300, deviceWidth / 2, 0, 250)
     className('android.widget.ListView')
       .depth(2)
       .drawingOrder(3)

@@ -1,21 +1,27 @@
 {
 	"folders": [
 		{
-			"path": "alipayForestAutoCollect"
-		},
-		{
-			"path": "idlefishAutoRefreshItem"
-		},
-		{
-			"path": "utils"
-		},
-		{
+			"name": "wexinAutoLikeSport",
 			"path": "wexinAutoLikeSport"
 		},
 		{
+			"name": "alipayForestAutoCollect",
+			"path": "alipayForestAutoCollect"
+		},
+		{
+			"name": "idlefishAutoRefreshItem",
+			"path": "idlefishAutoRefreshItem"
+		},
+		{
+			"name": "utils",
+			"path": "utils"
+		},
+		{
+			"name": "wexinOrganizeContacts",
 			"path": "wexinOrganizeContacts"
 		},
 		{
+			"name": "xiaomiAutoReboot",
 			"path": "xiaomiAutoReboot"
 		}
 	]
