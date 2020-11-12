@@ -9,6 +9,10 @@ let isNeedLockScreen = false // 是否需要息屏，如果程序运行前屏幕
 setScreenMetrics(designedWidth, designedHeight)
 
 /* 解锁设备，type 为锁屏类型 */
+/**
+  * 解锁设备
+  * @param {String} type 锁屏类型，主要有 number 数字锁和 gesture 手势锁 
+  */
 function unlockDevice(type) {
   /* 手机屏幕开着且不处于解锁页面，则手机没有锁屏，直接返回 */
   while (true) {
@@ -49,7 +53,7 @@ function unlockDevice(type) {
   sleep(500)
   log(4)
 
-  if (type === 'picture') {
+  if (type === 'gesture') {
     /* 复杂手势解锁，与设置的具体手势有关，具体的坐标位置信息依赖于手机分辨率 */
     gesture(750, [541, 1329], [253, 1612], [832, 1616], [536, 1900])
 

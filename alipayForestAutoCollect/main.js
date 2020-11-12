@@ -48,6 +48,8 @@ app.startActivity({
 })
 
 /* Autojs 打开支付宝提示窗，检测 0.5 秒钟，超过时间不再检测 */
+/* 这一步跟当前的运行环境有关，可能出现也可能不出现，所以检测 */
+/* 时间尽量缩短，加快程序执行速度 */
 try {
   packageName('com.eg.android.AlipayGphone')
     .className('android.widget.Button')
@@ -143,6 +145,7 @@ try {
 //     sleep(250)
 //   })
 
+/* 进入好友排行榜 */
 className('android.view.View')
   .text('总排行榜')
   .findOne()
@@ -166,7 +169,7 @@ let pickableIcon = images.read('assets/pickable-icon.jpg') || images.read('alipa
 let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || images.read('alipayForestAutoCollect/assets/energy-competition.jpg')
 let getTheEndIcon = images.read('assets/get-the-end.jpg') || images.read('alipayForestAutoCollect/assets/get-the-end.jpg')
 while (!isFoundEnd) {
-  images.matchTemplate(images.captureScreen(), pickableIcon, { region: [950, 0] }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+  images.matchTemplate(images.captureScreen(), pickableIcon, { region: [950, 0], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
     click(point.x - 100, point.y + 80) // 这里的偏移是手动测量后设置的
     
     /* 等待页面加载完成 */
@@ -174,7 +177,6 @@ while (!isFoundEnd) {
       if (images.matchTemplate(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 }).best()) break
       else sleep(1000)
     }
-    sleep(250)
 
     /* 相比于颜色识别，控件识别更加准确，但是用控件识别速度太慢了！ */
     // let energyPoint
@@ -219,7 +221,7 @@ while (!isFoundEnd) {
     // scrollDown()
     
     /* 调用控件滑动无法加载触发加载下一页的逻辑，因此改用模拟方法 */
-    swipe(parseInt(designedWidth / 2, 10), parseInt(designedHeight * 4 / 5, 10), parseInt(designedWidth / 2, 10), 0, 200)
+    swipe(parseInt(designedWidth / 2, 10), parseInt(designedHeight * 4 / 5, 10), parseInt(designedWidth / 2, 10), 0, 500)
     sleep(250)
   }
 }
