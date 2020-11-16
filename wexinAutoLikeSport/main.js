@@ -47,11 +47,10 @@ depth(0)
 sleep(500)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
-while (!className('android.widget.TextView').depth(3).text('我').findOne(1000)) back()
+while (!className('android.widget.TextView').text('我').findOne(1000)) back()
   
 /* 确认选择到微信最近对话页面 */
 className('android.widget.TextView')
-  .depth(3)
   .text('微信')
   .findOne()
   .parent()
@@ -59,20 +58,16 @@ className('android.widget.TextView')
 
 /* 切换用一种更加简单的方式进入搜索页面 */
 className('android.widget.RelativeLayout')
-  .depth(3)
   .desc('搜索')
-  .drawingOrder(2)
   .findOne()
   .click()
 
 /* 在搜索栏中填入微信运动 */
 className('android.widget.TextView')
-  .depth(2)
   .text('取消')
-  .findOne()
+  .waitFor()
 sleep(250)
 className('android.widget.TextView')
-  .depth(2)
   .text('取消')
   .findOne()
   .parent()
@@ -82,13 +77,9 @@ className('android.widget.TextView')
 /* 在搜索框中输入微信运动并点击出现的微信运动的搜索结果 */
 while (true) {
   try {
-    className('android.widget.ListView')
-      .depth(1)
+    className('android.widget.TextView')
+      .text('微信运动')
       .findOne()
-      .findOne(
-        className('android.widget.TextView')
-          .depth(3)
-          .text('微信运动'))
       .parent()
       .click()
     break
@@ -99,7 +90,6 @@ while (true) {
 
 /* 进入到微信运动对话框页面后点击步数排行榜 */
 className('android.widget.TextView')
-  .depth(4)
   .text('步数排行榜')
   .findOne()
   .parent()
@@ -107,7 +97,6 @@ className('android.widget.TextView')
 
 /* 阻塞等到步数排行榜页面准备好 */
 className('android.widget.TextView')
-  .depth(2)
   .textContains('占领了封面')
   .waitFor()
 
