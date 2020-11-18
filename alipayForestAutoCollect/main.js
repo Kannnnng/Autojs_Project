@@ -108,20 +108,22 @@ sleep(1000)
 
 /* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
-images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   /* 对通过图像匹配匹配到的位置进行去重和按照从上到下的顺序排序 */
   /* 多次点击防止触发不了 */
   utils.multipleClicks(point, 3)
-  sleep(250)
+  sleep(100)
+  utils.multipleClicks(point, 3)
+  sleep(100)
 })
 
 /* 有时收集完能量后会弹出推广提示框，点击其包含的关闭按钮关闭该提示框 */
-try {
-  className('android.widget.Button')
-    .text('关闭')
-    .findOne(1000)
-    .click()
-} catch (e) {}
+// try {
+//   className('android.widget.Button')
+//     .text('关闭')
+//     .findOne(1000)
+//     .click()
+// } catch (e) {}
 
 /* 能量球识别颜色 */
 // const ENERGY_BALL_IDENTIFY_COLOR = '#CFFF5E'
@@ -170,7 +172,10 @@ let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || imag
 let getTheEndIcon = images.read('assets/get-the-end.jpg') || images.read('alipayForestAutoCollect/assets/get-the-end.jpg')
 while (!isFoundEnd) {
   images.matchTemplate(images.captureScreen(), pickableIcon, { region: [950, 0], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-    click(point.x - 100, point.y + 80) // 这里的偏移是手动测量后设置的
+    utils.multipleClicks({
+      x: point.x - 100,
+      y: point.y + 10,
+    }, 3)
     
     /* 等待页面加载完成 */
     while (true) {
@@ -190,9 +195,11 @@ while (!isFoundEnd) {
     /* 2.颜色识别存在识别错误的情况，比如检测到背景颜色与能量球颜色相同时， */
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
-    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.85 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
       utils.multipleClicks(point, 3)
-      sleep(250)
+      sleep(100)
+      utils.multipleClicks(point, 3)
+      sleep(100)
     })
       
     /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件，因此使用 untilFind 函数 */
@@ -210,16 +217,14 @@ while (!isFoundEnd) {
     className('android.support.v7.widget.RecyclerView')
       .depth(2)
       .waitFor()
-    sleep(250)
   })
 
   /* 滑到底部以后识别底部的“没有更多了”字符 */
+  /* 截图之前先暂停一下，等待页面绘制完成 */
   if (images.matchTemplate(images.captureScreen(), getTheEndIcon, { region: [0, 2000], threshold: 0.8 }).best()) isFoundEnd = true
 
   if (!isFoundEnd) {
     /* 向下滑动的实现方式由模拟滑动改为调用控件滑动方法实现 */
-    // scrollDown()
-    
     /* 调用控件滑动无法加载触发加载下一页的逻辑，因此改用模拟方法 */
     swipe(parseInt(designedWidth / 2, 10), parseInt(designedHeight * 4 / 5, 10), parseInt(designedWidth / 2, 10), 0, 500)
     sleep(250)
