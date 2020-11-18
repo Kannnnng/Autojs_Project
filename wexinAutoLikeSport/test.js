@@ -250,9 +250,11 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //   .drawingOrder(3)
 //   .findOne()
 //   .scrollForward()
-log(className('android.widget.TextView')
-.text('微信运动')
-.find().length)
+// log(className('android.widget.TextView')
+// .text('微信运动')
+// .find().length)
+scrollForward()
+
 
 toast('执行完毕')
 

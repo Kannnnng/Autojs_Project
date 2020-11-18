@@ -100,19 +100,20 @@ className('android.widget.TextView')
   .textContains('占领了封面')
   .waitFor()
 
+let isFirst = true
 let isFoundEnd = false
 while (!isFoundEnd) {
   className('android.widget.ListView')
-    .depth(2)
     .findOne()
     .find(
       className('android.widget.RelativeLayout')
         .depth(4)
         .drawingOrder(3))
-    .slice(1) // 跳过处于列表最前面的我的运动步数
     .forEach((item) => {
       if (isFoundEnd || item.parent().child(0).child(0).text()) {
         isFoundEnd = true
+      } else if (isFirst) {
+        isFirst = false
       } else {
         item.click()
       }
