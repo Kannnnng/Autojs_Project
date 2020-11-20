@@ -180,5 +180,9 @@ setScreenMetrics(designedWidth, designedHeight)
 
 // toast('执行完成')
 
-console.log(typeof +1231313131)
-console.log(typeof 1231313131)
+// console.log(typeof +1231313131)
+// console.log(typeof 1231313131)
+
+let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
+console.log(images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }))
+energyBallIcon.recycle()

@@ -108,13 +108,13 @@ sleep(1000)
 
 /* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
-images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.94 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
   /* 对通过图像匹配匹配到的位置进行去重和按照从上到下的顺序排序 */
   /* 多次点击防止触发不了 */
   utils.multipleClicks(point, 3)
-  sleep(100)
+  sleep(50)
   utils.multipleClicks(point, 3)
-  sleep(100)
+  sleep(50)
 })
 
 /* 有时收集完能量后会弹出推广提示框，点击其包含的关闭按钮关闭该提示框 */
@@ -195,11 +195,11 @@ while (!isFoundEnd) {
     /* 2.颜色识别存在识别错误的情况，比如检测到背景颜色与能量球颜色相同时， */
     /* 会不断地点击背景，但背景颜色并不会发生更改，导致一直在点击背景，程序 */
     /* 会卡在这里无法继续向下执行 */
-    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.8 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.94 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
       utils.multipleClicks(point, 3)
-      sleep(100)
+      sleep(50)
       utils.multipleClicks(point, 3)
-      sleep(100)
+      sleep(50)
     })
       
     /* 蚂蚁森林刚进入时能量球还不能被正确识别为控件，因此使用 untilFind 函数 */
