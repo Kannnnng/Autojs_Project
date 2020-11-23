@@ -19,7 +19,7 @@ try {
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
 
-/* 超时停止检测线程 */
+/* 超时停止检测线程，当前功能限定在 1 分钟之内完成 */
 utils.stopWhenTimeout(1000 * 60 * 1)
 
 /* 解锁设备 */

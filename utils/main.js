@@ -118,7 +118,10 @@ function stopWhenTimeout(timeout) {
   let thread = threads.start(function() {
     setTimeout(function() {
       engines.myEngine().forceStop()
-
+      
+      /* 程序强制停止时返回桌面 */
+      home()
+      
       /* 确保程序停止 */
       exit()
     }, timeout)

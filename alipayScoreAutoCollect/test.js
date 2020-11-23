@@ -22,11 +22,13 @@ setScreenMetrics(designedWidth, designedHeight)
 // console.log(icon.getWidth())
 // console.log(icon.getHeight())
 
-/* 执行完毕退出程序返回到最开始的桌面 */
-back()
-sleep(250)
-back()
-sleep(250)
-home()
-sleep(250)
+/* 在停止之前先返回到桌面 */
+engines.myEngine().forceStop()
+
 toastLog('完成')
+home()
+toastLog('停止')
+
+/* 确保程序停止 */
+exit()
+
