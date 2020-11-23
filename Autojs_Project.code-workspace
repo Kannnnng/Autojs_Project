@@ -1,12 +1,16 @@
 {
 	"folders": [
 		{
-			"name": "wexinAutoLikeSport",
-			"path": "wexinAutoLikeSport"
+			"name": "alipayScoreAutoCollect",
+			"path": "alipayScoreAutoCollect"
 		},
 		{
 			"name": "alipayForestAutoCollect",
 			"path": "alipayForestAutoCollect"
+		},
+		{
+			"name": "wexinAutoLikeSport",
+			"path": "wexinAutoLikeSport"
 		},
 		{
 			"name": "idlefishAutoRefreshItem",

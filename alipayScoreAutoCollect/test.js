@@ -17,5 +17,16 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
 
+// const icon = images.read('assets/member.jpg') || images.read('alipayScoreAutoCollect/assets/member.jpg')
 
-console.log(images.read('assets/member.jpg') || images.read('alipayForestAutoCollect/assets/member.jpg'))
+// console.log(icon.getWidth())
+// console.log(icon.getHeight())
+
+/* 执行完毕退出程序返回到最开始的桌面 */
+back()
+sleep(250)
+back()
+sleep(250)
+home()
+sleep(250)
+toastLog('完成')
