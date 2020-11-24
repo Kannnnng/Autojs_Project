@@ -58,6 +58,7 @@ className('android.widget.TextView')
 className('android.support.v7.widget.RecyclerView')
   .depth(1)
   .waitFor()
+sleep(250)
 
 const memberIcon = images.read('assets/member.jpg') || images.read('alipayForestAutoCollect/assets/member.jpg')
 const memberIconPoint = images.matchTemplate(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.9 }).best().point
@@ -72,25 +73,30 @@ className('android.view.View')
   .waitFor()
 sleep(250)
 
-className('android.view.View')
-  .text('领积分')
-  .findOne()
-  .parent()
-  .click()
+while (className('android.view.View').text('领积分').findOne(1000)) {
+  className('android.view.View')
+    .text('领积分')
+    .findOne()
+    .click()
+  sleep(100)
+}
 
 className('android.view.View')
-  .text('点击领取')
+  .textMatches(/点击领取|可用积分/)
   .waitFor()
 sleep(250)
 
 /* 点击不同的积分类型 */
 /* Autojs 的 Javascript 引擎不能正确解析 [xx, xx] 生成数组的方式，需要用原始的 Array() 构造函数方式实现 */
-Array('到店支付', '签到').forEach(function (type) {
+Array('到店支付', '签到', '公交地铁出行', '转账到户').forEach(function (type) {
   className('android.view.View')
     .text(type)
     .find()
     .forEach(function (item) {
       item.parent().click()
+      item.parent().click()
+      item.parent().click()
+      sleep(100)
     })
 })
 

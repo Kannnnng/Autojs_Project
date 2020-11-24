@@ -23,12 +23,10 @@ setScreenMetrics(designedWidth, designedHeight)
 // console.log(icon.getHeight())
 
 /* 在停止之前先返回到桌面 */
-engines.myEngine().forceStop()
+className('android.view.View')
+  .textMatches(/点击领取|可用积分/)
+  .waitFor()
 
 toastLog('完成')
-home()
-toastLog('停止')
 
-/* 确保程序停止 */
-exit()
 
