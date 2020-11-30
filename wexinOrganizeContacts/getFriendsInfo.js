@@ -31,9 +31,6 @@ let deviceHeight = device.height
 let designedWidth = 1080 // 设计代码时的屏幕宽度
 let designedHeight = 2248 // 设计代码时的屏幕高度
 
-const WAIT_FOR_FIND_TAGS_TIME = 500
-const WAIT_FOR_FIND_END_TIME = 500
-
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
 
@@ -47,17 +44,17 @@ app.startActivity({
 depth(0)
   .packageName('com.tencent.mm')
   .waitFor()
+sleep(500)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
-while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
+while (!className('android.widget.TextView').text('我').findOne(1000)) back()
   
 /* 确认选择到微信联系人（通讯录）页面 */
-className('android.widget.TextView')
-  .depth(3)
-  .text('通讯录')
-  .findOne()
-  .parent()
-  .click()
+className('android.widget.TextView').text('通讯录').findOne().parent().click()
+/* 与上一个操作配合，形成双击底部通讯录按钮，以便滑动到人员列表顶部 */
+/* 考虑到可能要从中间状态开始，因此这句话先暂时注释掉 */
+// className('android.widget.TextView').text('通讯录').findOne().parent().click()
+sleep(1000)
 
 let friendsInformations = {}
 let isFoundEnd = false
@@ -67,7 +64,16 @@ events.on('exit', () => {
   let resultString = '微信ID,姓名,标签,,,,,,其他信息'
 
   forEach(friendsInformations, (value, key) => {
-    resultString += '\n' + `${key},${value.name},${value.tags[0]},${value.tags[1]},${value.tags[2]},${value.tags[3]},${value.tags[4]},${value.tags[5]},${value.moreInfo}`
+    resultString += "\n"
+      .concat(key, ",")
+      .concat(value.name, ",")
+      .concat(value.tags[0], ",")
+      .concat(value.tags[1], ",")
+      .concat(value.tags[2], ",")
+      .concat(value.tags[3], ",")
+      .concat(value.tags[4], ",")
+      .concat(value.tags[5], ",")
+      .concat(value.moreInfo);
   })
   
   /* 保存成表格格式方便修改 */
@@ -85,7 +91,7 @@ while (!isFoundEnd) {
       
       child.parent().parent().click()
 
-      if (className('android.widget.TextView').depth(4).text('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
+      if (className('android.widget.TextView').depth(4).text('标签').findOne(500)) {
         className('android.widget.TextView')
           .depth(4)
           .text('标签')
@@ -93,13 +99,12 @@ while (!isFoundEnd) {
           .parent()
           .click()
 
-        if (className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME)) {
+        if (className('android.view.ViewGroup').depth(3).findOne(500)) {
           className('android.view.ViewGroup')
             .depth(3)
             .findOne()
             .children()
             .forEach((child) => { tags.push(child.text()) })
-  
         }
 
         className('android.widget.TextView')
@@ -117,7 +122,7 @@ while (!isFoundEnd) {
           .forEach((child) => {
             if (nextIsInfo) {
               nextIsInfo = false
-              moreInfo = child.text()
+              moreInfo = child.text() === '添加更多备注信息' ? '' : child.text()
             }
             if (child.text() === '描述') nextIsInfo = true
           })
@@ -148,8 +153,8 @@ while (!isFoundEnd) {
 
   if (className('android.widget.TextView')
     .depth(5)
-    .textContains('位联系人')
-    .findOne(WAIT_FOR_FIND_END_TIME)) break
+    .textMatches(/\d{1,4}位联系人/)
+    .findOne(500)) break
 }
 
 /* 执行完毕退出程序返回到最开始的桌面 */
