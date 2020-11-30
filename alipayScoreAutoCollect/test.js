@@ -23,9 +23,11 @@ setScreenMetrics(designedWidth, designedHeight)
 // console.log(icon.getHeight())
 
 /* 在停止之前先返回到桌面 */
-className('android.view.View')
-  .textMatches(/点击领取|可用积分/)
-  .waitFor()
+// className('android.view.View')
+//   .textMatches(/点击领取|可用积分/)
+//   .waitFor()
+
+files.write('./编码测试文件.txt', 'resultString这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的12313131314141424342这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的', 'gb2312')
 
 toastLog('完成')
 

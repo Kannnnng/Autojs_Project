@@ -76,8 +76,8 @@ events.on('exit', () => {
       .concat(value.moreInfo);
   })
   
-  /* 保存成表格格式方便修改 */
-  files.write('./联系人信息.csv', resultString)
+  /* 保存成表格格式方便修改，格式为 GB2312，Excel 打开不乱码 */
+  files.write('./联系人信息.csv', resultString, 'gb2312')
 })
 
 while (!isFoundEnd) {
