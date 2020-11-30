@@ -100,10 +100,12 @@ try {
 //   .click()
 
 /* 等待进入蚂蚁森林 */
-className('android.view.View')
-  .depth(4)
-  .waitFor()
-sleep(1000)
+let avatarIcon = images.read('assets/avatar.jpg') || images.read('alipayForestAutoCollect/assets/avatar.jpg')
+while (true) {
+  if (images.matchTemplate(images.captureScreen(), avatarIcon, { region: [0, 0, 1080, 430], threshold: 0.95 }).best()) break
+  else sleep(1000)
+}
+sleep(500)
 
 
 /* 收集自己的能量 */
@@ -232,6 +234,7 @@ while (!isFoundEnd) {
 }
 
 /* 释放导入的图片资源 */
+avatarIcon.recycle()
 energyBallIcon.recycle()
 pickableIcon.recycle()
 energyCompetitionIcon.recycle()
