@@ -53,10 +53,7 @@ try {
   
 /* 等待进入蚂蚁森林 */
 let avatarIcon = images.read('assets/avatar.jpg') || images.read('alipayForestAutoCollect/assets/avatar.jpg')
-while (true) {
-  if (images.matchTemplate(images.captureScreen(), avatarIcon, { region: [0, 0, 1080, 430], threshold: 0.95 }).best()) break
-  else sleep(500)
-}
+while (!images.matchTemplate(images.captureScreen(), avatarIcon, { region: [0, 0, 1080, 430], threshold: 0.95 }).best()) sleep(500)
 
 /* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
@@ -73,9 +70,12 @@ let findEnergyIcon = images.read('assets/find-energy.jpg') || images.read('alipa
 let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg')
 let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || images.read('alipayForestAutoCollect/assets/energy-competition.jpg')
 let isStop = false // 退出标志位，当没有能量可收取时设置为 true，退出找能量的无限循环
+let lastEnergyNumber = null
 while (!isStop) {
   let findEnergyIconPoint = null
   if (findEnergyIconPoint = images.matchTemplate(images.captureScreen(), findEnergyIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 }).best()) {
+    lastEnergyNumber = className('android.view.View').textMatches(/\d+g/).depth(11).findOne().text()
+    
     /* 点击找能量按钮 */
     findEnergyIconPoint = findEnergyIconPoint.point
     utils.multipleClicks({
@@ -84,21 +84,26 @@ while (!isStop) {
     }, 3)
 
     /* 等待页面加载完成 */
+    let temp = null
     while (true) {
       /* 没有能量可收取，将推出标志位设置为 true */
       if (isStop) break
-      else if (images.matchTemplate(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 }).best()) break
+      else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(500)) && (lastEnergyNumber !== temp.text())) break
       else if (images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 }).best()) { isStop = true }
       else sleep(500)
     }
 
-    /* 收取能量 */
-    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.94 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-      utils.multipleClicks(point, 3)
-      sleep(50)
-      utils.multipleClicks(point, 3)
-      sleep(50)
-    })
+    while (!isStop && !images.matchTemplate(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 }).best()) sleep(500)
+
+    if (!isStop) {
+      /* 收取能量 */
+      images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.94 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+        utils.multipleClicks(point, 3)
+        sleep(50)
+        utils.multipleClicks(point, 3)
+        sleep(50)
+      })
+    }
   } else {
     sleep(500)
   }

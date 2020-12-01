@@ -103,6 +103,7 @@ utils.multipleClicksForElement(className('android.view.View')
   .textMatches(/\+\d/)
   .find(), 3, true)
 
+// /* 黄金会员以上（含）的界面不适用下面的代码 */
 // className('android.view.View')
 //   .textMatches(/点击领取|可用积分/)
 //   .waitFor()
