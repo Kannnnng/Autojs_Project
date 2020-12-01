@@ -4,8 +4,6 @@ auto.waitFor()
 if(!images.requestScreenCapture(false)){
   toast('请求截图权限失败')
   exit()
-} else {
-  sleep(250)
 }
 
 /* 当前设备的一些信息 */
