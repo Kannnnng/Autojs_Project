@@ -23,7 +23,7 @@ utils.stopRepeatExecution()
 utils.stopWhenTimeout(1000 * 60 * 2)
 
 /* 解锁设备 */
-utils.unlockDevice('number')
+utils.unlockDevice()
 
 let deviceWidth = device.width
 let deviceHeight = device.height
