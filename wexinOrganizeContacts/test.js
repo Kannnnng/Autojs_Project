@@ -367,5 +367,12 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //               .waitFor()
 //           })
 
-const parseXlsx = require('excel').default
+// const parseXlsx = require('excel').default
+// className('android.widget.TextView')
+//     .depth(5)
+//     .textMatches(/\d{1,4}位联系人/)
+//     .waitFor()
+className('android.widget.TextView').text('通讯录').findOne().parent().click()
+className('android.widget.TextView').text('通讯录').findOne().parent().click()
+// className('android.widget.TextView').text('通讯录').findOne().parent().click()
 toast('执行完毕')

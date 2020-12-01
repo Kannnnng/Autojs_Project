@@ -27,8 +27,12 @@ setScreenMetrics(designedWidth, designedHeight)
 //   .textMatches(/点击领取|可用积分/)
 //   .waitFor()
 
-files.write('./编码测试文件.txt', 'resultString这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的12313131314141424342这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的', 'gb2312')
+// files.write('./编码测试文件.txt', 'resultString这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的12313131314141424342这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的这是一段中文，测试通用的', 'gb2312')
+// const memberIcon = images.read('assets/member.jpg') || images.read('alipayScoreAutoCollect/assets/member.jpg')
+// console.log(images.matchTemplate(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.95 }))
 
+log(className('android.view.View').textContains('赚取更多积分').findOne().click)
+log(className('android.view.View').textContains('赚取更多积分').findOne().clickable())
 toastLog('完成')
 
 

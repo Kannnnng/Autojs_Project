@@ -19,11 +19,11 @@ try {
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
 
-/* 超时停止检测线程，当前功能限定在 1 分钟之内完成 */
-utils.stopWhenTimeout(1000 * 60 * 1)
+/* 超时停止检测线程，当前功能限定在半分钟之内完成 */
+utils.stopWhenTimeout(1000 * 60 * 0.5)
 
 /* 解锁设备 */
-utils.unlockDevice('number')
+utils.unlockDevice()
 
 /* 当前设备的一些信息 */
 let deviceWidth = device.width
@@ -45,60 +45,85 @@ depth(0)
   .packageName('com.eg.android.AlipayGphone')
   .waitFor()
 
-
 /* 如果打开的支付宝不是主页面，则返回到主页面 */
 while (!className('android.widget.TextView').text('首页').findOne(1000)) back()
 
-className('android.widget.TextView')
+utils.multipleClicksForElement(className('android.widget.TextView')
   .text('我的')
   .findOne()
-  .parent()
-  .click()
+  .parent(), 3)
 
 className('android.support.v7.widget.RecyclerView')
   .depth(1)
   .waitFor()
-sleep(250)
+sleep(500)
 
-const memberIcon = images.read('assets/member.jpg') || images.read('alipayForestAutoCollect/assets/member.jpg')
-const memberIconPoint = images.matchTemplate(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.9 }).best().point
-
-utils.multipleClicks({
-  x: memberIconPoint.x + memberIcon.getWidth() / 2,
-  y: memberIconPoint.y + memberIcon.getHeight() / 2,
-}, 3)
-
-className('android.view.View')
-  .text('领积分')
-  .waitFor()
-sleep(250)
-
-while (className('android.view.View').text('领积分').findOne(1000)) {
-  className('android.view.View')
-    .text('领积分')
-    .findOne()
-    .click()
-  sleep(100)
+const memberIcon = images.read('assets/member.jpg') || images.read('alipayScoreAutoCollect/assets/member.jpg')
+while (true) {
+  let memberIconPoint = null
+  if (memberIconPoint = images.matchTemplate(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.95 }).best()) {
+    memberIconPoint = memberIconPoint.point
+    utils.multipleClicks({
+      x: memberIconPoint.x + memberIcon.getWidth() / 2,
+      y: memberIconPoint.y + memberIcon.getHeight() / 2,
+    }, 3)
+    break
+  }
+  else sleep(500)
 }
 
-className('android.view.View')
-  .textMatches(/点击领取|可用积分/)
-  .waitFor()
-sleep(250)
+utils.multipleClicksForElement(className('android.widget.Button')
+  .text('全部领取')
+  .findOne(1000), 3)
 
-/* 点击不同的积分类型 */
-/* Autojs 的 Javascript 引擎不能正确解析 [xx, xx] 生成数组的方式，需要用原始的 Array() 构造函数方式实现 */
-Array('到店支付', '签到', '公交地铁出行', '转账到户').forEach(function (type) {
-  className('android.view.View')
-    .text(type)
-    .find()
-    .forEach(function (item) {
-      item.parent().click()
-      item.parent().click()
-      item.parent().click()
-      sleep(100)
-    })
-})
+utils.multipleClicksForElement(className('android.view.View')
+  .text('签到领积分')
+  .findOne()
+  .parent(), 1)
+
+className('android.view.View')
+  .text('连续7天以上天天得7积分')
+  .waitFor()
+sleep(500)
+
+utils.multipleClicksForElement(className('android.view.View')
+  .text('签到领积分')
+  .findOne(1000), 3)
+
+back()
+
+utils.multipleClicksForElement(className('android.view.View')
+  .text('我的家')
+  .findOne()
+  .parent(), 3)
+
+className('android.view.View')
+  .text('更多权益')
+  .waitFor()
+sleep(500)
+
+utils.multipleClicksForElement(className('android.view.View')
+  .textMatches(/\+\d/)
+  .find(), 3, true)
+
+// className('android.view.View')
+//   .textMatches(/点击领取|可用积分/)
+//   .waitFor()
+// sleep(250)
+
+// /* 点击不同的积分类型 */
+// /* Autojs 的 Javascript 引擎不能正确解析 [xx, xx] 生成数组的方式，需要用原始的 Array() 构造函数方式实现 */
+// Array('到店支付', '签到', '公交地铁出行', '转账到户').forEach(function (type) {
+//   className('android.view.View')
+//     .text(type)
+//     .find()
+//     .forEach(function (item) {
+//       item.parent().click()
+//       item.parent().click()
+//       item.parent().click()
+//       sleep(100)
+//     })
+// })
 
 /* 释放导入的图片资源 */
 memberIcon.recycle()
