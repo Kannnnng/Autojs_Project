@@ -11,7 +11,7 @@ setScreenMetrics(designedWidth, designedHeight)
 /* 解锁设备，type 为锁屏类型 */
 /**
   * 解锁设备
-  * @param {String} type 锁屏类型，主要有 number 数字锁和 gesture 手势锁 
+  * @param {String} type 锁屏类型，主要有 number 数字锁和 gesture 手势锁
   */
 function unlockDevice(type) {
   /* 默认为数字锁，因为 Autojs 不支持默认值语法，所以使用原始的初始值设置方式 */
@@ -141,10 +141,32 @@ function multipleClicks(point, counter) {
   }
 }
 
+/* 点击同一个地方 counter 次，控件专用，isManual 表示是否通过模拟方式实现点击操作 */
+function multipleClicksForElement(element, counter, isManual) {
+  if (element) {
+    if (element.forEach) {
+      element.forEach((item) => { multipleClicksForElement(item, counter, isManual) })
+    } else if (isManual && element.bounds) {
+      const bounds = element.bounds()
+      multipleClicks({
+        x: bounds.centerX(),
+        y: bounds.centerY(),
+      }, counter)
+    } else if (element.clickable() && element.click) {
+      for (let i = 0; i < counter; i++) {
+        element.click()
+      }
+    } else {
+      throw new Error('点击当前选中的控件失败！')
+    }
+  }
+}
+
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
   stopRepeatExecution: stopRepeatExecution,
   stopWhenTimeout: stopWhenTimeout,
   multipleClicks: multipleClicks,
+  multipleClicksForElement: multipleClicksForElement,
 }
