@@ -82,7 +82,6 @@ utils.multipleClicksForElement(className('android.view.View')
 className('android.view.View')
   .text('连续7天以上天天得7积分')
   .waitFor()
-sleep(500)
 
 utils.multipleClicksForElement(className('android.view.View')
   .text('签到领积分')
