@@ -38,22 +38,19 @@ function unlockDevice(type) {
   /* 1.充电时不显示上滑解锁而显示当前正在快速充电，无法进行后面的步骤 */
   /* 2.等到一秒应该换成等到当前活动应用 */
   /* 3.不能通过判断当前处于活动状态的应用知道是否进行下一步，很大概率上会判断错误，所以用最简单的办法，延迟时间 */
-  sleep(250)
+  // sleep(250)
 
   /* 下滑手势呼出状态栏 */
   // swipe(deviceWidth / 2, 10, deviceWidth / 2, deviceHeight * 2 / 3, 250)
   /* 这里改用直接显示快速设置 API */
   quickSettings()
-  log(2)
 
   /* 点击设置按钮，呼出解锁页面 */
   desc('设置').findOne().click()
-  log(3)
   
   /* 阻塞等待解锁页面出现 */
   text('返回').findOne()
   sleep(500)
-  log(4)
 
   if (type === 'gesture') {
     /* 复杂手势解锁，与设置的具体手势有关，具体的坐标位置信息依赖于手机分辨率 */
@@ -76,6 +73,7 @@ function unlockDevice(type) {
 
   /* 等待成功解锁后进入手机设置页面 */
   waitForActivity('com.android.settings.MiuiSettings')
+  sleep(250)
 
   /* 从设置页面返回到主页，直到发现锁屏快捷按键，并在此之后统一等待 500 毫秒，让页面缓冲好 */
   home()
