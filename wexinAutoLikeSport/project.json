@@ -7,6 +7,7 @@
     "useFeatures": [],
     "name": "微信运动步数自动点赞",
     "main": "main.js",
+    "icon": "assets/logo.jpg",
     "ignore": [
         "build"
     ],
