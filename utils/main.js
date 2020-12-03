@@ -102,7 +102,7 @@ function lockDevice() {
 
 /* 防止相同代码重复执行，当同一程序被多次同时运行时，停掉除本程序之外的其他程序 */
 function stopRepeatExecution() {
-  engines.all().slice(1).forEach((script) => {
+  engines.all().slice(0, -1).forEach((script) => {
     if (script.getSource().getName().includes(engines.myEngine().getSource().getName())) {
       script.forceStop()
       sleep(250)
@@ -116,7 +116,7 @@ function stopWhenTimeout(timeout) {
   if (!timeout) return
   
   let thread = threads.start(function() {
-    setTimeout(function() {
+    setTimeout(function () {
       engines.myEngine().forceStop()
       
       /* 程序强制停止时返回桌面 */
