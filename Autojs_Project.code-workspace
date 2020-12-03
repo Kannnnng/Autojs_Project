@@ -1,12 +1,24 @@
 {
 	"folders": [
 		{
-			"name": "alipayScoreAutoCollect",
-			"path": "alipayScoreAutoCollect"
+			"name": "dingdingReceiveMessageSelect",
+			"path": "dingdingReceiveMessageSelect"
+		},
+		{
+			"name": "utils",
+			"path": "utils"
 		},
 		{
 			"name": "alipayForestAutoCollect",
 			"path": "alipayForestAutoCollect"
+		},
+		{
+			"name": "alipayScoreAutoCollect",
+			"path": "alipayScoreAutoCollect"
+		},
+		{
+			"name": "wexinOrganizeContacts",
+			"path": "wexinOrganizeContacts"
 		},
 		{
 			"name": "wexinAutoLikeSport",
@@ -15,14 +27,6 @@
 		{
 			"name": "idlefishAutoRefreshItem",
 			"path": "idlefishAutoRefreshItem"
-		},
-		{
-			"name": "utils",
-			"path": "utils"
-		},
-		{
-			"name": "wexinOrganizeContacts",
-			"path": "wexinOrganizeContacts"
 		},
 		{
 			"name": "xiaomiAutoReboot",
