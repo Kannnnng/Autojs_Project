@@ -18,7 +18,7 @@ try {
 utils.stopRepeatExecution()
 
 /* 超时停止检测线程 */
-utils.stopWhenTimeout(1000 * 60 * 3)
+utils.stopWhenTimeout(1000 * 60 * 0.1)
 
 /* 解锁设备 */
 // utils.unlockDevice()
@@ -35,6 +35,6 @@ setScreenMetrics(designedWidth, designedHeight)
 // toastLog(1)
 // toastLog(2)
 
-log(engines.all())
-sleep(2 * 60 * 1000)
+// log(engines.all())
+// sleep(2 * 60 * 1000)
 
