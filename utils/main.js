@@ -8,6 +8,11 @@ let isNeedLockScreen = false // 是否需要息屏，如果程序运行前屏幕
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
 
+/* 统一设置 */
+const config = {
+  waitForByImageTimeGap = 250 // 图像匹配等待函数的检测时间间隔，以毫秒为单位
+}
+
 /* 解锁设备，type 为锁屏类型 */
 /**
   * 解锁设备
@@ -160,6 +165,22 @@ function multipleClicksForElement(element, counter, isManual) {
   }
 }
 
+/* 等待函数，需要事先申请截图权限 */
+function waitForByImage(image, timeout, region, threshold) {
+  threshold = threshold || 0.95
+
+  if (image) {
+    if (timeout) {
+      const totalCount = Math.round(timeout / config.waitForByImageTimeGap)
+      while (totalCount-- && !images.findImage(images.captureScreen(), image, { region: region, threshold: threshold })) sleep(config.waitForByImageTimeGap)
+    } else {
+      while (!images.findImage(images.captureScreen(), image, { region: region, threshold: threshold })) sleep(config.waitForByImageTimeGap)
+    }
+  } else {
+    throw new Error('waitForByImage 函数的输入图像无效！')
+  }
+}
+
 module.exports = {
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
@@ -167,4 +188,5 @@ module.exports = {
   stopWhenTimeout: stopWhenTimeout,
   multipleClicks: multipleClicks,
   multipleClicksForElement: multipleClicksForElement,
+  waitForByImage: waitForByImage,
 }
