@@ -48,7 +48,7 @@ click(368, 1296) // 重新启动
 /* 等待重新启动页面弹出 */
 let rebootConfirmIcon = images.read('assets/reboot-confirm.jpg') || images.read('xiaomiAutoReboot/assets/reboot-confirm.jpg')
 while (true) {
-  if (images.matchTemplate(images.captureScreen(), rebootConfirmIcon, { region: [0, 920, 1080, 600], threshold: 0.75 }).best()) break
+  if (images.findImage(images.captureScreen(), rebootConfirmIcon, { region: [0, 920, 1080, 600], threshold: 0.75 })) break
   else sleep(1000)
 }
 

@@ -53,7 +53,7 @@ try {
   
 /* 等待进入蚂蚁森林 */
 let avatarIcon = images.read('assets/avatar.jpg') || images.read('alipayForestAutoCollect/assets/avatar.jpg')
-while (!images.matchTemplate(images.captureScreen(), avatarIcon, { region: [0, 0, 1080, 430], threshold: 0.95 }).best()) sleep(500)
+while (!images.findImage(images.captureScreen(), avatarIcon, { region: [0, 0, 1080, 430], threshold: 0.95 })) sleep(500)
 
 /* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
@@ -73,7 +73,7 @@ let isStop = false // 退出标志位，当没有能量可收取时设置为 tru
 let lastEnergyNumber = null
 while (!isStop) {
   let findEnergyIconPoint = null
-  if (findEnergyIconPoint = images.matchTemplate(images.captureScreen(), findEnergyIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 }).best()) {
+  if (findEnergyIconPoint = images.findImage(images.captureScreen(), findEnergyIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 })) {
     lastEnergyNumber = className('android.view.View').textMatches(/\d+g/).depth(11).findOne().text()
     
     /* 点击找能量按钮 */
@@ -89,11 +89,11 @@ while (!isStop) {
       /* 没有能量可收取，将推出标志位设置为 true */
       if (isStop) break
       else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(500)) && (lastEnergyNumber !== temp.text())) break
-      else if (images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 }).best()) { isStop = true }
+      else if (images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 })) { isStop = true }
       else sleep(500)
     }
 
-    while (!isStop && !images.matchTemplate(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 }).best()) sleep(500)
+    while (!isStop && !images.findImage(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 })) sleep(500)
 
     if (!isStop) {
       /* 收取能量 */

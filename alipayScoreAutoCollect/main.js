@@ -59,7 +59,7 @@ sleep(500)
 const memberIcon = images.read('assets/member.jpg') || images.read('alipayScoreAutoCollect/assets/member.jpg')
 while (true) {
   let memberIconPoint = null
-  if (memberIconPoint = images.matchTemplate(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.95 }).best()) {
+  if (memberIconPoint = images.findImage(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.95 })) {
     memberIconPoint = memberIconPoint.point
     utils.multipleClicks({
       x: memberIconPoint.x + memberIcon.getWidth() / 2,

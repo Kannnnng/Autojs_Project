@@ -1,16 +1,16 @@
 {
 	"folders": [
 		{
+			"name": "alipayForestAutoCollect",
+			"path": "alipayForestAutoCollect"
+		},
+		{
 			"name": "dingdingReceiveMessageSelect",
 			"path": "dingdingReceiveMessageSelect"
 		},
 		{
 			"name": "utils",
 			"path": "utils"
-		},
-		{
-			"name": "alipayForestAutoCollect",
-			"path": "alipayForestAutoCollect"
 		},
 		{
 			"name": "alipayScoreAutoCollect",
