@@ -60,7 +60,6 @@ const memberIcon = images.read('assets/member.jpg') || images.read('alipayScoreA
 while (true) {
   let memberIconPoint = null
   if (memberIconPoint = images.findImage(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.95 })) {
-    memberIconPoint = memberIconPoint.point
     utils.multipleClicks({
       x: memberIconPoint.x + memberIcon.getWidth() / 2,
       y: memberIconPoint.y + memberIcon.getHeight() / 2,

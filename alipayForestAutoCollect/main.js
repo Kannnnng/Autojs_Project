@@ -77,7 +77,6 @@ while (!isStop) {
     lastEnergyNumber = className('android.view.View').textMatches(/\d+g/).depth(11).findOne().text()
     
     /* 点击找能量按钮 */
-    findEnergyIconPoint = findEnergyIconPoint.point
     utils.multipleClicks({
       x: findEnergyIconPoint.x + findEnergyIcon.getWidth() / 2,
       y: findEnergyIconPoint.y + findEnergyIcon.getHeight() / 2,
