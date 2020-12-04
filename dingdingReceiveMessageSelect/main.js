@@ -14,7 +14,7 @@ try {
   uniq = require('dingdingReceiveMessageSelect/node_modules/uniq/uniq.js')
 } catch (e) {
   utils = require('../utils/main.js')
-  uniq = require('./node_modules/uniq/uniq.js')
+  uniq = require('node_modules/uniq/uniq.js')
 }
 
 /* 防止当前代码被重复执行 */

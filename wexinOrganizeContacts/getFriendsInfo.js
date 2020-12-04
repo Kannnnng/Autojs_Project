@@ -16,8 +16,8 @@ try {
   forEach = require('wexinOrganizeContacts/node_modules/lodash.foreach/index.js')
 } catch (e) {
   utils = require('../utils/main.js')
-  uniqBy = require('./node_modules/lodash.uniqby/index.js')
-  forEach = require('./node_modules/lodash.foreach/index.js')
+  uniqBy = require('node_modules/lodash.uniqby/index.js')
+  forEach = require('node_modules/lodash.foreach/index.js')
 }
 
 /* 防止当前代码被重复执行 */
