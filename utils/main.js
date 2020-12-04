@@ -182,6 +182,7 @@ function waitForByImage(image, timeout, region, threshold) {
 }
 
 module.exports = {
+  config: config,
   lockDevice: lockDevice,
   unlockDevice: unlockDevice,
   stopRepeatExecution: stopRepeatExecution,
