@@ -18,7 +18,7 @@ try {
 utils.stopRepeatExecution()
 
 /* 超时停止检测线程 */
-utils.stopWhenTimeout(1000 * 60 * 3)
+utils.stopWhenTimeout(1000 * 60 * 2)
 
 /* 解锁设备 */
 utils.unlockDevice()
@@ -35,8 +35,8 @@ setScreenMetrics(designedWidth, designedHeight)
 /* 直接进入蚂蚁森林 */
 app.startActivity({
   packageName: 'com.eg.android.AlipayGphone',
+  data: "alipayqr://platformapi/startapp?saId=60000002",
   action: "VIEW",
-  data: "alipayqr://platformapi/startapp?saId=60000002"
 })
 
 /* Autojs 打开支付宝提示窗，检测 0.5 秒钟，超过时间不再检测 */
@@ -53,7 +53,7 @@ try {
   
 /* 等待进入蚂蚁森林 */
 let avatarIcon = images.read('assets/avatar.jpg') || images.read('alipayForestAutoCollect/assets/avatar.jpg')
-while (!images.findImage(images.captureScreen(), avatarIcon, { region: [0, 0, 1080, 430], threshold: 0.95 })) sleep(500)
+utils.findOneByImage(avatarIcon, 0, [0, 0, 1080, 430])
 
 /* 收集自己的能量 */
 let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
@@ -72,39 +72,33 @@ let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || imag
 let isStop = false // 退出标志位，当没有能量可收取时设置为 true，退出找能量的无限循环
 let lastEnergyNumber = null
 while (!isStop) {
-  let findEnergyIconPoint = null
-  if (findEnergyIconPoint = images.findImage(images.captureScreen(), findEnergyIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 })) {
-    lastEnergyNumber = className('android.view.View').textMatches(/\d+g/).depth(11).findOne().text()
-    
-    /* 点击找能量按钮 */
-    utils.multipleClicks({
-      x: findEnergyIconPoint.x + findEnergyIcon.getWidth() / 2,
-      y: findEnergyIconPoint.y + findEnergyIcon.getHeight() / 2,
-    }, 3)
-
-    /* 等待页面加载完成 */
-    let temp = null
-    while (true) {
-      /* 没有能量可收取，将推出标志位设置为 true */
-      if (isStop) break
-      else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(500)) && (lastEnergyNumber !== temp.text())) break
-      else if (images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 })) { isStop = true }
-      else sleep(500)
-    }
-
-    while (!isStop && !images.findImage(images.captureScreen(), energyCompetitionIcon, { region: [0, 1633], threshold: 0.8 })) sleep(500)
-
-    if (!isStop) {
-      /* 收取能量 */
-      images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.94 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
-        utils.multipleClicks(point, 3)
-        sleep(50)
-        utils.multipleClicks(point, 3)
-        sleep(50)
-      })
-    }
-  } else {
-    sleep(500)
+  let findEnergyIconPoint = utils.findOneByImage(findEnergyIcon, 0, [0, 1450, 1080, 200])
+  lastEnergyNumber = className('android.view.View').textMatches(/\d+g/).depth(11).findOne().text()
+   
+  /* 点击找能量按钮 */
+  utils.multipleClicks({
+    x: findEnergyIconPoint.x + findEnergyIcon.getWidth() / 2,
+    y: findEnergyIconPoint.y + findEnergyIcon.getHeight() / 2,
+  }, 3)
+  
+  /* 等待页面加载完成 */
+  let temp = null
+  while (true) {
+    /* 没有能量可收取，将推出标志位设置为 true */
+    if (isStop) break
+    else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250)) && (lastEnergyNumber !== temp.text())) { sleep(500); break }
+    else if (images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 })) { isStop = true }
+    else sleep(500)
+  }
+  
+  /* 收取能量 */
+  if (!isStop) {
+    images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.94 }).points.filter((point, index, points) => !points.some((_point, _index) => _index < index && _point.x === point.x && _point.y === point.y)).sort((prev, next) => prev.y - next.y).forEach((point) => {
+      utils.multipleClicks(point, 3)
+      sleep(50)
+      utils.multipleClicks(point, 3)
+      sleep(50)
+    })
   }
 }
 
