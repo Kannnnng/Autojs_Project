@@ -10,7 +10,7 @@ setScreenMetrics(designedWidth, designedHeight)
 
 /* 统一设置 */
 const config = {
-  waitForByImageTimeGap = 250 // 图像匹配等待函数的检测时间间隔，以毫秒为单位
+  findOneByImageTimeGap: 250 // 图像匹配等待函数的检测时间间隔，以毫秒为单位
 }
 
 /* 解锁设备，type 为锁屏类型 */
@@ -165,20 +165,32 @@ function multipleClicksForElement(element, counter, isManual) {
   }
 }
 
-/* 等待函数，需要事先申请截图权限 */
-function waitForByImage(image, timeout, region, threshold) {
+/**
+  * 等待函数，需要事先申请截图权限
+  * @param {Image} image 待匹配的图像模板
+  * @param {Number} timeout 超时时间，不设置或设置为 0 表示不限时间
+  * @param {Array} region 匹配图像的区域
+  * @param {Number} threshold 匹配图像的阈值
+  * @return {Point} 返回匹配到的图像的具体位置
+  */
+function findOneByImage(image, timeout, region, threshold) {
   threshold = threshold || 0.95
+
+  /* 匹配结果 */
+  let resultPoints = null
 
   if (image) {
     if (timeout) {
-      const totalCount = Math.round(timeout / config.waitForByImageTimeGap)
-      while (totalCount-- && !images.findImage(images.captureScreen(), image, { region: region, threshold: threshold })) sleep(config.waitForByImageTimeGap)
+      const totalCount = Math.round(timeout / config.findOneByImageTimeGap)
+      while (totalCount-- && !(resultPoints = images.findImage(images.captureScreen(), image, { region: region, threshold: threshold }))) sleep(config.findOneByImageTimeGap)
     } else {
-      while (!images.findImage(images.captureScreen(), image, { region: region, threshold: threshold })) sleep(config.waitForByImageTimeGap)
+      while (!(resultPoints = images.findImage(images.captureScreen(), image, { region: region, threshold: threshold }))) sleep(config.findOneByImageTimeGap)
     }
   } else {
-    throw new Error('waitForByImage 函数的输入图像无效！')
+    throw new Error('findOneByImage 函数的输入图像无效！')
   }
+
+  return resultPoints
 }
 
 module.exports = {
@@ -189,5 +201,5 @@ module.exports = {
   stopWhenTimeout: stopWhenTimeout,
   multipleClicks: multipleClicks,
   multipleClicksForElement: multipleClicksForElement,
-  waitForByImage: waitForByImage,
+  findOneByImage: findOneByImage,
 }
