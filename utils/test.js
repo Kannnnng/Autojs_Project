@@ -145,7 +145,12 @@ setScreenMetrics(designedWidth, designedHeight)
 // app.launch('com.taobao.idlefish')
 
 
-let a = 4
-while (a--) {
-  console.log(a)
-}
+// let a = 4
+// while (a--) {
+//   console.log(a)
+// }
+className('android.widget.TextView')
+      .text('锁屏')
+      .findOne()
+      .parent()
+      .click()

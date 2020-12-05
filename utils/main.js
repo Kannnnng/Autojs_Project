@@ -91,11 +91,8 @@ function lockDevice() {
   home()
 
   if (isNeedLockScreen) {
-    waitForPackage('com.miui.home')
-  
     className('android.widget.TextView')
       .text('锁屏')
-      .depth(3)
       .findOne()
       .parent()
       .click()
