@@ -251,8 +251,35 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 // log(className('android.widget.TextView')
 // .text('微信运动')
 // .find().length)
-scrollForward()
+// scrollForward()
+// className('android.widget.TextView')
+//   .textContains('占领了封面')
+//   .waitFor()
+let isFirst = true
+let isFoundEnd = false
+while (!isFoundEnd) {
+  className('android.widget.RelativeLayout')
+    .depth(3)
+    .find()
+    .forEach((item) => {
+      if (isFirst) {
+        isFirst = false
+      } else if (!item.childCount()) {
+        isFoundEnd = true
+      } else if (!isFoundEnd) {
+        item.child(item.childCount() - 1).click()
+      }
+    })
 
+  if (!isFoundEnd) {
+    className('android.widget.ListView')
+      .depth(2)
+      .drawingOrder(3)
+      .findOne()
+      .scrollForward()
+    sleep(250)
+  }
+}
 
 toast('执行完毕')
 

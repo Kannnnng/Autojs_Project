@@ -101,19 +101,16 @@ className('android.widget.TextView')
 let isFirst = true
 let isFoundEnd = false
 while (!isFoundEnd) {
-  className('android.widget.ListView')
-    .findOne()
-    .find(
-      className('android.widget.RelativeLayout')
-        .depth(4)
-        .drawingOrder(3))
+  className('android.widget.RelativeLayout')
+    .depth(3)
+    .find()
     .forEach((item) => {
-      if (isFoundEnd || item.parent().child(0).child(0).text()) {
-        isFoundEnd = true
-      } else if (isFirst) {
+      if (isFirst) {
         isFirst = false
-      } else {
-        item.click()
+      } else if (!item.childCount()) {
+        isFoundEnd = true
+      } else if (!isFoundEnd) {
+        item.child(item.childCount() - 1).click()
       }
     })
 
