@@ -46,7 +46,7 @@ sleep(500)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
 while (!className('android.widget.TextView').text('我').findOne(1000)) back()
-  
+
 /* 确认选择到微信最近对话页面 */
 className('android.widget.TextView')
   .text('微信')
@@ -104,13 +104,16 @@ while (!isFoundEnd) {
   className('android.widget.RelativeLayout')
     .depth(3)
     .find()
+    .filter((item) => item.childCount())
     .forEach((item) => {
-      if (isFirst) {
-        isFirst = false
-      } else if (!item.childCount()) {
+      if (!isFoundEnd && item.child(0).child(0).text()) {
+        if (isFirst) {
+          isFirst = false // 跳过自己的微信运动栏
+        } else {
+          item.child(item.childCount() - 1).click()
+        }
+      } else {
         isFoundEnd = true
-      } else if (!isFoundEnd) {
-        item.child(item.childCount() - 1).click()
       }
     })
 
