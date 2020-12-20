@@ -74,7 +74,7 @@ utils.multipleClicksForElement(className('android.widget.Button')
   .findOne(1000), 3)
 
 utils.multipleClicksForElement(className('android.view.View')
-  .text('签到领积分')
+  .textMatches(/(每日赚|签到领)积分/)
   .findOne()
   .parent(), 1)
 
