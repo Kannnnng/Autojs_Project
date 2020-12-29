@@ -55,7 +55,7 @@ setScreenMetrics(designedWidth, designedHeight)
 //     .textContains('的蚂蚁森林')
 //     .waitFor()
 //   sleep(250)
-  
+
 //   let energyPoint
 //   while (energyPoint = images.findColor(images.captureScreen(), ENERGY_BALL_IDENTIFY_COLOR, { region: [0, 430, 1080, 630] })) {
 //     click(energyPoint.x, energyPoint.y)
@@ -133,7 +133,7 @@ setScreenMetrics(designedWidth, designedHeight)
 //   log(point)
 // })
 // log(images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 1080, 630], threshold: 0.5 }).matches)
-// toastLog('已经进入蚂蚁森林')  
+// toastLog('已经进入蚂蚁森林')
 /* 通过识别能量球图像来点击相对应位置 */
 // let energyBallIcon = images.read('assets/energy-ball.jpg') || images.read('alipayForestAutoCollect/assets/energy-ball.jpg')
 // let energyBallIconWidth = energyBallIcon.getWidth()
@@ -186,9 +186,15 @@ setScreenMetrics(designedWidth, designedHeight)
 // energyBallIcon.recycle()
 // let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg')
 // console.log(images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1450, 1080, 200], threshold: 0.95 }).best())
-toast(className('android.view.View')
-  .textMatches(/\d+g/)
-  .depth(11)
-  .find()
-  .length)
-// toastLog('完成')
+// toast(className('android.view.View')
+//   .textMatches(/\d+g/)
+//   .depth(11)
+//   .find()
+//   .length)
+
+let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg')
+// console.log(images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 200], threshold: 0.7 }))
+console.log(images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 200], threshold: 0.5}))
+
+
+toastLog('完成')

@@ -5,24 +5,24 @@
 			"path": "alipayForestAutoCollect"
 		},
 		{
-			"name": "dingdingReceiveMessageSelect",
-			"path": "dingdingReceiveMessageSelect"
+			"name": "alipayScoreAutoCollect",
+			"path": "alipayScoreAutoCollect"
 		},
 		{
 			"name": "utils",
 			"path": "utils"
 		},
 		{
-			"name": "alipayScoreAutoCollect",
-			"path": "alipayScoreAutoCollect"
+			"name": "wexinAutoLikeSport",
+			"path": "wexinAutoLikeSport"
+		},
+		{
+			"name": "dingdingReceiveMessageSelect",
+			"path": "dingdingReceiveMessageSelect"
 		},
 		{
 			"name": "wexinOrganizeContacts",
 			"path": "wexinOrganizeContacts"
-		},
-		{
-			"name": "wexinAutoLikeSport",
-			"path": "wexinAutoLikeSport"
 		},
 		{
 			"name": "idlefishAutoRefreshItem",
