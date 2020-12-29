@@ -71,7 +71,7 @@ while (true) {
 
 utils.multipleClicksForElement(className('android.widget.Button')
   .text('全部领取')
-  .findOne(1000), 3)
+  .findOne(2000), 3)
 
 utils.multipleClicksForElement(className('android.view.View')
   .textMatches(/(每日赚|签到领)积分/)
@@ -82,9 +82,11 @@ className('android.view.View')
   .text('连续7天以上天天得7积分')
   .waitFor()
 
-utils.multipleClicksForElement(className('android.view.View')
-  .text('签到领积分')
-  .findOne(1000), 3)
+if (!className('android.view.View').textContains('已签到 赚取更多积分').findOne(500)) {
+  utils.multipleClicksForElement(className('android.view.View')
+    .text('签到领积分')
+    .findOne(500), 3)
+}
 
 back()
 
