@@ -194,7 +194,7 @@ setScreenMetrics(designedWidth, designedHeight)
 
 let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg')
 // console.log(images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 200], threshold: 0.7 }))
-console.log(images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 200], threshold: 0.5}))
+console.log(images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080], threshold: 0.5}))
 
 
 toastLog('完成')

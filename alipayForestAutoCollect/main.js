@@ -67,7 +67,7 @@ images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 
 })
 
 let findEnergyIcon = images.read('assets/find-energy.jpg') || images.read('alipayForestAutoCollect/assets/find-energy.jpg')
-let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg')
+// let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg') // 改用元素识别方式
 let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || images.read('alipayForestAutoCollect/assets/energy-competition.jpg')
 let isStop = false // 退出标志位，当没有能量可收取时设置为 true，退出找能量的无限循环
 let lastEnergyNumber = null
@@ -87,7 +87,8 @@ while (!isStop) {
     /* 没有能量可收取，将推出标志位设置为 true */
     if (isStop) break
     else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250)) && (lastEnergyNumber !== temp.text())) { sleep(500); break }
-    else if (images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 200], threshold: 0.92 })) { isStop = true }
+    // else if (images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 500], threshold: 0.92 })) { isStop = true } // 改用元素识别方式
+    else if (className('android.view.View').text('返回我的森林').findOne(500)) { isStop = true }
     else sleep(500)
   }
 
@@ -105,7 +106,7 @@ while (!isStop) {
 avatarIcon.recycle()
 energyBallIcon.recycle()
 findEnergyIcon.recycle()
-getEndIcon.recycle()
+// getEndIcon.recycle() // 改用元素识别方式
 energyCompetitionIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
