@@ -79,10 +79,10 @@ utils.multipleClicksForElement(className('android.view.View')
   .parent(), 1)
 
 className('android.view.View')
-  .text('连续7天以上天天得7积分')
+  .textContains('明天签到 +')
   .waitFor()
 
-if (!className('android.view.View').textContains('已签到 赚取更多积分').findOne(500)) {
+if (!className('android.view.View').textContains('已连续签到').findOne(500)) {
   utils.multipleClicksForElement(className('android.view.View')
     .text('签到领积分')
     .findOne(500), 3)
