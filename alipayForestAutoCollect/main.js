@@ -66,11 +66,9 @@ images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 
   sleep(50)
 })
 
-let findEnergyIcon = images.read('assets/find-energy.jpg') || images.read('alipayForestAutoCollect/assets/find-energy.jpg')
-// let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg') // 改用元素识别方式
-let energyCompetitionIcon = images.read('assets/energy-competition.jpg') || images.read('alipayForestAutoCollect/assets/energy-competition.jpg')
+let findEnergyIcon = images.read('assets/find-energy.jpg') || images.read('alipayForestAutoCollect/assets/find-energy.jpg') // 找能量图标
 let isStop = false // 退出标志位，当没有能量可收取时设置为 true，退出找能量的无限循环
-let lastEnergyNumber = null
+let lastEnergyNumber = null // 上一个朋友的能量值，用来跟当前朋友的能量值比较，用来确定页面加载完成
 while (!isStop) {
   let findEnergyIconPoint = utils.findOneByImage(findEnergyIcon, 0, [0, 1450, 1080, 200])
   lastEnergyNumber = className('android.view.View').textMatches(/\d+g/).depth(11).findOne().text()
@@ -87,7 +85,6 @@ while (!isStop) {
     /* 没有能量可收取，将推出标志位设置为 true */
     if (isStop) break
     else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250)) && (lastEnergyNumber !== temp.text())) { sleep(500); break }
-    // else if (images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 500], threshold: 0.92 })) { isStop = true } // 改用元素识别方式
     else if (className('android.view.View').text('返回我的森林').findOne(500)) { isStop = true }
     else sleep(500)
   }
@@ -100,14 +97,22 @@ while (!isStop) {
       utils.multipleClicks(point, 3)
       sleep(50)
     })
+
+    /* 点到提醒收取的能量球时，会出现提醒好友收能量的对话框，需要取消这个对话框，才能继续 */
+    let dialog = className('android.view.View').text('知道了 去提醒').findOne(1000)
+    if (dialog) {
+      dialog
+        .parent()
+        .child(0)
+        .click()
+    }
+
   }
 }
 
 avatarIcon.recycle()
 energyBallIcon.recycle()
 findEnergyIcon.recycle()
-// getEndIcon.recycle() // 改用元素识别方式
-energyCompetitionIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
 back()
