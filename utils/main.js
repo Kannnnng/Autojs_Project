@@ -25,12 +25,12 @@ function unlockDevice(type) {
   while (true) {
     if (device.isScreenOn() && currentPackage() !== 'com.android.systemui') {
       isNeedLockScreen = false
-      
+
       if (confirm('设定的程序即将执行')) return
       else exit()
     } else {
       isNeedLockScreen = true
-      
+
       device.wakeUpIfNeeded()
       sleep(500)
 
@@ -52,7 +52,7 @@ function unlockDevice(type) {
 
   /* 点击设置按钮，呼出解锁页面 */
   desc('设置').findOne().click()
-  
+
   /* 阻塞等待解锁页面出现 */
   text('返回').findOne()
   sleep(500)
@@ -116,14 +116,14 @@ function stopRepeatExecution() {
 function stopWhenTimeout(timeout) {
   /* 超时时间无效时，不做任何操作 */
   if (!timeout) return
-  
+
   let thread = threads.start(function() {
     setTimeout(function () {
       engines.myEngine().forceStop()
-      
+
       /* 程序强制停止时返回桌面 */
       home()
-      
+
       /* 确保程序停止 */
       exit()
     }, timeout)
@@ -165,7 +165,7 @@ function multipleClicksForElement(element, counter, isManual) {
 /**
   * 等待函数，需要事先申请截图权限
   * @param {Image} image 待匹配的图像模板
-  * @param {Number} timeout 超时时间，不设置或设置为 0 表示不限时间
+  * @param {Number} timeout 超时时间，以毫秒为单位，不设置或设置为 0 表示不限时间
   * @param {Array} region 匹配图像的区域
   * @param {Number} threshold 匹配图像的阈值
   * @return {Point} 返回匹配到的图像的具体位置
