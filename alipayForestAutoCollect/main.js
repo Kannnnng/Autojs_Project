@@ -67,7 +67,6 @@ images.matchTemplate(images.captureScreen(), energyBallIcon, { region: [0, 430, 
 })
 
 let findEnergyIcon = images.read('assets/find-energy.jpg') || images.read('alipayForestAutoCollect/assets/find-energy.jpg') // 找能量图标
-let getEndIcon = images.read('assets/get-end.jpg') || images.read('alipayForestAutoCollect/assets/get-end.jpg') // 找能量图标
 let isStop = false // 退出标志位，当没有能量可收取时设置为 true，退出找能量的无限循环
 let lastEnergyNumber = null // 上一个朋友的能量值，用来跟当前朋友的能量值比较，用来确定页面加载完成
 while (!isStop) {
@@ -86,8 +85,7 @@ while (!isStop) {
     /* 没有能量可收取，将推出标志位设置为 true */
     if (isStop) break
     else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250)) && (lastEnergyNumber !== temp.text())) { sleep(500); break }
-    // else if (className('android.view.View').text('返回我的森林').findOne(500)) { isStop = true }
-    else if (utils.findOneByImage(getEndIcon, 500, [0, 0, 1080, 550])) { isStop = true }
+    else if (className('android.widget.Button').text('返回我的森林').findOne(500)) { isStop = true }
     else sleep(500)
   }
 
@@ -115,7 +113,6 @@ while (!isStop) {
 avatarIcon.recycle()
 energyBallIcon.recycle()
 findEnergyIcon.recycle()
-getEndIcon.recycle()
 
 /* 执行完毕退出程序返回到最开始的桌面 */
 back()

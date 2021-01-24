@@ -196,7 +196,12 @@ setScreenMetrics(designedWidth, designedHeight)
 // console.log(images.findImage(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080, 200], threshold: 0.7 }))
 // console.log(images.matchTemplate(images.captureScreen(), getEndIcon, { region: [0, 1550, 1080], threshold: 0.5}))
 
-toastLog(textContains('知道了').findOne(1000))
+// toastLog(textContains('知道了').findOne(1000))
+var temp
+(temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250))
+console.log('temp: ', temp);
 
+temp = className('android.widget.Button').text('返回我的森林').findOne(500)
+console.log('temp: ', temp);
 
 toastLog('完成')
