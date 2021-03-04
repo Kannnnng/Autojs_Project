@@ -190,6 +190,31 @@ function findOneByImage(image, timeout, region, threshold) {
   return resultPoints
 }
 
+/**
+  * 代码执行检测，发现代码不执行后执行指定操作
+  * @param {Object} flag 标志
+  * @param {Number} flag.flag 代码执行标志，一定时间内不变化则表明代码执行被阻塞了
+  * @return {Object} 返回代码检测线程的 ID
+  */
+function codeExecutionDetector(flag, callback) {
+  let prevFlag = null
+
+  let thread = threads.start(function() {
+    setTimeout(function F() {
+      if (prevFlag === flag.flag) {
+        callback()
+      }
+
+      prevFlag = flag.flag
+      setTimeout(F, 2000)
+    }, 2000)
+  })
+
+  thread.waitFor()
+
+  return thread
+}
+
 module.exports = {
   config: config,
   lockDevice: lockDevice,
@@ -199,4 +224,5 @@ module.exports = {
   multipleClicks: multipleClicks,
   multipleClicksForElement: multipleClicksForElement,
   findOneByImage: findOneByImage,
+  codeExecutionDetector: codeExecutionDetector,
 }
