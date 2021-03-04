@@ -46,7 +46,7 @@ sleep(500)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
 while (!className('android.widget.TextView').text('我').findOne(1000)) back()
-  
+
 /* 确认选择到微信联系人（通讯录）页面 */
 className('android.widget.TextView').text('通讯录').findOne().parent().click()
 /* 与上一个操作配合，形成双击底部通讯录按钮，以便滑动到人员列表顶部 */
@@ -73,7 +73,7 @@ events.on('exit', () => {
       .concat(value.tags[5], ",")
       .concat(value.moreInfo);
   })
-  
+
   /* 保存成表格格式方便修改，格式为 GB2312，Excel 打开不乱码 */
   files.write('./联系人信息.csv', resultString, 'gb2312')
 })
@@ -86,7 +86,7 @@ while (!isFoundEnd) {
     .forEach((child) => {
       let tags = []
       let moreInfo = ''
-      
+
       child.parent().parent().click()
 
       if (className('android.widget.TextView').depth(4).text('标签').findOne(500)) {
@@ -109,7 +109,7 @@ while (!isFoundEnd) {
           .depth(3)
           .text('描述')
           .waitFor()
-        
+
         let nextIsInfo = false
 
         className('android.widget.ScrollView')
@@ -142,12 +142,12 @@ while (!isFoundEnd) {
       back()
       sleep(250)
     })
-    
-  className('android.widget.ListView')
-    .depth(3)
-    .drawingOrder(5)
-    .findOne()
-    .scrollForward()
+
+    className('android.widget.ListView')
+      .depth(3)
+      .drawingOrder(6)
+      .findOne()
+      .scrollForward()
 
   if (className('android.widget.TextView')
     .depth(5)
