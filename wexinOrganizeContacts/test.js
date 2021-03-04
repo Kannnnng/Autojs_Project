@@ -18,7 +18,7 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //   .find(
 //     className('android.widget.RelativeLayout')
 //       .depth(4)
-//       .drawingOrder(1))      
+//       .drawingOrder(1))
 //   .map((item) => item.child(0))
 //   .some((item) => item.text())) {
 //   className('android.widget.ListView')
@@ -56,11 +56,11 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //   //     .scrollBackward()
 
 //   sleep(250)
-  
+
 //   screenshot_2 = images.toBytes(images.captureScreen(), format = 'jpg', quality = 75)
 
 //   log(images.matchTemplate(images.fromBytes(screenshot_1), images.fromBytes(screenshot_2)).best())
-  
+
 //   break
 //   // if (result) {
 //   //   break
@@ -82,7 +82,7 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //     .child(0)
 //     .scrollBackward()
 //   sleep(500)
-  
+
 //   screenshot_2 = images.toBytes(images.captureScreen(), format = 'jpg', quality = 75)
 
 //   if (images.matchTemplate(images.fromBytes(screenshot_1), images.fromBytes(screenshot_2)).best()) {
@@ -174,7 +174,7 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //   toast(123)
 // }).on("negative", () => {
 //   toast(456)
-  
+
 // }).show()
 // log(121313131)
 // app.launch('com.tencent.mm')
@@ -300,11 +300,11 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //               .findOne()
 
 //               setText('nihaod7')
-                
+
 //               className('android.widget.ListView')
 //                 .depth(2)
 //                 .waitFor()
-              
+
 //               click(parent.bounds().right - 2, parent.bounds().centerY())
 
 //               className('android.view.ViewGroup')
@@ -313,11 +313,11 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //                 .waitFor()
 
 //               setText('nihaod8')
-                
+
 //               className('android.widget.ListView')
 //                 .depth(2)
 //                 .waitFor()
-              
+
 //               click(parent.bounds().right - 2, parent.bounds().centerY())
 
 //               className('android.view.ViewGroup')
@@ -326,18 +326,18 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //               .waitFor()
 
 //               setText('nihaod9')
-                
+
 //               className('android.widget.ListView')
 //                 .depth(2)
 //                 .waitFor()
-              
+
 //               click(parent.bounds().right - 2, parent.bounds().centerY())
 
 // let parent = className('android.view.ViewGroup')
 //             .depth(3)
 //             .drawingOrder(1)
 //             .findOne()
-            
+
 //           /* 删除现有的标签 */
 //           parent
 //             .children()
@@ -356,7 +356,7 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //             className('android.widget.ListView')
 //               .depth(2)
 //               .waitFor()
-            
+
 //             click(parent.bounds().right - 2, parent.bounds().centerY())
 
 //             className('android.view.ViewGroup')
@@ -370,7 +370,16 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 //     .depth(5)
 //     .textMatches(/\d{1,4}位联系人/)
 //     .waitFor()
-className('android.widget.TextView').text('通讯录').findOne().parent().click()
-className('android.widget.TextView').text('通讯录').findOne().parent().click()
 // className('android.widget.TextView').text('通讯录').findOne().parent().click()
+// className('android.widget.TextView').text('通讯录').findOne().parent().click()
+// className('android.widget.TextView').text('通讯录').findOne().parent().click()
+
+
+className('android.widget.ListView')
+    .depth(3)
+    .drawingOrder(6)
+    .findOne()
+    .scrollForward()
+    // .scrollUp()
+
 toast('执行完毕')

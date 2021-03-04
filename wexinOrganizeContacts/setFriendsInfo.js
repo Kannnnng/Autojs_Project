@@ -45,14 +45,20 @@ depth(0)
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
 while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
-  
+
+/* 确认选择到微信联系人（通讯录）页面 */
+// className('android.widget.TextView')
+//   .depth(3)
+//   .text('通讯录')
+//   .findOne()
+//   .parent()
+//   .click()
+
 /* 确认选择到微信联系人（通讯录）页面 */
 className('android.widget.TextView')
   .depth(3)
   .text('通讯录')
   .findOne()
-  .parent()
-  .click()
 
 let friendsInformations = JSON.parse(files.read('./联系人信息.json'))
 let isFoundEnd = false
@@ -64,7 +70,7 @@ while (!isFoundEnd) {
     .find()
     .forEach((child) => {
       let tags = []
-      
+
       child.parent().parent().click()
 
       let weixinId = className('android.widget.TextView')
@@ -78,34 +84,48 @@ while (!isFoundEnd) {
       if (
         friendInformation &&
         !friendInformation.isFinished &&
-        className('android.widget.TextView').depth(4).textContains('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
+        className('android.widget.TextView').textMatches(/(描述)|((添加)?标签)/).findOne(WAIT_FOR_FIND_TAGS_TIME)
       ) {
         friendInformation.isFinished = true
-        
-        className('android.widget.TextView')
-          .depth(4)
-          .textContains('标签')
-          .findOne()
-          .parent()
-          .click()
 
-        /* 修改备注 */
-        className('android.widget.TextView')
-          .depth(3)
-          .drawingOrder(3)
-          .findOne()
-          .click()
-        className('android.widget.EditText')
+        if (className('android.widget.TextView').textContains('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
+          className('android.widget.TextView')
+            .depth(4)
+            .textContains('标签')
+            .findOne()
+            .parent()
+            .click()
+        } else {
+          className('android.widget.TextView')
+            .depth(5)
+            .textContains('描述')
+            .findOne()
+            .parent()
+            .click()
+        }
+
+        /* 备注名称有效则修改名称 */
+        if (friendInformation.name) {
+          /* 修改备注 */
+          className('android.widget.TextView')
+            .depth(3)
+            .drawingOrder(3)
+            .findOne()
+            .click()
+
+          className('android.widget.EditText')
           .depth(3)
           .drawingOrder(2)
           .findOne()
           .setText(friendInformation.name)
+        }
 
         /* 原本有标签和没有标签的选择器不同，因此在这里合并这两种搜索方式 */
-        let tagEditor = 
+        let tagEditor =
           className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME) ||
           className('android.widget.TextView').depth(3).textContains('添加标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
-        if (tagEditor) {
+
+        if (tagEditor && friendInformation.tags.some((value) => !!value)) {
           tagEditor.click()
 
           className('android.widget.TextView')
@@ -117,7 +137,7 @@ while (!isFoundEnd) {
             .depth(3)
             .drawingOrder(1)
             .findOne()
-            
+
           /* 删除现有的标签 */
           parent
             .children()
@@ -131,14 +151,15 @@ while (!isFoundEnd) {
             })
 
           friendInformation.tags.forEach((tag) => {
+            /* 跳过无效标签 */
             if (!tag) return
-            
+
             setText(tag)
 
             className('android.widget.ListView')
               .depth(2)
               .waitFor()
-            
+
             click(parent.bounds().right - 5, parent.bounds().bottom - 5)
 
             className('android.view.ViewGroup')
@@ -176,10 +197,13 @@ while (!isFoundEnd) {
 
               child.click()
 
-              /* 这里非常不稳定，因为不同版本的微信此处控件对应的 ID 不同 */
-              id('b0_')
-                .findOne()
-                .setText(friendInformation.moreInfo)
+              /* 跳过无效的备注信息 */
+              if (friendInformation.moreInfo) {
+                /* 这里非常不稳定，因为不同版本的微信此处控件对应的 ID 不同 */
+                id('bb3')
+                  .findOne()
+                  .setText(friendInformation.moreInfo)
+              }
               sleep(100)
               back()
             } else if (child.text() === '描述') nextIsInfo = true
@@ -206,10 +230,10 @@ while (!isFoundEnd) {
         .text('通讯录')
         .waitFor()
     })
-    
+
   className('android.widget.ListView')
     .depth(3)
-    .drawingOrder(5)
+    .drawingOrder(6)
     .findOne()
     .scrollForward()
 
