@@ -28,6 +28,7 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 
 const WAIT_FOR_FIND_TAGS_TIME = 500
 const WAIT_FOR_FIND_END_TIME = 500
+const WAIT_FOR_FIND_FINISH_BUTTON_TIME = 500
 
 /* 设置屏幕分辨率，当前数据来源于小米 8 */
 setScreenMetrics(designedWidth, designedHeight)
@@ -103,7 +104,10 @@ while (!isFoundEnd) {
         }
 
         /* 备注名称有效则修改名称 */
-        if (friendInformation.name) {
+        if (
+          friendInformation.name &&
+          friendInformation.name !== className('android.widget.TextView').depth(3).drawingOrder(3).findOne().text()
+        ) {
           /* 修改备注 */
           className('android.widget.TextView')
             .depth(3)
@@ -123,12 +127,14 @@ while (!isFoundEnd) {
           className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME) ||
           className('android.widget.TextView').depth(3).textContains('添加标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
 
+          /* 从微信读取原来的标签 */
         const previousTags = className('android.view.ViewGroup')
           .depth(3)
           .findOne()
           .children()
           .map((child) => child.text())
 
+        /* 标签编辑器出现，设置的标签至少有一个有效，原有的标签和设置的标签不完全相同，三个条件缺一不可 */
         if (
           tagEditor &&
           friendInformation.tags.some((value) => !!value) &&
@@ -206,16 +212,19 @@ while (!isFoundEnd) {
             if (nextIsInfo) {
               nextIsInfo = false
 
-              child.click()
-
               /* 跳过无效的备注信息 */
-              if (friendInformation.moreInfo) {
+              if (
+                friendInformation.moreInfo &&
+                friendInformation.moreInfo !== child.text()
+              ) {
+                /* 点击编辑以后才会出现编辑框 */
+                child.click()
                 /* 这里非常不稳定，因为不同版本的微信此处控件对应的 ID 不同 */
                 id('bb3')
                   .findOne()
                   .setText(friendInformation.moreInfo)
+                sleep(100)
               }
-              sleep(100)
               back()
             } else if (child.text() === '描述') nextIsInfo = true
           })
@@ -223,11 +232,12 @@ while (!isFoundEnd) {
         let finishButton = className('android.widget.Button')
           .depth(2)
           .text('完成')
-          .findOne()
-        if (finishButton.enabled()) {
-          finishButton.click()
-        } else {
+          .findOne(WAIT_FOR_FIND_FINISH_BUTTON_TIME)
+        /* 如果修改前后没有区别，完成按钮就不能点，直接返回 */
+        if (!finishButton || !finishButton.enabled()) {
           back()
+        } else {
+          finishButton.click()
         }
       } else {
         back()
@@ -244,10 +254,10 @@ while (!isFoundEnd) {
         .waitFor()
     })
 
-  className('android.widget.ListView')
-    .depth(3)
-    .drawingOrder(6)
+  className('com.tencent.mm.ui.mogic.WxViewPager')
+    .depth(2)
     .findOne()
+    .child(1)
     .scrollForward()
 
   if (className('android.widget.TextView')
