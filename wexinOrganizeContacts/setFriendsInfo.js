@@ -88,17 +88,15 @@ while (!isFoundEnd) {
       ) {
         friendInformation.isFinished = true
 
-        if (className('android.widget.TextView').textContains('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
+        if (className('android.widget.TextView').textMatches(/(添加)?标签/).findOne(WAIT_FOR_FIND_TAGS_TIME)) {
           className('android.widget.TextView')
-            .depth(4)
-            .textContains('标签')
+            .textMatches(/(添加)?标签/)
             .findOne()
             .parent()
             .click()
         } else {
           className('android.widget.TextView')
-            .depth(5)
-            .textContains('描述')
+            .text('描述')
             .findOne()
             .parent()
             .click()
@@ -125,7 +123,20 @@ while (!isFoundEnd) {
           className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME) ||
           className('android.widget.TextView').depth(3).textContains('添加标签').findOne(WAIT_FOR_FIND_TAGS_TIME)
 
-        if (tagEditor && friendInformation.tags.some((value) => !!value)) {
+        const previousTags = className('android.view.ViewGroup')
+          .depth(3)
+          .findOne()
+          .children()
+          .map((child) => child.text())
+
+        if (
+          tagEditor &&
+          friendInformation.tags.some((value) => !!value) &&
+          (
+            previousTags.length !== friendInformation.tags.filter((tag) => !!tag).length ||
+            previousTags.some((tag) => !friendInformation.tags.includes(tag))
+          )
+        ) {
           tagEditor.click()
 
           className('android.widget.TextView')
@@ -218,6 +229,8 @@ while (!isFoundEnd) {
         } else {
           back()
         }
+      } else {
+        back()
       }
 
       className('android.widget.TextView')
