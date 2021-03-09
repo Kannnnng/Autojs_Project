@@ -55,19 +55,13 @@ while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) 
 //   .click()
 
 /* 确认选择到微信联系人（通讯录）页面 */
-className('android.widget.TextView')
-  .depth(3)
-  .text('通讯录')
-  .findOne()
+// className('android.widget.TextView')
+//   .depth(3)
+//   .text('通讯录')
+//   .findOne()
 
 let friendsInformations = JSON.parse(files.read('./联系人信息.json'))
 let isFoundEnd = false
-
-/* 代码卡住后执行回退操作 */
-const flag = { flag: 0 }
-utils.codeExecutionDetector(flag, () => {
-  if (!className('android.widget.TextView').depth(3).text('我').findOnce()) back()
-})
 
 while (!isFoundEnd) {
   className('android.view.View')
@@ -77,7 +71,6 @@ while (!isFoundEnd) {
     .forEach((child) => {
       let tags = []
 
-      flag.flag++
       child.parent().parent().click()
 
       let weixinId = className('android.widget.TextView')
@@ -88,7 +81,6 @@ while (!isFoundEnd) {
 
       let friendInformation = friendsInformations[weixinId]
 
-      flag.flag++
       if (
         friendInformation &&
         !friendInformation.isFinished &&
@@ -96,7 +88,6 @@ while (!isFoundEnd) {
       ) {
         friendInformation.isFinished = true
 
-        flag.flag++
         if (className('android.widget.TextView').textContains('标签').findOne(WAIT_FOR_FIND_TAGS_TIME)) {
           className('android.widget.TextView')
             .depth(4)
@@ -113,7 +104,6 @@ while (!isFoundEnd) {
             .click()
         }
 
-        flag.flag++
         /* 备注名称有效则修改名称 */
         if (friendInformation.name) {
           /* 修改备注 */
@@ -130,7 +120,6 @@ while (!isFoundEnd) {
             .setText(friendInformation.name)
         }
 
-        flag.flag++
         /* 原本有标签和没有标签的选择器不同，因此在这里合并这两种搜索方式 */
         let tagEditor =
           className('android.view.ViewGroup').depth(3).findOne(WAIT_FOR_FIND_TAGS_TIME) ||
@@ -144,27 +133,23 @@ while (!isFoundEnd) {
             .text('添加标签')
             .waitFor()
 
-          flag.flag++
           let parent = className('android.view.ViewGroup')
             .depth(3)
             .drawingOrder(1)
             .findOne()
 
-          flag.flag++
           /* 删除现有的标签 */
           parent
             .children()
             .forEach((child) => {
               if (child.className() !== 'android.widget.TextView') return
 
-              flag.flag++
               child.click()
               sleep(100)
               child.click()
               sleep(100)
             })
 
-          flag.flag++
           friendInformation.tags.forEach((tag) => {
             /* 跳过无效标签 */
             if (!tag) return
@@ -174,7 +159,6 @@ while (!isFoundEnd) {
             className('android.widget.ListView')
               .depth(2)
               .waitFor()
-            flag.flag++
 
             click(parent.bounds().right - 5, parent.bounds().bottom - 5)
 
@@ -184,7 +168,6 @@ while (!isFoundEnd) {
               .waitFor()
           })
 
-          flag.flag++
           let saveButton = className('android.widget.Button')
             .depth(2)
             .text('保存')
@@ -197,7 +180,6 @@ while (!isFoundEnd) {
           }
         }
 
-        flag.flag++
         /* 修改更多个人信息 */
         className('android.widget.TextView')
           .depth(3)
@@ -213,7 +195,6 @@ while (!isFoundEnd) {
             if (nextIsInfo) {
               nextIsInfo = false
 
-              flag.flag++
               child.click()
 
               /* 跳过无效的备注信息 */
@@ -228,7 +209,6 @@ while (!isFoundEnd) {
             } else if (child.text() === '描述') nextIsInfo = true
           })
 
-        flag.flag++
         let finishButton = className('android.widget.Button')
           .depth(2)
           .text('完成')
@@ -240,7 +220,6 @@ while (!isFoundEnd) {
         }
       }
 
-      flag.flag++
       className('android.widget.TextView')
         .depth(4)
         .text('发消息')
@@ -252,14 +231,12 @@ while (!isFoundEnd) {
         .waitFor()
     })
 
-  flag.flag++
   className('android.widget.ListView')
     .depth(3)
     .drawingOrder(6)
     .findOne()
     .scrollForward()
 
-  flag.flag++
   if (className('android.widget.TextView')
     .depth(5)
     .textContains('位联系人')
