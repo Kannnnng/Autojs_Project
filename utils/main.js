@@ -16,11 +16,11 @@ const config = {
 /* 解锁设备，type 为锁屏类型 */
 /**
   * 解锁设备
-  * @param {String} type 锁屏类型，主要有 number 数字锁和 gesture 手势锁
+  * @param {'number' | 'gesture'} type 锁屏类型，主要有 number 数字锁和 gesture 手势锁
   */
 function unlockDevice(type) {
   /* 默认为数字锁，因为 Autojs 不支持默认值语法，所以使用原始的初始值设置方式 */
-  type = type || 'number'
+  type = type || 'gesture'
   /* 手机屏幕开着且不处于解锁页面，则手机没有锁屏，直接返回 */
   while (true) {
     if (device.isScreenOn() && currentPackage() !== 'com.android.systemui') {
