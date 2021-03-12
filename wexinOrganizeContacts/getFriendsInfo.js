@@ -48,7 +48,7 @@ sleep(500)
 while (!className('android.widget.TextView').text('我').findOne(1000)) back()
 
 /* 确认选择到微信联系人（通讯录）页面 */
-className('android.widget.TextView').text('通讯录').findOne().parent().click()
+// className('android.widget.TextView').text('通讯录').findOne().parent().click()
 /* 与上一个操作配合，形成双击底部通讯录按钮，以便滑动到人员列表顶部 */
 /* 考虑到可能要从中间状态开始，因此这句话先暂时注释掉 */
 // className('android.widget.TextView').text('通讯录').findOne().parent().click()
@@ -80,8 +80,8 @@ events.on('exit', () => {
 
 while (!isFoundEnd) {
   className('android.view.View')
-    .depth(6)
     .drawingOrder(4)
+    .textMatches(/\S{2,}/)
     .find()
     .forEach((child) => {
       let tags = []
@@ -143,15 +143,13 @@ while (!isFoundEnd) {
       sleep(250)
     })
 
-    className('android.widget.ListView')
-      .depth(3)
-      .drawingOrder(6)
+    className('com.tencent.mm.ui.mogic.WxViewPager')
       .findOne()
+      .child(1)
       .scrollForward()
 
   if (className('android.widget.TextView')
-    .depth(5)
-    .textMatches(/\d{1,4}位联系人/)
+    .textContains('位联系人')
     .findOne(500)) break
 }
 

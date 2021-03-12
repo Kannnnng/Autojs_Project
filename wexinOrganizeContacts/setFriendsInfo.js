@@ -45,7 +45,7 @@ depth(0)
   .waitFor()
 
 /* 如果当前打开的微信页面不是主页面，则返回到主页面 */
-while (!className('android.widget.TextView').depth(3).text('我').findOne(500)) back()
+while (!className('android.widget.TextView').text('我').findOne(500)) back()
 
 /* 确认选择到微信联系人（通讯录）页面 */
 // className('android.widget.TextView')
@@ -66,8 +66,8 @@ let isFoundEnd = false
 
 while (!isFoundEnd) {
   className('android.view.View')
-    .depth(6)
     .drawingOrder(4)
+    .textMatches(/\S{2,}/)
     .find()
     .forEach((child) => {
       let tags = []
@@ -255,13 +255,11 @@ while (!isFoundEnd) {
     })
 
   className('com.tencent.mm.ui.mogic.WxViewPager')
-    .depth(2)
     .findOne()
     .child(1)
     .scrollForward()
 
   if (className('android.widget.TextView')
-    .depth(5)
     .textContains('位联系人')
     .findOne(WAIT_FOR_FIND_END_TIME)) break
 }

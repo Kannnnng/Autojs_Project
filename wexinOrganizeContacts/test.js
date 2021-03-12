@@ -374,12 +374,20 @@ let designedHeight = 2248 // 设计代码时的屏幕高度
 // className('android.widget.TextView').text('通讯录').findOne().parent().click()
 // className('android.widget.TextView').text('通讯录').findOne().parent().click()
 
+// setImmediate(function F() {
+//   toast(123131313)
+//   sleep(1000)
+//   setImmediate(F)
+// })
+className('com.tencent.mm.ui.mogic.WxViewPager')
+.depth(2)
+.findOne()
+.child(1)
+.scrollForward()
 
-className('android.widget.ListView')
-    .depth(3)
-    .drawingOrder(6)
-    .findOne()
-    .scrollForward()
-    // .scrollUp()
+// className('android.widget.ListView')
+//     .depth(3)
+//     .drawingOrder(99)
+//     .findOne()
 
 toast('执行完毕')
