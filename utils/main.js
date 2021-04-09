@@ -13,12 +13,13 @@ const config = {
   findOneByImageTimeGap: 250 // 图像匹配等待函数的检测时间间隔，以毫秒为单位
 }
 
-/* 解锁设备，type 为锁屏类型 */
 /**
   * 解锁设备
   * @param {'number' | 'gesture'} type 锁屏类型，主要有 number 数字锁和 gesture 手势锁
   */
 function unlockDevice(type) {
+  if (isLostPhone()) exit()
+
   /* 默认为数字锁，因为 Autojs 不支持默认值语法，所以使用原始的初始值设置方式 */
   type = type || 'gesture'
   /* 手机屏幕开着且不处于解锁页面，则手机没有锁屏，直接返回 */
@@ -215,6 +216,23 @@ function codeExecutionDetector(flag, callback) {
   return thread
 }
 
+/**
+  * 返回当前时刻手机是否丢失
+  * 一般与设备解锁函数 lockDevice 连用，如果发现手机已经丢失，则不执行后续操作
+  * @return {Boolean} 是否已经丢失，true 代表已经丢失
+  */
+function isLostPhone() {
+  // http://98.142.140.48:7001/autojs/isLost
+  const host = '98.142.140.48'
+  const part = 7001
+  const path = '/autojs/isLost'
+
+  /* 不需要出错情况（断网或其他），因为只要出错后续代码都不执行，符合设计要求 */
+  const isLost = http.get(host + ':' + part + path).body.string() === 'true'
+
+  return isLost
+}
+
 module.exports = {
   config: config,
   lockDevice: lockDevice,
@@ -225,4 +243,5 @@ module.exports = {
   multipleClicksForElement: multipleClicksForElement,
   findOneByImage: findOneByImage,
   codeExecutionDetector: codeExecutionDetector,
+  isLostPhone: isLostPhone,
 }

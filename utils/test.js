@@ -17,9 +17,6 @@ try {
 /* 防止当前代码被重复执行 */
 utils.stopRepeatExecution()
 
-/* 超时停止检测线程 */
-utils.stopWhenTimeout(1000 * 60 * 0.1)
-
 /* 解锁设备 */
 // utils.unlockDevice()
 
@@ -149,8 +146,14 @@ setScreenMetrics(designedWidth, designedHeight)
 // while (a--) {
 //   console.log(a)
 // }
-className('android.widget.TextView')
-      .text('锁屏')
-      .findOne()
-      .parent()
-      .click()
+// className('android.widget.TextView')
+//       .text('锁屏')
+//       .findOne()
+//       .parent()
+//       .click()
+
+const host = '98.142.140.48'
+  const part = 7001
+  const path = '/autojs/isLost'
+
+console.log(http.get(host + ':' + part + path).body.string() === 'true');
