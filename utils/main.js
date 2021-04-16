@@ -228,7 +228,7 @@ function isLostPhone() {
   const path = '/autojs/isLostPhone'
 
   /* 不需要出错情况（断网或其他），因为只要出错后续代码都不执行，符合设计要求 */
-  const isLost = http.get(host + ':' + part + path).body.string() === 'true'
+  const isLost = http.get(host + ':' + part + path).body.string() !== 'false'
 
   return isLost
 }
