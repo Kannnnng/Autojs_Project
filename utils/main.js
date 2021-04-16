@@ -222,10 +222,10 @@ function codeExecutionDetector(flag, callback) {
   * @return {Boolean} 是否已经丢失，true 代表已经丢失
   */
 function isLostPhone() {
-  // http://98.142.140.48:7001/autojs/isLost
+  // http://98.142.140.48:7001/autojs/isLostPhone
   const host = '98.142.140.48'
   const part = 7001
-  const path = '/autojs/isLost'
+  const path = '/autojs/isLostPhone'
 
   /* 不需要出错情况（断网或其他），因为只要出错后续代码都不执行，符合设计要求 */
   const isLost = http.get(host + ':' + part + path).body.string() === 'true'
