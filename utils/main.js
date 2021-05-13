@@ -89,6 +89,9 @@ function unlockDevice(type) {
 
 /* 锁定设备，适用于手机处于正常开启状态，且桌面首页要有锁屏快捷方式 */
 function lockDevice() {
+  /* 需要点击两次 HOME 键才能保证一定会退到主界面 */
+  home()
+  sleep(250)
   home()
 
   if (isNeedLockScreen) {

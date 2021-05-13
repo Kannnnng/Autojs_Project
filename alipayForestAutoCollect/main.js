@@ -85,7 +85,7 @@ while (!isStop) {
     /* 没有能量可收取，将推出标志位设置为 true */
     if (isStop) break
     else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250)) && (lastEnergyNumber !== temp.text())) { sleep(500); break }
-    else if (className('android.widget.Button').text('返回我的森林').findOne(500)) { isStop = true }
+    else if (className('android.view.View').text('返回蚂蚁森林>').findOne(500)) { isStop = true }
     else sleep(500)
   }
 

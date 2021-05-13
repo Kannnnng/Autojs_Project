@@ -1,6 +1,14 @@
 {
 	"folders": [
 		{
+			"name": "utils",
+			"path": "utils"
+		},
+		{
+			"name": "wexinOrganizeContacts",
+			"path": "wexinOrganizeContacts"
+		},
+		{
 			"name": "alipayForestAutoCollect",
 			"path": "alipayForestAutoCollect"
 		},
@@ -9,20 +17,12 @@
 			"path": "alipayScoreAutoCollect"
 		},
 		{
-			"name": "utils",
-			"path": "utils"
-		},
-		{
 			"name": "wexinAutoLikeSport",
 			"path": "wexinAutoLikeSport"
 		},
 		{
 			"name": "dingdingReceiveMessageSelect",
 			"path": "dingdingReceiveMessageSelect"
-		},
-		{
-			"name": "wexinOrganizeContacts",
-			"path": "wexinOrganizeContacts"
 		},
 		{
 			"name": "idlefishAutoRefreshItem",
