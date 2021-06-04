@@ -1,0 +1,20 @@
+{
+    "assets": [],
+    "build": {
+        "build_number": 0,
+        "build_time": 0
+    },
+    "useFeatures": [],
+    "name": "小米手机自动变静音为响铃",
+    "main": "main.js",
+    "ignore": [
+        "build"
+    ],
+    "launchConfig": {
+        "hideLogs": false
+    },
+    "packageName": "com.einskang.xiaomi.autorerestoresound",
+    "scripts": {},
+    "versionName": "1.0.0",
+    "versionCode": 1
+}
