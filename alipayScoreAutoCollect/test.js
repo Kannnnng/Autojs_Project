@@ -29,8 +29,9 @@ setScreenMetrics(designedWidth, designedHeight)
 // const memberIcon = images.read('assets/member.jpg') || images.read('alipayScoreAutoCollect/assets/member.jpg')
 // console.log(images.matchTemplate(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 780], threshold: 0.95 }))
 
-log(className('android.view.View').textContains('赚取更多积分').findOne().click)
-log(className('android.view.View').textContains('赚取更多积分').findOne().clickable())
+// log(className('android.view.View').textContains('赚取更多积分').findOne().click)
+// log(className('android.view.View').textContains('赚取更多积分').findOne().clickable())
+const memberIcon = images.read('assets/2.jpg') || images.read('alipayScoreAutoCollect/assets/2.jpg')
+console.log(images.findImage(images.captureScreen(), memberIcon, { region: [0, 0, 1080, 700], threshold: 0.95 }))
+
 toastLog('完成')
-
-
