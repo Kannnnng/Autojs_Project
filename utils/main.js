@@ -182,7 +182,7 @@ function findOneByImage(image, timeout, region, threshold) {
 
   if (image) {
     if (timeout) {
-      const totalCount = Math.round(timeout / config.findOneByImageTimeGap)
+      let totalCount = Math.round(timeout / config.findOneByImageTimeGap)
       while (totalCount-- && !(resultPoints = images.findImage(images.captureScreen(), image, { region: region, threshold: threshold }))) sleep(config.findOneByImageTimeGap)
     } else {
       while (!(resultPoints = images.findImage(images.captureScreen(), image, { region: region, threshold: threshold }))) sleep(config.findOneByImageTimeGap)
