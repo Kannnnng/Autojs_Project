@@ -84,9 +84,9 @@ while (!isStop) {
   while (true) {
     /* 没有能量可收取，将推出标志位设置为 true */
     if (isStop) break
-    else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(250)) && (lastEnergyNumber !== temp.text())) { sleep(500); break }
-    else if (className('android.view.View').text('返回蚂蚁森林>').findOne(500)) { isStop = true }
-    else sleep(500)
+    else if ((temp = className('android.view.View').textMatches(/\d+g/).depth(11).findOne(100)) && (lastEnergyNumber !== temp.text())) { sleep(100); break }
+    else if (className('android.view.View').text('返回蚂蚁森林>').findOne(100)) { isStop = true }
+    else sleep(100)
   }
 
   /* 收取能量 */
