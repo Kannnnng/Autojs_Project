@@ -1,0 +1,21 @@
+{
+    "assets": [],
+    "build": {
+        "build_number": 0,
+        "build_time": 0
+    },
+    "useFeatures": [],
+    "name": "滴答打车自动收集积分",
+    "main": "main.js",
+    "icon": "assets/logo.png",
+    "ignore": [
+        "build"
+    ],
+    "launchConfig": {
+        "hideLogs": false
+    },
+    "packageName": "com.einskang.didapinche.autocollect",
+    "scripts": {},
+    "versionName": "1.0.0",
+    "versionCode": 1
+}
