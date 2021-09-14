@@ -48,6 +48,9 @@ selector()
   .depth(0)
   .waitFor()
 
+/* 等待开屏广告结束 */
+sleep(2000)
+
 /* 不在首页的跳转到首页 */
 while (!selector().className('android.widget.TextView').text('输入市内、城际目的地').findOne(1500)) back()
 
