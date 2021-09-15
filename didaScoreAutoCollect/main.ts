@@ -123,5 +123,29 @@ sleep(250)
 home()
 sleep(250)
 
+/* 呼出最近运行的应用列表 */
+recents()
+selector()
+  .className('android.widget.TextView')
+  .text('小窗应用')
+  .waitFor()
+
+sleep(500)
+
+/* 等待嘀嗒出行出现，向右滑动一个很长的距离，强制停止后台程序 */
+const didaTitleRect = selector()
+  .className('android.widget.TextView')
+  .text('嘀嗒出行')
+  .findOne()
+  .bounds()
+
+swipe(
+  didaTitleRect.centerX(),
+  didaTitleRect.centerY(),
+  didaTitleRect.centerX() + 2080,
+  didaTitleRect.centerY(),
+  300,
+)
+
 /* 锁定设备 */
 utils.lockDevice()

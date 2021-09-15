@@ -18,8 +18,40 @@ setScreenMetrics(designedWidth, designedHeight)
 // console.log(className('android.widget.ImageView')
 // .depth(1)
 // .findOne().bounds())
+// selector()
+//   .className('android.widget.TextView')
+//   .text('优惠券与顺风金可叠加使用')
+//   .waitFor()
+recents()
+
 selector()
   .className('android.widget.TextView')
-  .text('优惠券与顺风金可叠加使用')
+  .text('小窗应用')
   .waitFor()
+
+sleep(500)
+
+const didaTitleRect = selector()
+  .className('android.widget.TextView')
+  .text('嘀嗒出行')
+  .findOne()
+  .bounds()
+
+if (didaTitleRect.centerX() > deviceWidth / 2) {
+  swipe(
+    didaTitleRect.centerX(),
+    didaTitleRect.centerY(),
+    didaTitleRect.centerX() + 1080,
+    didaTitleRect.centerY(),
+    200,
+  )
+} else {
+  swipe(
+    didaTitleRect.centerX(),
+    didaTitleRect.centerY(),
+    0,
+    didaTitleRect.centerY(),
+    200,
+  )
+}
     toastLog('完成')
